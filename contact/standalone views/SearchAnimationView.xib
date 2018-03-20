@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchAnimationView">
+            <connections>
+                <outlet property="logotypeImageView" destination="Z9O-8l-pjP" id="eGk-Om-OUR"/>
+                <outlet property="searchingLabel" destination="tGV-Gg-HHC" id="AsM-sr-nNt"/>
+                <outlet property="wave_0_ImageView" destination="afB-qB-Dmk" id="FuD-Vf-ulh"/>
+                <outlet property="wave_1_ImageView" destination="sbX-dN-pGG" id="Lj9-9e-LON"/>
+                <outlet property="wave_2_ImageView" destination="YD5-aA-clj" id="EZe-r4-Nfe"/>
+                <outlet property="wavesView" destination="kCB-F2-CVs" id="MCX-8h-RQW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_114_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-8l-pjP">
+                    <rect key="frame" x="122.5" y="279" width="130" height="129"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="Vvk-Ll-8wX"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1q-Q3-PSy">
+                    <rect key="frame" x="0.0" y="516" width="375" height="151"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="searching" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGV-Gg-HHC">
+                            <rect key="frame" x="32" y="0.0" width="309.5" height="14"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tGV-Gg-HHC" firstAttribute="centerX" secondItem="E1q-Q3-PSy" secondAttribute="centerX" id="HkR-YU-Dmv"/>
+                        <constraint firstItem="tGV-Gg-HHC" firstAttribute="top" secondItem="E1q-Q3-PSy" secondAttribute="top" id="dVw-cv-GkC"/>
+                        <constraint firstItem="tGV-Gg-HHC" firstAttribute="leading" secondItem="E1q-Q3-PSy" secondAttribute="leading" constant="32" id="ybK-g2-Ks3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCB-F2-CVs">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_image" translatesAutoresizingMaskIntoConstraints="NO" id="afB-qB-Dmk">
+                            <rect key="frame" x="60" y="195.5" width="256" height="256"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_image" translatesAutoresizingMaskIntoConstraints="NO" id="sbX-dN-pGG">
+                            <rect key="frame" x="60" y="195.5" width="256" height="256"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_image" translatesAutoresizingMaskIntoConstraints="NO" id="YD5-aA-clj">
+                            <rect key="frame" x="60" y="195.5" width="256" height="256"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="YD5-aA-clj" firstAttribute="centerY" secondItem="kCB-F2-CVs" secondAttribute="centerY" id="5yL-1w-kEA"/>
+                        <constraint firstItem="YD5-aA-clj" firstAttribute="centerX" secondItem="kCB-F2-CVs" secondAttribute="centerX" id="Ymf-Rd-lTi"/>
+                        <constraint firstItem="sbX-dN-pGG" firstAttribute="centerY" secondItem="kCB-F2-CVs" secondAttribute="centerY" id="abo-hp-rWE"/>
+                        <constraint firstItem="sbX-dN-pGG" firstAttribute="centerX" secondItem="kCB-F2-CVs" secondAttribute="centerX" id="btQ-eU-1oz"/>
+                        <constraint firstItem="afB-qB-Dmk" firstAttribute="centerY" secondItem="kCB-F2-CVs" secondAttribute="centerY" id="gP2-Qc-Mbu"/>
+                        <constraint firstItem="afB-qB-Dmk" firstAttribute="centerX" secondItem="kCB-F2-CVs" secondAttribute="centerX" id="pF9-Bg-Gdf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="E1q-Q3-PSy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2j5-RR-wDH"/>
+                <constraint firstItem="kCB-F2-CVs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="80F-j5-B5W"/>
+                <constraint firstItem="kCB-F2-CVs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8Hn-wk-Sqc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="E1q-Q3-PSy" secondAttribute="trailing" id="Qkz-zs-ny6"/>
+                <constraint firstItem="Z9O-8l-pjP" firstAttribute="centerX" secondItem="kCB-F2-CVs" secondAttribute="centerX" id="ULs-Bj-NQU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E1q-Q3-PSy" secondAttribute="bottom" id="dhJ-8t-F5j"/>
+                <constraint firstAttribute="bottom" secondItem="kCB-F2-CVs" secondAttribute="bottom" id="jMO-6q-x5B"/>
+                <constraint firstAttribute="trailing" secondItem="kCB-F2-CVs" secondAttribute="trailing" id="qnw-yy-11M"/>
+                <constraint firstItem="Z9O-8l-pjP" firstAttribute="centerY" secondItem="kCB-F2-CVs" secondAttribute="centerY" id="ski-8K-GJn"/>
+                <constraint firstItem="E1q-Q3-PSy" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="184:812" id="ykX-3f-5Ch"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="contact_logotype_114_pt_mode_day_image" width="114" height="129"/>
+        <image name="wave_image" width="256" height="256"/>
+    </resources>
+</document>

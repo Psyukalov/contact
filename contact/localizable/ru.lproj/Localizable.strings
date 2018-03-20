@@ -1,0 +1,51 @@
+/*
+ 
+ Localizable.strings
+ contact
+ 
+ Created by Vladimir Psyukalov on 14.03.18.
+ Copyright © 2018 YOUROCK INC. All rights reserved.
+ 
+ Russian version
+ 
+ */
+
+// Authorization view controller
+
+"avc_button_0" = "Инструкция";
+
+// Authorization view
+
+"av_button_0" = "Логин";
+"av_button_1" = "Войти";
+"av_button_2" = "Зарегистрируйтесь с помощью Email";
+"av_button_3" = "Забыли пароль?";
+
+"av_label_0" = "Войдите или зарегистрируйтесь с помощью Email";
+"av_label_1" = "Contact LLC %@ %@ Все права защищены";
+
+"av_placeholder_0" = "Ваш Email";
+"av_placeholder_1" = "Ваш пароль";
+
+// Registration view
+
+"rv_button_0" = "Создать";
+"rv_button_1" = "Зарегистрироваться";
+
+"rv_placeholder_0" = "Ваш Email";
+"rv_placeholder_1" = "Ваше Имя";
+"rv_placeholder_2" = "Ваш Возраст";
+
+"rv_label_0" = "Мужчина";
+"rv_label_1" = "Ищу Мужчину";
+"rv_label_2" = "Женщина";
+"rv_label_3" = "Ищу Женщину";
+
+// About contact view
+
+"abcv_label_0" = "Contact";
+"abcv_label_1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis. Mauris ex lorem, gravida pharetra sodales non, elementum fermentum tellus. Fusce gravida sit amet neque eget fermentum.\nDonec ut augue tristique, tincidunt justo quis, tincidunt neque. Nullam nec eros tristique leo aliquet lobortis. Aliquam non tristique ex, eu placerat enim. Vivamus ut elit lacinia, egestas dui ac, finibus purus. Quisque scelerisque malesuada nibh sit amet aliquam.";
+
+// Search animation view
+
+"sav_label_0" = "Поиск контактов";

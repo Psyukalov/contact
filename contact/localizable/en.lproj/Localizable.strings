@@ -1,0 +1,51 @@
+/*
+ 
+ Localizable.strings
+ contact
+ 
+ Created by Vladimir Psyukalov on 14.03.18.
+ Copyright © 2018 YOUROCK INC. All rights reserved.
+ 
+ English version
+ 
+ */
+
+// Authorization view controller
+
+"avc_button_0" = "Instruction";
+
+// Authorization view
+
+"av_button_0" = "Login";
+"av_button_1" = "Log in";
+"av_button_2" = "Sign Up with Email";
+"av_button_3" = "Forgot password";
+
+"av_label_0" = "Sign up or login with email";
+"av_label_1" = "Contact LLC %@ %@ Copyright";
+
+"av_placeholder_0" = "Your Email";
+"av_placeholder_1" = "Your Password";
+
+// Registration view
+
+"rv_button_0" = "Sign Up";
+"rv_button_1" = "Sign Up";
+
+"rv_placeholder_0" = "Your Email";
+"rv_placeholder_1" = "Your Name";
+"rv_placeholder_2" = "Your Age";
+
+"rv_label_0" = "Male";
+"rv_label_1" = "Prefer Male";
+"rv_label_2" = "Female";
+"rv_label_3" = "Prefer Female";
+
+// About contact view
+
+"abcv_label_0" = "Contact";
+"abcv_label_1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis. Mauris ex lorem, gravida pharetra sodales non, elementum fermentum tellus. Fusce gravida sit amet neque eget fermentum.\nDonec ut augue tristique, tincidunt justo quis, tincidunt neque. Nullam nec eros tristique leo aliquet lobortis. Aliquam non tristique ex, eu placerat enim. Vivamus ut elit lacinia, egestas dui ac, finibus purus. Quisque scelerisque malesuada nibh sit amet aliquam.";
+
+// Search animation view
+
+"sav_label_0" = "Searching for contact";
