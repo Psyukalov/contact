@@ -28,17 +28,30 @@
 @property (weak, nonatomic) IBOutlet UIView *profileView;
 @property (weak, nonatomic) IBOutlet UIView *contentProfileView;
 @property (weak, nonatomic) IBOutlet UIView *tokensView;
+@property (weak, nonatomic) IBOutlet UIView *maskedLeftView;
+@property (weak, nonatomic) IBOutlet UIView *maskedRightView;
+
+@property (weak, nonatomic) IBOutlet UILabel *tokens_0_Label;
+@property (weak, nonatomic) IBOutlet UILabel *tokens_1_Label;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *invisibleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notificationsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nightModeLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *logotype_0_ImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *logotype_1_ImageView;
+
+@property (weak, nonatomic) IBOutlet UIButton *showHistoryButton;
+@property (weak, nonatomic) IBOutlet UIButton *editProfileButton;
+@property (weak, nonatomic) IBOutlet UIButton *aboutContactButton;
+
+@property (weak, nonatomic) IBOutlet UISwitch *invisibleSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *notificationsSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *screenModeSwitch;
 
 @property (weak, nonatomic) IBOutlet SearchAnimationView *searchAnimationView;
 
 @property (weak, nonatomic) IBOutlet AboutContactView *aboutContactView;
-
-@property (weak, nonatomic) IBOutlet UISwitch *testSwitch;
-
-@property (weak, nonatomic) IBOutlet UIView *maskedLeftView;
-@property (weak, nonatomic) IBOutlet UIView *maskedRightView;
-
-@property (weak, nonatomic) IBOutlet UISwitch *screenModeSwitch;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftMarginProfileViewLC;
 
@@ -73,7 +86,6 @@
         [self stopAccelerometerUpdates];
         [_aboutContactView viewAnimation:ViewAnimationFadeOut animated:YES];
     };
-    _profileScrollView.decelerationRate = .84f;
     _profileScrollView.contentInset = UIEdgeInsetsMake(HEIGHT - _tokensView.frame.size.height - 18.f, 0.f, 0.f, 0.f);
     top = -(HEIGHT - _profileView.frame.size.height);
     bottom = -_profileScrollView.contentInset.top;
@@ -81,6 +93,20 @@
     [_maskedRightView cornerRadius:4.f];
     [self setIsOpen:NO animated:YES];
     _screenModeSwitch.on = [ScreenModeManager shared].isScreenModeNight;
+    for (UISwitch *optionSwitch in @[_invisibleSwitch, _notificationsSwitch, _screenModeSwitch]) {
+        optionSwitch.onTintColor = RGB(28.f, 132.f, 242.f);
+        optionSwitch.backgroundColor = RGB(168.f, 168.f, 168.f);
+        optionSwitch.tintColor = optionSwitch.backgroundColor;
+        [optionSwitch cornerRadius:.5f * optionSwitch.frame.size.height];
+    }
+    _screenModeSwitch.backgroundColor = RGB(52.f, 54.f, 102.f);
+    _screenModeSwitch.tintColor = _screenModeSwitch.backgroundColor;
+    [_showHistoryButton setTitle:LOCALIZE(@"mvc_button_0") forState:UIControlStateNormal];
+    [_editProfileButton setTitle:LOCALIZE(@"mvc_button_1") forState:UIControlStateNormal];
+    [_aboutContactButton setTitle:LOCALIZE(@"mvc_button_2") forState:UIControlStateNormal];
+    _invisibleLabel.text = LOCALIZE(@"mvc_label_0");
+    _notificationsLabel.text = LOCALIZE(@"mvc_label_1");
+    _nightModeLabel.text = LOCALIZE(@"mvc_label_2");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -90,6 +116,11 @@
         [self test];
         value = YES;
     }
+}
+
+- (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration {
+    [super accelerometerUpdateWithAcceleration:acceleration];
+    _aboutContactView.parallaxPoint = CGPointMake(acceleration.x, acceleration.y);
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -102,6 +133,9 @@
         _maskedLeftView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
         _maskedRightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
         _tokensView.alpha = 1.f - percent;
+        _tokens_1_Label.alpha = percent;
+        _logotype_1_ImageView.alpha = percent;
+        _showHistoryButton.alpha = percent;
     }
 }
 
@@ -137,13 +171,7 @@
     [[ScreenModeManager shared] toggleScreenMode];
 }
 
-#pragma mark -
-
-- (void)testSwitchUnhide {
-    [UIView animate:^{
-        _testSwitch.alpha = 1.f;
-    }];
-}
+#pragma mark - Test
 
 - (void)test {
     AuthorizationViewController *authorizationVC = [AuthorizationViewController new];
@@ -153,15 +181,9 @@
         [weakAuthorizationVC.view removeFromSuperview];
         [_searchAnimationView viewAnimation:ViewAnimationZoomIn animated:YES completion:^{
             [_searchAnimationView play];
-            [self testSwitchUnhide];
         }];
     };
     [self.view addSubview:authorizationVC.view];
-}
-
-- (IBAction)test:(UISwitch *)sender {
-    self.needed3DEffect = sender.on;
-    _searchAnimationView.needed3DEffect = sender.on;
 }
 
 @end

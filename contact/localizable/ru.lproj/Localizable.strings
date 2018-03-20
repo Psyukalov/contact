@@ -49,3 +49,13 @@
 // Search animation view
 
 "sav_label_0" = "Поиск контактов";
+
+// Main view controller
+
+"mvc_button_0" = "История";
+"mvc_button_1" = "Редактировать";
+"mvc_button_2" = "Информация";
+
+"mvc_label_0" = "Невидимый";
+"mvc_label_1" = "Уведомления";
+"mvc_label_2" = "Ночной режим";

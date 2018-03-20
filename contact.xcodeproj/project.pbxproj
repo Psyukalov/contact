@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71CB47920614ED700DC7ADD /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CB47820614ED700DC7ADD /* Switch.m */; };
 		C7330DD3205C075D00E8F336 /* AboutContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DD2205C075D00E8F336 /* AboutContactView.m */; };
 		C7330DD5205C077300E8F336 /* AboutContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7330DD4205C077300E8F336 /* AboutContactView.xib */; };
 		C7330DD8205C099100E8F336 /* SMImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DD7205C099100E8F336 /* SMImageView.m */; };
@@ -56,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71CB47720614ED700DC7ADD /* Switch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Switch.h; sourceTree = "<group>"; };
+		C71CB47820614ED700DC7ADD /* Switch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Switch.m; sourceTree = "<group>"; };
 		C7330DD1205C075D00E8F336 /* AboutContactView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutContactView.h; sourceTree = "<group>"; };
 		C7330DD2205C075D00E8F336 /* AboutContactView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutContactView.m; sourceTree = "<group>"; };
 		C7330DD4205C077300E8F336 /* AboutContactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutContactView.xib; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 			children = (
 				C7FBC2372059290A00A49F14 /* NavigationController.h */,
 				C7FBC2382059290A00A49F14 /* NavigationController.m */,
+				C71CB47720614ED700DC7ADD /* Switch.h */,
+				C71CB47820614ED700DC7ADD /* Switch.m */,
 				C7FBC24620592E3F00A49F14 /* TableView.h */,
 				C7FBC24720592E3F00A49F14 /* TableView.m */,
 				C7FBC2352059286F00A49F14 /* View.h */,
@@ -481,6 +486,7 @@
 				C7E41B74205BDB6100C4B96F /* SMView.m in Sources */,
 				C7F41398205BBC8A00AA316D /* CObject.m in Sources */,
 				C7FBC271205952E300A49F14 /* CView.m in Sources */,
+				C71CB47920614ED700DC7ADD /* Switch.m in Sources */,
 				C7FBC21B2059087600A49F14 /* main.m in Sources */,
 				C7E41B77205BDC9200C4B96F /* SMLabel.m in Sources */,
 				C785C22F205FDC5F00FC3927 /* MainViewController.m in Sources */,

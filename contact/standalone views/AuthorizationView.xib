@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -53,10 +52,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1b-dx-pY5">
-                    <rect key="frame" x="0.0" y="423" width="172" height="68"/>
+                    <rect key="frame" x="0.0" y="407.5" width="172" height="79"/>
                     <subviews>
                         <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAi-Jp-11Y">
-                            <rect key="frame" x="0.0" y="0.0" width="151" height="68"/>
+                            <rect key="frame" x="0.0" y="0.0" width="151" height="79"/>
                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="58"/>
                             <inset key="contentEdgeInsets" minX="26" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="login">
@@ -84,16 +83,16 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEE-bn-pkY">
-                    <rect key="frame" x="0.0" y="511" width="375" height="156"/>
+                    <rect key="frame" x="0.0" y="506" width="375" height="160.5"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-AU-M4R">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-AU-M4R">
                             <rect key="frame" x="0.0" y="0.0" width="54" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="54" id="JHN-zZ-pB6"/>
                                 <constraint firstAttribute="height" constant="44" id="JoL-8K-ZtB"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                            <inset key="contentEdgeInsets" minX="26" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="contentEdgeInsets" minX="26" minY="0.0" maxX="0.0" maxY="10"/>
                             <state key="normal" image="facebook_authorization_button">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -104,9 +103,10 @@
                                 <action selector="facebookButton_TUI:" destination="-1" eventType="touchUpInside" id="RIz-bt-thP"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-bu-oXX">
-                            <rect key="frame" x="54" y="13.5" width="26" height="17"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-bu-oXX">
+                            <rect key="frame" x="54" y="0.0" width="54" height="44"/>
                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="10"/>
                             <state key="normal" image="vkontakte_authorization_button">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -118,13 +118,13 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-AE-ctG">
-                            <rect key="frame" x="26" y="52" width="70" height="16.5"/>
+                            <rect key="frame" x="26" y="52" width="65.5" height="19.5"/>
                             <fontDescription key="fontDescription" name="OpenSans-LightItalic" family="Open Sans" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copyright" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj2-8c-Wt7">
-                            <rect key="frame" x="26" y="128.5" width="34" height="9.5"/>
+                            <rect key="frame" x="26" y="131.5" width="35" height="11"/>
                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -135,16 +135,18 @@
                         <constraint firstAttribute="bottom" secondItem="Bj2-8c-Wt7" secondAttribute="bottom" constant="18" id="3td-tu-y6a"/>
                         <constraint firstItem="Vkl-AU-M4R" firstAttribute="top" secondItem="aEE-bn-pkY" secondAttribute="top" id="C87-ct-boc"/>
                         <constraint firstItem="Bj2-8c-Wt7" firstAttribute="top" secondItem="NAl-AE-ctG" secondAttribute="bottom" constant="60" id="KK0-DU-dXC"/>
+                        <constraint firstItem="ti3-bu-oXX" firstAttribute="height" secondItem="Vkl-AU-M4R" secondAttribute="height" id="N0l-Qx-S0z"/>
                         <constraint firstItem="NAl-AE-ctG" firstAttribute="top" secondItem="Vkl-AU-M4R" secondAttribute="bottom" constant="8" id="RWf-g7-clQ"/>
                         <constraint firstItem="NAl-AE-ctG" firstAttribute="leading" secondItem="Bj2-8c-Wt7" secondAttribute="leading" id="RYG-hz-BzS"/>
                         <constraint firstItem="ti3-bu-oXX" firstAttribute="centerY" secondItem="Vkl-AU-M4R" secondAttribute="centerY" id="Sxs-T5-Fvt"/>
                         <constraint firstItem="ti3-bu-oXX" firstAttribute="leading" secondItem="Vkl-AU-M4R" secondAttribute="trailing" id="o22-jm-Mnc"/>
                         <constraint firstItem="Bj2-8c-Wt7" firstAttribute="leading" secondItem="aEE-bn-pkY" secondAttribute="leading" constant="26" id="slQ-8F-iEc"/>
                         <constraint firstItem="Vkl-AU-M4R" firstAttribute="leading" secondItem="aEE-bn-pkY" secondAttribute="leading" id="ugu-Ar-201"/>
+                        <constraint firstItem="ti3-bu-oXX" firstAttribute="width" secondItem="Vkl-AU-M4R" secondAttribute="width" id="vgE-Nq-G0c"/>
                     </constraints>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-BQ-h1N">
-                    <rect key="frame" x="0.0" y="287" width="375" height="380"/>
+                    <rect key="frame" x="0.0" y="281" width="375" height="386"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" adjustsFontSizeToFit="NO" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Klx-ut-egR">
                             <rect key="frame" x="30" y="0.0" width="315" height="44"/>
@@ -170,10 +172,10 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Ac-Udh">
-                            <rect key="frame" x="280" y="122" width="95" height="35"/>
+                            <rect key="frame" x="218" y="122" width="157" height="38"/>
                             <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="16"/>
                             <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
-                            <state key="normal" title="sign up">
+                            <state key="normal" title="forgot password">
                                 <color key="titleColor" red="0.10980392156862745" green="0.51764705882352935" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <state key="highlighted">
@@ -184,7 +186,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsT-cy-tOv">
-                            <rect key="frame" x="145" y="249" width="85" height="35"/>
+                            <rect key="frame" x="144" y="252" width="87" height="38"/>
                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                             <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                             <state key="normal" title="sign up">
@@ -198,7 +200,7 @@
                             </connections>
                         </button>
                         <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGN-Fl-m5K">
-                            <rect key="frame" x="28" y="300" width="319" height="60"/>
+                            <rect key="frame" x="28" y="306" width="319" height="60"/>
                             <color key="backgroundColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="8Th-2O-1Gy"/>
@@ -253,16 +255,15 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aEE-bn-pkY" secondAttribute="trailing" id="1Uz-bw-pWQ"/>
-                <constraint firstItem="aEE-bn-pkY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3Gp-fc-mxU"/>
-                <constraint firstItem="ynF-BQ-h1N" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="6KD-LJ-VUn"/>
+                <constraint firstAttribute="trailing" secondItem="aEE-bn-pkY" secondAttribute="trailing" id="1Uz-bw-pWQ"/>
+                <constraint firstItem="aEE-bn-pkY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Gp-fc-mxU"/>
+                <constraint firstItem="ynF-BQ-h1N" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="6KD-LJ-VUn"/>
                 <constraint firstItem="aEE-bn-pkY" firstAttribute="top" secondItem="c1b-dx-pY5" secondAttribute="bottom" constant="20" id="NvD-r3-kNE"/>
-                <constraint firstItem="c1b-dx-pY5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WTR-dT-uuA"/>
-                <constraint firstItem="ynF-BQ-h1N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Y0x-LL-ky9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ynF-BQ-h1N" secondAttribute="trailing" id="o1C-v2-5Uq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aEE-bn-pkY" secondAttribute="bottom" id="ppa-xD-Vwc"/>
+                <constraint firstItem="c1b-dx-pY5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WTR-dT-uuA"/>
+                <constraint firstItem="ynF-BQ-h1N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Y0x-LL-ky9"/>
+                <constraint firstAttribute="trailing" secondItem="ynF-BQ-h1N" secondAttribute="trailing" id="o1C-v2-5Uq"/>
+                <constraint firstAttribute="bottom" secondItem="aEE-bn-pkY" secondAttribute="bottom" id="ppa-xD-Vwc"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>

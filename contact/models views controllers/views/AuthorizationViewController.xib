@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -41,28 +40,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Tqr-Uy-z0u">
-                    <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9p-Vi-14F">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_pattern_image" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-vh-rXe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_gradient_layer_0_image" translatesAutoresizingMaskIntoConstraints="NO" id="UnT-05-LAl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_gradient_layer_1_image" translatesAutoresizingMaskIntoConstraints="NO" id="vF9-hM-ZwU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjQ-nd-euy" customClass="AuthorizationView">
-                                    <rect key="frame" x="0.0" y="109.66666666666669" width="414" height="606.33333333333326"/>
+                                    <rect key="frame" x="0.0" y="109.66666666666669" width="414" height="626.33333333333326"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcp-Dm-MUc" customClass="RegistrationView">
-                                    <rect key="frame" x="0.0" y="98" width="414" height="618"/>
+                                    <rect key="frame" x="0.0" y="98" width="414" height="638"/>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHI-7W-VHh">
-                                    <rect key="frame" x="26" y="60" width="103" height="38"/>
+                                    <rect key="frame" x="26" y="60" width="98" height="38"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="38" id="TIr-Kw-XaI"/>
@@ -79,11 +78,11 @@
                                         <action selector="instructionButton_TUI:" destination="-1" eventType="touchUpInside" id="Osh-Yh-V9k"/>
                                     </connections>
                                 </button>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_39_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="hW5-Xd-rpe">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_39_pt_mode_night_image" translatesAutoresizingMaskIntoConstraints="NO" id="hW5-Xd-rpe">
                                     <rect key="frame" x="349" y="56" width="39" height="45"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsV-2e-FdR" customClass="AboutContactView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </view>
                             </subviews>
                             <constraints>
@@ -132,10 +131,9 @@
             <constraints>
                 <constraint firstItem="Tqr-Uy-z0u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5v4-GE-eLg"/>
                 <constraint firstItem="Tqr-Uy-z0u" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="c84-06-1xf"/>
-                <constraint firstItem="Tqr-Uy-z0u" firstAttribute="top" secondItem="sSe-kz-Irx" secondAttribute="top" id="fiY-x6-vdN"/>
+                <constraint firstItem="Tqr-Uy-z0u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fiY-x6-vdN"/>
                 <constraint firstItem="Tqr-Uy-z0u" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="mhl-pI-ISL"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="sSe-kz-Irx"/>
             <point key="canvasLocation" x="24" y="52"/>
         </view>
     </objects>
@@ -143,6 +141,6 @@
         <image name="base_gradient_layer_0_image" width="32" height="812"/>
         <image name="base_gradient_layer_1_image" width="32" height="460"/>
         <image name="base_pattern_image" width="553" height="1091"/>
-        <image name="contact_logotype_39_pt_mode_day_image" width="39" height="45"/>
+        <image name="contact_logotype_39_pt_mode_night_image" width="39" height="45"/>
     </resources>
 </document>

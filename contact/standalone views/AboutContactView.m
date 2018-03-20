@@ -28,8 +28,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
-@property (weak, nonatomic) IBOutlet UISwitch *test;
-
 @end
 
 
@@ -55,17 +53,12 @@
     _titleLabel.text = LOCALIZE(@"abcv_label_0");
     _descriptionLabel.text = LOCALIZE(@"abcv_label_1");
     [_descriptionLabel attribute];
-    _test.on = [ScreenModeManager shared].isScreenModeNight;
 }
 
 - (IBAction)closeButton_TUI:(UIButton *)sender {
     if (self.didCloseViewCompletion) {
         self.didCloseViewCompletion();
     }
-}
-
-- (IBAction)test:(UISwitch *)sender {
-    [[ScreenModeManager shared] toggleScreenMode];
 }
 
 @end
