@@ -6,9 +6,18 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <userDefinedRuntimeAttributes>
@@ -17,7 +26,7 @@
                 <userDefinedRuntimeAttribute type="boolean" keyPath="neededGradientImageViews" value="NO"/>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="neededAccelerometerUpdates" value="YES"/>
                 <userDefinedRuntimeAttribute type="number" keyPath="deltaSwitchBorder">
-                    <real key="value" value="128"/>
+                    <real key="value" value="64"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
@@ -28,16 +37,14 @@
                 <outlet property="contentProfileView" destination="W5l-U8-bAG" id="ZOM-yD-pUq"/>
                 <outlet property="contentView" destination="eoS-W0-Bar" id="NI5-kU-w4i"/>
                 <outlet property="leftMarginProfileViewLC" destination="Peg-5B-VRk" id="XeW-Z7-SRn"/>
-                <outlet property="maskLeftImageView" destination="Cwk-lv-5fd" id="k0e-lJ-4bA"/>
-                <outlet property="maskRightImageView" destination="6kE-TM-6EW" id="a38-Xu-Yud"/>
                 <outlet property="maskedLeftView" destination="he1-Ey-3SI" id="o1M-Di-DUL"/>
                 <outlet property="maskedRightView" destination="pFD-ai-NYf" id="wjK-IV-OQU"/>
                 <outlet property="profileScrollView" destination="uLv-YX-wAD" id="qWs-nK-laP"/>
                 <outlet property="profileView" destination="3Zc-8X-gRM" id="dEt-fq-rIR"/>
-                <outlet property="screenModeSwitch" destination="Nue-Y2-BKU" id="mvn-gR-1nP"/>
                 <outlet property="scrollView" destination="5Xy-oI-UWQ" id="Lt6-Pf-f1Q"/>
                 <outlet property="searchAnimationView" destination="Z73-xA-c2S" id="jnE-h2-ebt"/>
                 <outlet property="testSwitch" destination="eri-94-9Hr" id="kUn-qZ-X4T"/>
+                <outlet property="tokensView" destination="X2g-3e-PWs" id="inE-8H-Cec"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -67,47 +74,165 @@
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-YX-wAD">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-8X-gRM">
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-8X-gRM">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide_image" translatesAutoresizingMaskIntoConstraints="NO" id="f3l-w3-ObT">
                                                     <rect key="frame" x="182" y="0.0" width="50" height="6"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he1-Ey-3SI" customClass="SMView">
+                                                    <rect key="frame" x="10" y="18" width="64" height="526"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="kW7-wd-ejS"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                                                            <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFD-ai-NYf" customClass="SMView">
+                                                    <rect key="frame" x="340" y="18" width="64" height="526"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="bdB-fS-5RB"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                                                            <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5l-U8-bAG" customClass="SMView">
                                                     <rect key="frame" x="14" y="18" width="386" height="494"/>
                                                     <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-Y2-BKU">
-                                                            <rect key="frame" x="169" y="232" width="51" height="31"/>
-                                                            <connections>
-                                                                <action selector="screenModeSwitch_VC:" destination="-1" eventType="valueChanged" id="60V-7B-Swd"/>
-                                                            </connections>
-                                                        </switch>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="Nue-Y2-BKU" firstAttribute="centerX" secondItem="W5l-U8-bAG" secondAttribute="centerX" id="Ayp-Bn-1yP"/>
-                                                        <constraint firstItem="Nue-Y2-BKU" firstAttribute="centerY" secondItem="W5l-U8-bAG" secondAttribute="centerY" id="sEu-Ir-U0V"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
-                                                            <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he1-Ey-3SI" customClass="SMView">
-                                                    <rect key="frame" x="0.0" y="18" width="14" height="494"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_view_left_mask_image" translatesAutoresizingMaskIntoConstraints="NO" id="Cwk-lv-5fd">
-                                                            <rect key="frame" x="-14" y="-24" width="64" height="1024"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-3e-PWs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="386" height="85.333333333333329"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-dH-kZc">
+                                                                    <rect key="frame" x="177" y="30.333333333333329" width="32" height="25"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkT-Bx-Y1d" customClass="SMLabel">
+                                                                            <rect key="frame" x="0.0" y="0.6666666666666714" width="10.333333333333334" height="24.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="18"/>
+                                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </label>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_18_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="l1A-en-3m1" customClass="SMImageView">
+                                                                            <rect key="frame" x="14" y="2.3333333333333428" width="18" height="21"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="contact_logotype_18_pt_mode_day_image"/>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="contact_logotype_18_pt_mode_night_image"/>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="l1A-en-3m1" firstAttribute="leading" secondItem="UkT-Bx-Y1d" secondAttribute="trailing" constant="4" id="9bJ-4E-QSd"/>
+                                                                        <constraint firstItem="UkT-Bx-Y1d" firstAttribute="top" secondItem="6ua-dH-kZc" secondAttribute="top" id="DB0-Ej-VUU"/>
+                                                                        <constraint firstItem="UkT-Bx-Y1d" firstAttribute="leading" secondItem="6ua-dH-kZc" secondAttribute="leading" id="L38-2U-Cpx"/>
+                                                                        <constraint firstItem="l1A-en-3m1" firstAttribute="centerY" secondItem="UkT-Bx-Y1d" secondAttribute="centerY" id="P6K-cA-wFx"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="UkT-Bx-Y1d" secondAttribute="bottom" id="RqU-p0-1eZ"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="l1A-en-3m1" secondAttribute="trailing" id="rEO-r8-32Z"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="6ua-dH-kZc" firstAttribute="centerY" secondItem="X2g-3e-PWs" secondAttribute="centerY" id="5LR-dm-npE"/>
+                                                                <constraint firstItem="6ua-dH-kZc" firstAttribute="centerX" secondItem="X2g-3e-PWs" secondAttribute="centerX" id="VTl-B3-sKf"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM3-Mq-rng" customClass="SMLabel">
+                                                            <rect key="frame" x="14" y="18" width="32" height="76.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="56"/>
+                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_39_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-Q9-mUK" customClass="SMImageView">
+                                                            <rect key="frame" x="60" y="34" width="39" height="45"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="contact_logotype_39_pt_mode_day_image"/>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="contact_logotype_39_pt_mode_night_image"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGh-rc-aId">
+                                                            <rect key="frame" x="0.0" y="94.333333333333343" width="87" height="36"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
+                                                            <state key="normal" title="history">
+                                                                <color key="titleColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <state key="highlighted">
+                                                                <color key="titleColor" red="0.36862745099999999" green="0.6588235294" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIG-3h-5r1" customClass="SMView">
+                                                            <rect key="frame" x="14" y="165" width="358" height="1"/>
+                                                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="5gy-ZX-AWI"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                                                                    <color key="value" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                                                                    <color key="value" red="0.26666666666666666" green="0.29019607843137252" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gi-Yi-Wij" customClass="SMLabel">
+                                                            <rect key="frame" x="84" y="236" width="32" height="76.333333333333329"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="56"/>
+                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="Cwk-lv-5fd" firstAttribute="top" secondItem="he1-Ey-3SI" secondAttribute="top" constant="-24" id="JAT-sT-wLW"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Cwk-lv-5fd" secondAttribute="trailing" constant="-36" id="TlX-wm-GLX"/>
+                                                        <constraint firstItem="bIG-3h-5r1" firstAttribute="leading" secondItem="EM3-Mq-rng" secondAttribute="leading" id="4OS-gY-nfN"/>
+                                                        <constraint firstItem="zzp-Q9-mUK" firstAttribute="centerY" secondItem="EM3-Mq-rng" secondAttribute="centerY" id="7At-ac-b5I"/>
+                                                        <constraint firstItem="zzp-Q9-mUK" firstAttribute="leading" secondItem="EM3-Mq-rng" secondAttribute="trailing" constant="14" id="9wp-p2-RSt"/>
+                                                        <constraint firstItem="bIG-3h-5r1" firstAttribute="centerX" secondItem="W5l-U8-bAG" secondAttribute="centerX" id="CDH-Il-WSh"/>
+                                                        <constraint firstItem="X2g-3e-PWs" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" id="Mej-s7-b3v"/>
+                                                        <constraint firstItem="EM3-Mq-rng" firstAttribute="leading" secondItem="W5l-U8-bAG" secondAttribute="leading" constant="14" id="P5u-H0-8rB"/>
+                                                        <constraint firstItem="X2g-3e-PWs" firstAttribute="leading" secondItem="W5l-U8-bAG" secondAttribute="leading" id="QMs-bO-Q1D"/>
+                                                        <constraint firstAttribute="trailing" secondItem="X2g-3e-PWs" secondAttribute="trailing" id="Y6U-AY-871"/>
+                                                        <constraint firstItem="zGh-rc-aId" firstAttribute="top" secondItem="EM3-Mq-rng" secondAttribute="bottom" id="gE0-mu-Bp7"/>
+                                                        <constraint firstItem="EM3-Mq-rng" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" constant="18" id="iqL-eN-ufH"/>
+                                                        <constraint firstItem="zGh-rc-aId" firstAttribute="leading" secondItem="EM3-Mq-rng" secondAttribute="leading" constant="-14" id="okh-JF-Gxu"/>
+                                                        <constraint firstItem="bIG-3h-5r1" firstAttribute="top" secondItem="zGh-rc-aId" secondAttribute="bottom" constant="34" id="s7y-gh-vSv"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
@@ -119,33 +244,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <variation key="default">
                                                         <mask key="subviews">
-                                                            <exclude reference="Cwk-lv-5fd"/>
-                                                        </mask>
-                                                    </variation>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFD-ai-NYf" customClass="SMView">
-                                                    <rect key="frame" x="400" y="18" width="14" height="494"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_view_right_mask_image" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-TM-6EW">
-                                                            <rect key="frame" x="-36" y="-24" width="64" height="1024"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="6kE-TM-6EW" firstAttribute="top" secondItem="pFD-ai-NYf" secondAttribute="top" constant="-24" id="3bi-Ce-pq9"/>
-                                                        <constraint firstItem="6kE-TM-6EW" firstAttribute="leading" secondItem="pFD-ai-NYf" secondAttribute="leading" constant="-36" id="SSo-ne-HAH"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
-                                                            <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <variation key="default">
-                                                        <mask key="subviews">
-                                                            <exclude reference="6kE-TM-6EW"/>
+                                                            <exclude reference="X2g-3e-PWs"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -154,18 +253,16 @@
                                                 <constraint firstItem="he1-Ey-3SI" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" id="1AR-Yd-th1"/>
                                                 <constraint firstAttribute="height" constant="512" id="3Ii-BA-ayL"/>
                                                 <constraint firstAttribute="trailing" secondItem="W5l-U8-bAG" secondAttribute="trailing" constant="14" id="3zW-UG-2r7"/>
-                                                <constraint firstItem="he1-Ey-3SI" firstAttribute="leading" secondItem="3Zc-8X-gRM" secondAttribute="leading" id="7pe-KS-qsC"/>
-                                                <constraint firstItem="W5l-U8-bAG" firstAttribute="leading" secondItem="he1-Ey-3SI" secondAttribute="trailing" id="9Jl-u4-VbQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="pFD-ai-NYf" secondAttribute="trailing" id="Gf5-0R-tFk"/>
+                                                <constraint firstItem="he1-Ey-3SI" firstAttribute="leading" secondItem="3Zc-8X-gRM" secondAttribute="leading" constant="10" id="7pe-KS-qsC"/>
+                                                <constraint firstAttribute="trailing" secondItem="pFD-ai-NYf" secondAttribute="trailing" constant="10" id="Gf5-0R-tFk"/>
                                                 <constraint firstItem="pFD-ai-NYf" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" id="JGw-gR-XVd"/>
                                                 <constraint firstItem="f3l-w3-ObT" firstAttribute="centerX" secondItem="3Zc-8X-gRM" secondAttribute="centerX" id="Kao-3b-Opi"/>
                                                 <constraint firstItem="W5l-U8-bAG" firstAttribute="leading" secondItem="3Zc-8X-gRM" secondAttribute="leading" constant="14" id="Peg-5B-VRk"/>
                                                 <constraint firstItem="W5l-U8-bAG" firstAttribute="top" secondItem="f3l-w3-ObT" secondAttribute="bottom" constant="12" id="QyX-2M-pgV"/>
-                                                <constraint firstItem="pFD-ai-NYf" firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" id="U5n-hq-s4i"/>
-                                                <constraint firstItem="he1-Ey-3SI" firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" id="WRC-ce-TrU"/>
+                                                <constraint firstItem="pFD-ai-NYf" firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" constant="32" id="U5n-hq-s4i"/>
+                                                <constraint firstItem="he1-Ey-3SI" firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" constant="32" id="WRC-ce-TrU"/>
                                                 <constraint firstItem="f3l-w3-ObT" firstAttribute="top" secondItem="3Zc-8X-gRM" secondAttribute="top" id="iDE-mx-DoN"/>
                                                 <constraint firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" id="klh-dg-oqz"/>
-                                                <constraint firstItem="pFD-ai-NYf" firstAttribute="leading" secondItem="W5l-U8-bAG" secondAttribute="trailing" id="mBb-kL-Kpw"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -239,6 +336,7 @@
             <color key="backgroundColor" red="0.10980392160000001" green="0.015686274510000001" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="5Xy-oI-UWQ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="1xF-rT-G9T"/>
+                <constraint firstItem="X2g-3e-PWs" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="94:812" id="H7X-xo-iaY"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="5Xy-oI-UWQ" secondAttribute="bottom" id="ME1-ZC-mCS"/>
                 <constraint firstItem="5Xy-oI-UWQ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gyM-nj-Fjp"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="5Xy-oI-UWQ" secondAttribute="trailing" id="mCI-jk-Rsi"/>
@@ -251,8 +349,10 @@
         <image name="base_gradient_layer_0_image" width="32" height="812"/>
         <image name="base_gradient_layer_1_image" width="32" height="460"/>
         <image name="base_pattern_image" width="553" height="1091"/>
-        <image name="profile_view_left_mask_image" width="64" height="1024"/>
-        <image name="profile_view_right_mask_image" width="64" height="1024"/>
+        <image name="contact_logotype_18_pt_mode_day_image" width="18" height="21"/>
+        <image name="contact_logotype_18_pt_mode_night_image" width="18" height="21"/>
+        <image name="contact_logotype_39_pt_mode_day_image" width="39" height="45"/>
+        <image name="contact_logotype_39_pt_mode_night_image" width="39" height="45"/>
         <image name="slide_image" width="50" height="6"/>
     </resources>
 </document>

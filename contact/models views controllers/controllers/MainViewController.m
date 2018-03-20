@@ -27,6 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *profileView;
 @property (weak, nonatomic) IBOutlet UIView *contentProfileView;
+@property (weak, nonatomic) IBOutlet UIView *tokensView;
 
 @property (weak, nonatomic) IBOutlet SearchAnimationView *searchAnimationView;
 
@@ -36,9 +37,6 @@
 
 @property (weak, nonatomic) IBOutlet UIView *maskedLeftView;
 @property (weak, nonatomic) IBOutlet UIView *maskedRightView;
-
-@property (weak, nonatomic) IBOutlet UIImageView *maskLeftImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *maskRightImageView;
 
 @property (weak, nonatomic) IBOutlet UISwitch *screenModeSwitch;
 
@@ -75,12 +73,12 @@
         [self stopAccelerometerUpdates];
         [_aboutContactView viewAnimation:ViewAnimationFadeOut animated:YES];
     };
-    _profileScrollView.decelerationRate = 0.84f;
-    _profileScrollView.contentInset = UIEdgeInsetsMake(HEIGHT - 94.f - 18.f, 0.f, 0.f, 0.f);
+    _profileScrollView.decelerationRate = .84f;
+    _profileScrollView.contentInset = UIEdgeInsetsMake(HEIGHT - _tokensView.frame.size.height - 18.f, 0.f, 0.f, 0.f);
     top = -(HEIGHT - _profileView.frame.size.height);
     bottom = -_profileScrollView.contentInset.top;
-    _maskedLeftView.maskView = _maskLeftImageView;
-    _maskedRightView.maskView = _maskRightImageView;
+    [_maskedLeftView cornerRadius:4.f];
+    [_maskedRightView cornerRadius:4.f];
     [self setIsOpen:NO animated:YES];
     _screenModeSwitch.on = [ScreenModeManager shared].isScreenModeNight;
 }
@@ -100,9 +98,10 @@
     if (scrollView == _profileScrollView) {
         CGFloat y = scrollView.contentOffset.y;
         CGFloat percent = (ABS(bottom) - ABS(y)) / (ABS(bottom) - ABS(top));
-        CGFloat margin = _leftMarginProfileViewLC.constant + 4.f;
-        _maskLeftImageView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
-        _maskRightImageView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
+        CGFloat margin = _leftMarginProfileViewLC.constant;
+        _maskedLeftView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
+        _maskedRightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
+        _tokensView.alpha = 1.f - percent;
     }
 }
 
