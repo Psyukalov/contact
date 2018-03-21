@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstManualItemView">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="layer_0_ImageView" destination="tK3-T8-Mu2" id="XwZ-iW-lVK"/>
+                <outlet property="layer_0_View" destination="0FH-4T-AWA" id="hPx-Cj-tuV"/>
+                <outlet property="layer_1_ImageView" destination="fh1-we-ogb" id="GWB-Yv-pKG"/>
+                <outlet property="layer_1_View" destination="Mku-nw-iDi" id="QeQ-41-TCv"/>
+                <outlet property="layer_2_ImageView" destination="5DY-0X-W1W" id="EaV-eD-Hjt"/>
+                <outlet property="layer_2_View" destination="u0Q-XA-09e" id="kdD-Ku-Unb"/>
+                <outlet property="wawes_0_View" destination="mcB-sp-Xs9" id="8Eh-RR-pQC"/>
+                <outlet property="wawes_1_View" destination="rKX-rI-Gmz" id="x38-X1-J1F"/>
+                <outlet property="wawes_2_View" destination="RV2-j4-jfG" id="naa-cu-n3h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FH-4T-AWA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szq-j1-bQh">
+                            <rect key="frame" x="207.5" y="278" width="6" height="40"/>
+                            <subviews>
+                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcB-sp-Xs9" customClass="WavesView">
+                                    <rect key="frame" x="-43" y="-25.5" width="92" height="92"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="92" id="7yS-XD-9nS"/>
+                                        <constraint firstAttribute="width" secondItem="mcB-sp-Xs9" secondAttribute="height" multiplier="1:1" id="bq3-Cr-wXk"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="mcB-sp-Xs9" firstAttribute="centerX" secondItem="szq-j1-bQh" secondAttribute="centerX" id="2O6-vf-33B"/>
+                                <constraint firstItem="mcB-sp-Xs9" firstAttribute="centerY" secondItem="szq-j1-bQh" secondAttribute="centerY" id="Kd7-Oj-G7W"/>
+                                <constraint firstAttribute="width" secondItem="szq-j1-bQh" secondAttribute="height" multiplier="2:12" id="p7i-JD-ASd"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_0_0_image" translatesAutoresizingMaskIntoConstraints="NO" id="tK3-T8-Mu2" customClass="SMImageView">
+                            <rect key="frame" x="161.5" y="278" width="52" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="tK3-T8-Mu2" secondAttribute="height" multiplier="64:133" id="rqi-eX-ARe"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_0_0_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_0_0_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="szq-j1-bQh" firstAttribute="top" secondItem="tK3-T8-Mu2" secondAttribute="top" id="8ZV-39-2rY"/>
+                        <constraint firstItem="szq-j1-bQh" firstAttribute="trailing" secondItem="tK3-T8-Mu2" secondAttribute="trailing" id="BAc-hq-Y5A"/>
+                        <constraint firstItem="szq-j1-bQh" firstAttribute="height" secondItem="tK3-T8-Mu2" secondAttribute="height" multiplier="44:120" id="Glu-Xi-v62"/>
+                        <constraint firstItem="tK3-T8-Mu2" firstAttribute="centerY" secondItem="0FH-4T-AWA" secondAttribute="centerY" id="LFP-U0-9IM"/>
+                        <constraint firstItem="tK3-T8-Mu2" firstAttribute="centerX" secondItem="0FH-4T-AWA" secondAttribute="centerX" id="OyU-71-Iy5"/>
+                        <constraint firstItem="tK3-T8-Mu2" firstAttribute="height" secondItem="0FH-4T-AWA" secondAttribute="height" multiplier="133:812" id="Rcj-BP-huV"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mku-nw-iDi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-ji-5Bl">
+                            <rect key="frame" x="24" y="360" width="11.5" height="67.5"/>
+                            <subviews>
+                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKX-rI-Gmz" customClass="WavesView">
+                                    <rect key="frame" x="-40.5" y="-12" width="92" height="92"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="92" id="85i-kQ-zd3"/>
+                                        <constraint firstAttribute="width" secondItem="rKX-rI-Gmz" secondAttribute="height" multiplier="1:1" id="kmI-yp-KB9"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hkd-ji-5Bl" secondAttribute="height" multiplier="2:12" id="Db3-qA-fGm"/>
+                                <constraint firstItem="rKX-rI-Gmz" firstAttribute="centerX" secondItem="hkd-ji-5Bl" secondAttribute="centerX" id="EYG-c9-xkL"/>
+                                <constraint firstItem="rKX-rI-Gmz" firstAttribute="centerY" secondItem="hkd-ji-5Bl" secondAttribute="centerY" id="VzR-zw-Rht"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_0_1_image" translatesAutoresizingMaskIntoConstraints="NO" id="fh1-we-ogb" customClass="SMImageView">
+                            <rect key="frame" x="24" y="360" width="135" height="157"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="fh1-we-ogb" secondAttribute="height" multiplier="164:190" id="WSK-z3-gsz"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_0_1_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_0_1_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hkd-ji-5Bl" firstAttribute="top" secondItem="fh1-we-ogb" secondAttribute="top" id="Aog-rC-3bV"/>
+                        <constraint firstItem="hkd-ji-5Bl" firstAttribute="leading" secondItem="fh1-we-ogb" secondAttribute="leading" id="J2Z-CY-61c"/>
+                        <constraint firstItem="fh1-we-ogb" firstAttribute="leading" secondItem="Mku-nw-iDi" secondAttribute="leading" constant="24" id="SFs-Vz-5rx"/>
+                        <constraint firstItem="fh1-we-ogb" firstAttribute="height" secondItem="Mku-nw-iDi" secondAttribute="height" multiplier="190:812" id="rSJ-kM-yaH"/>
+                        <constraint firstItem="hkd-ji-5Bl" firstAttribute="height" secondItem="fh1-we-ogb" secondAttribute="height" multiplier="54:126" id="tcK-YJ-OoV"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-XA-09e">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Soq-hu-flW">
+                            <rect key="frame" x="327.5" y="402" width="9.5" height="57.5"/>
+                            <subviews>
+                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV2-j4-jfG" customClass="WavesView">
+                                    <rect key="frame" x="-41.5" y="-17" width="92" height="92"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="92" id="525-Go-ELw"/>
+                                        <constraint firstAttribute="width" secondItem="RV2-j4-jfG" secondAttribute="height" multiplier="1:1" id="EKG-M8-T6U"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Soq-hu-flW" secondAttribute="height" multiplier="2:12" id="2LG-06-cqc"/>
+                                <constraint firstItem="RV2-j4-jfG" firstAttribute="centerY" secondItem="Soq-hu-flW" secondAttribute="centerY" id="FLM-Hv-OFw"/>
+                                <constraint firstItem="RV2-j4-jfG" firstAttribute="centerX" secondItem="Soq-hu-flW" secondAttribute="centerX" id="caU-LY-yZr"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_0_2_image" translatesAutoresizingMaskIntoConstraints="NO" id="5DY-0X-W1W" customClass="SMImageView">
+                            <rect key="frame" x="247.5" y="402" width="89.5" height="198"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="5DY-0X-W1W" secondAttribute="height" multiplier="110:241" id="Bvp-Fo-bu7"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_0_2_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_0_2_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Soq-hu-flW" firstAttribute="top" secondItem="5DY-0X-W1W" secondAttribute="top" id="7Ad-jU-tzD"/>
+                        <constraint firstAttribute="trailing" secondItem="5DY-0X-W1W" secondAttribute="trailing" constant="38" id="dht-78-3Xt"/>
+                        <constraint firstItem="Soq-hu-flW" firstAttribute="trailing" secondItem="5DY-0X-W1W" secondAttribute="trailing" id="ley-99-yPw"/>
+                        <constraint firstItem="Soq-hu-flW" firstAttribute="height" secondItem="5DY-0X-W1W" secondAttribute="height" multiplier="94:325" id="lg5-z7-4LW"/>
+                        <constraint firstItem="5DY-0X-W1W" firstAttribute="height" secondItem="u0Q-XA-09e" secondAttribute="height" multiplier="241:812" id="wSd-BQ-cto"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Mku-nw-iDi" secondAttribute="bottom" id="4zZ-fU-Uiy"/>
+                <constraint firstAttribute="bottom" secondItem="u0Q-XA-09e" secondAttribute="bottom" id="Crx-fy-oSs"/>
+                <constraint firstItem="0FH-4T-AWA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="D6U-ws-3rC"/>
+                <constraint firstItem="u0Q-XA-09e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DoM-XN-cYg"/>
+                <constraint firstItem="Mku-nw-iDi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EkP-Ba-eqK"/>
+                <constraint firstAttribute="bottom" secondItem="0FH-4T-AWA" secondAttribute="bottom" id="EmY-Kb-l34"/>
+                <constraint firstAttribute="trailing" secondItem="Mku-nw-iDi" secondAttribute="trailing" id="LVD-dL-Bsg"/>
+                <constraint firstItem="Mku-nw-iDi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dPr-WK-g16"/>
+                <constraint firstAttribute="trailing" secondItem="0FH-4T-AWA" secondAttribute="trailing" id="h3F-vC-8s5"/>
+                <constraint firstAttribute="trailing" secondItem="u0Q-XA-09e" secondAttribute="trailing" id="hcD-7G-x3m"/>
+                <constraint firstItem="u0Q-XA-09e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kL3-3b-wOG"/>
+                <constraint firstItem="fh1-we-ogb" firstAttribute="top" secondItem="tK3-T8-Mu2" secondAttribute="top" constant="82" id="nMh-HQ-ayM"/>
+                <constraint firstItem="5DY-0X-W1W" firstAttribute="top" secondItem="fh1-we-ogb" secondAttribute="top" constant="42" id="qph-Nh-WFQ"/>
+                <constraint firstItem="0FH-4T-AWA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="y0R-bN-6Xp"/>
+            </constraints>
+            <point key="canvasLocation" x="-122" y="1101"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="layer_mode_day_0_0_image" width="64" height="133"/>
+        <image name="layer_mode_day_0_1_image" width="164" height="190"/>
+        <image name="layer_mode_day_0_2_image" width="109" height="241"/>
+        <image name="layer_mode_night_0_0_image" width="64" height="133"/>
+        <image name="layer_mode_night_0_1_image" width="164" height="190"/>
+        <image name="layer_mode_night_0_2_image" width="109" height="241"/>
+    </resources>
+</document>

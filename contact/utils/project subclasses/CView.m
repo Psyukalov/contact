@@ -9,6 +9,8 @@
 
 #import "CView.h"
 
+#import "ScreenModeManager.h"
+
 
 @implementation CView
 
@@ -16,8 +18,8 @@
 
 - (void)setParallaxPoint:(CGPoint)parallaxPoint {
     _parallaxPoint = parallaxPoint;
-    _parallaxPoint.x = _parallaxRadius * _parallaxPoint.x;
-    _parallaxPoint.y = _parallaxRadius * _parallaxPoint.y;
+    _parallaxPoint.x *= _parallaxRadius;
+    _parallaxPoint.y *= _parallaxRadius;
 }
 
 - (void)setNeeded3DEffect:(BOOL)needed3DEffect {
@@ -129,6 +131,13 @@
 
 - (void)setNeeded3DEffect:(BOOL)needed3DEffect animated:(BOOL)animated {
     _needed3DEffect = needed3DEffect;
+}
+
+#pragma mark - Ovveride methods
+
+- (void)loadViewFromNib {
+    [super loadViewFromNib];
+    [[ScreenModeManager shared] applyScreenMode];
 }
 
 @end

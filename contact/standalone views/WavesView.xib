@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WavesView">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="wave_0_ImageView" destination="rdo-X4-Uzo" id="tba-Xm-fWZ"/>
+                <outlet property="wave_1_ImageView" destination="Q3d-Pc-Mwg" id="qVF-Ya-o2L"/>
+                <outlet property="wave_2_ImageView" destination="8Ui-H7-kDB" id="Ohi-MV-gZC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_0_3_image" translatesAutoresizingMaskIntoConstraints="NO" id="rdo-X4-Uzo" customClass="SMImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rdo-X4-Uzo" secondAttribute="height" multiplier="1:1" id="GI4-BV-OfK"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_0_3_image"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_0_3_image"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_0_3_image" translatesAutoresizingMaskIntoConstraints="NO" id="Q3d-Pc-Mwg" customClass="SMImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_0_3_image"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_0_3_image"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_0_3_image" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-H7-kDB" customClass="SMImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_0_3_image"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_0_3_image"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8Ui-H7-kDB" firstAttribute="leading" secondItem="Q3d-Pc-Mwg" secondAttribute="leading" id="4dB-fJ-zK8"/>
+                <constraint firstItem="Q3d-Pc-Mwg" firstAttribute="centerX" secondItem="rdo-X4-Uzo" secondAttribute="centerX" id="59T-20-6k9"/>
+                <constraint firstItem="rdo-X4-Uzo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="94j-D8-XBx"/>
+                <constraint firstItem="Q3d-Pc-Mwg" firstAttribute="top" secondItem="rdo-X4-Uzo" secondAttribute="top" id="N3g-yN-8St"/>
+                <constraint firstItem="Q3d-Pc-Mwg" firstAttribute="leading" secondItem="rdo-X4-Uzo" secondAttribute="leading" id="RSd-MY-ZOl"/>
+                <constraint firstItem="8Ui-H7-kDB" firstAttribute="centerX" secondItem="Q3d-Pc-Mwg" secondAttribute="centerX" id="WT2-sf-SU3"/>
+                <constraint firstItem="8Ui-H7-kDB" firstAttribute="centerY" secondItem="Q3d-Pc-Mwg" secondAttribute="centerY" id="ebr-3b-zLC"/>
+                <constraint firstItem="Q3d-Pc-Mwg" firstAttribute="centerY" secondItem="rdo-X4-Uzo" secondAttribute="centerY" id="gqU-e1-Lx9"/>
+                <constraint firstItem="rdo-X4-Uzo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rzQ-I3-cbG"/>
+                <constraint firstItem="8Ui-H7-kDB" firstAttribute="top" secondItem="Q3d-Pc-Mwg" secondAttribute="top" id="u2O-Wl-Iq3"/>
+                <constraint firstItem="rdo-X4-Uzo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zti-ro-fQZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-29.5" y="83"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="layer_mode_day_0_3_image" width="46" height="46"/>
+        <image name="layer_mode_night_0_3_image" width="46" height="46"/>
+    </resources>
+</document>

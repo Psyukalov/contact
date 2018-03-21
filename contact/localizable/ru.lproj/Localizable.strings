@@ -59,3 +59,13 @@
 "mvc_label_0" = "Невидимый";
 "mvc_label_1" = "Уведомления";
 "mvc_label_2" = "Ночной режим";
+
+// Manual view
+
+"mv_title_0" = "Привет!";
+"mv_title_1" = "";
+"mv_title_2" = "";
+
+"mv_title_3" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
+"mv_title_4" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
+"mv_title_5" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";

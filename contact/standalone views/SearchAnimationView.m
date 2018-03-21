@@ -38,7 +38,7 @@
 
 - (void)loadViewFromNib {
     [super loadViewFromNib];
-    _animationKeys = @[@"search_animatio_0_key", @"search_animatio_1_key", @"search_animatio_2_key"];
+    _animationKeys = @[@"search_animation_0_key", @"search_animation_1_key", @"search_animation_2_key"];
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
     scaleAnimation.fromValue = @(0.f);

@@ -11,7 +11,7 @@
 
 #import "AuthorizationView.h"
 #import "RegistrationView.h"
-#import "AboutContactView.h"
+#import "ManualView.h"
 
 #import "ScreenModeManager.h"
 
@@ -26,7 +26,7 @@
 
 @property (weak, nonatomic) IBOutlet RegistrationView *registrationView;
 
-@property (weak, nonatomic) IBOutlet AboutContactView *aboutContactView;
+@property (strong, nonatomic) CView *customView;
 
 @end
 
@@ -42,16 +42,11 @@
     [self interfaceHidden:YES animated:NO];
     [_authorizationView viewDirection:ViewDirectionBottom animated:NO];
     [_registrationView viewDirection:ViewDirectionBottom animated:NO];
-    [_aboutContactView viewAnimation:ViewAnimationFadeOut animated:NO];
     _authorizationView.delegate = self;
     _registrationView.delegate = self;
     _registrationView.didCloseViewCompletion = ^{
         [_authorizationView viewDirection:ViewDirectionCenter animated:YES];
         [_registrationView viewDirection:ViewDirectionBottom animated:YES];
-    };
-    _aboutContactView.didCloseViewCompletion = ^{
-        [self stopAccelerometerUpdates];
-        [_aboutContactView viewAnimation:ViewAnimationFadeOut animated:YES];
     };
 }
 
@@ -64,7 +59,7 @@
 
 - (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration {
     [super accelerometerUpdateWithAcceleration:acceleration];
-    _aboutContactView.parallaxPoint = CGPointMake(acceleration.x, acceleration.y);
+    _customView.parallaxPoint = CGPointMake(acceleration.x, acceleration.y);
 }
 
 #pragma mark - Class methods
@@ -144,7 +139,19 @@
 
 - (IBAction)instructionButton_TUI:(UIButton *)sender {
     [self startAccelerometerUpdates];
-    [_aboutContactView viewAnimation:ViewAnimationFadeIn animated:YES];
+    ManualView *manualView = [[ManualView alloc] initWithFrame:self.view.bounds];
+    _customView = manualView;
+    [self.view addSubview:manualView];
+    [manualView viewAnimation:ViewAnimationFadeOut animated:NO];
+    [manualView viewAnimation:ViewAnimationFadeIn animated:YES];
+    __weak ManualView *weakManualView = manualView;
+    manualView.didCloseViewCompletion = ^{
+        [self stopAccelerometerUpdates];
+        _customView = nil;
+        [weakManualView viewAnimation:ViewAnimationFadeOut animated:YES completion:^{
+            [weakManualView removeFromSuperview];
+        }];
+    };
 }
 
 @end

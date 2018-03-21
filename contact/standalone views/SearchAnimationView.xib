@@ -16,6 +16,11 @@
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchAnimationView">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="logotypeImageView" destination="Z9O-8l-pjP" id="eGk-Om-OUR"/>
                 <outlet property="searchingLabel" destination="tGV-Gg-HHC" id="AsM-sr-nNt"/>

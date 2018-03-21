@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManualView">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="carouselView" destination="Vl9-HD-yxJ" id="THQ-HR-oXg"/>
+                <outlet property="descriptionLabel" destination="1KP-dI-Hn6" id="BpN-AH-rjp"/>
+                <outlet property="pageControl" destination="d9t-9u-h0c" id="kh5-ek-JF0"/>
+                <outlet property="titleLabel" destination="JGC-kR-o7Y" id="B1u-f0-j2d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SMView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl9-HD-yxJ" customClass="iCarousel">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGC-kR-o7Y" customClass="SMLabel">
+                            <rect key="frame" x="159" y="74" width="58" height="42"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="36"/>
+                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="JGC-kR-o7Y" firstAttribute="top" secondItem="Vl9-HD-yxJ" secondAttribute="top" constant="74" id="EgP-ny-8vS"/>
+                        <constraint firstItem="JGC-kR-o7Y" firstAttribute="centerX" secondItem="Vl9-HD-yxJ" secondAttribute="centerX" id="LLN-Wo-u9v"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IZa-5Q-8dd"/>
+                        <outlet property="delegate" destination="-1" id="uea-ha-9sX"/>
+                    </connections>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfU-Yt-57R" customClass="SMButton">
+                    <rect key="frame" x="321" y="74" width="50" height="50"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                    <state key="normal" image="close_mode_day_button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayDefaultImage" value="close_mode_day_button"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighDefaultImage" value="close_mode_night_button"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="closeButton_TUI:" destination="-1" eventType="touchUpInside" id="NTc-1A-5iM"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KP-dI-Hn6" customClass="SMLabel">
+                    <rect key="frame" x="34" y="138" width="307" height="16.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                            <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="d9t-9u-h0c">
+                    <rect key="frame" x="168" y="622" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vl9-HD-yxJ" secondAttribute="trailing" id="8mc-hs-WwP"/>
+                <constraint firstAttribute="trailing" secondItem="OfU-Yt-57R" secondAttribute="trailing" constant="4" id="EiL-w8-iLi"/>
+                <constraint firstItem="1KP-dI-Hn6" firstAttribute="centerX" secondItem="JGC-kR-o7Y" secondAttribute="centerX" id="Kdn-jx-ER7"/>
+                <constraint firstItem="1KP-dI-Hn6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="34" id="KvL-PW-mVD"/>
+                <constraint firstItem="Vl9-HD-yxJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NxU-o0-JdD"/>
+                <constraint firstItem="OfU-Yt-57R" firstAttribute="top" secondItem="JGC-kR-o7Y" secondAttribute="top" id="Ph9-lQ-M17"/>
+                <constraint firstAttribute="bottom" secondItem="Vl9-HD-yxJ" secondAttribute="bottom" id="Urc-gv-RVV"/>
+                <constraint firstItem="1KP-dI-Hn6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="138" id="Zah-Jg-Svf"/>
+                <constraint firstItem="Vl9-HD-yxJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bwx-Om-GjQ"/>
+                <constraint firstAttribute="bottom" secondItem="d9t-9u-h0c" secondAttribute="bottom" constant="8" id="dt3-Kf-Uy4"/>
+                <constraint firstItem="d9t-9u-h0c" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v3C-aD-Xt2"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                    <color key="value" red="0.16470588235294117" green="0.1803921568627451" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_mode_day_button" width="18" height="18"/>
+        <image name="close_mode_night_button" width="18" height="18"/>
+    </resources>
+</document>

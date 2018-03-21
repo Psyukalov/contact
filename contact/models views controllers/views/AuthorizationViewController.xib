@@ -21,7 +21,6 @@
                 <userDefinedRuntimeAttribute type="boolean" keyPath="neededAccelerometerUpdates" value="YES"/>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="aboutContactView" destination="SsV-2e-FdR" id="CSd-p1-3Us"/>
                 <outlet property="authorizationView" destination="hjQ-nd-euy" id="GJ5-aF-KxK"/>
                 <outlet property="baseGradientLayer_0_ImageView" destination="UnT-05-LAl" id="sKQ-ua-0SV"/>
                 <outlet property="baseGradientLayer_1_ImageView" destination="vF9-hM-ZwU" id="efv-gV-Yea"/>
@@ -81,9 +80,6 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_39_pt_mode_night_image" translatesAutoresizingMaskIntoConstraints="NO" id="hW5-Xd-rpe">
                                     <rect key="frame" x="349" y="56" width="39" height="45"/>
                                 </imageView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsV-2e-FdR" customClass="AboutContactView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="hW5-Xd-rpe" firstAttribute="centerY" secondItem="WHI-7W-VHh" secondAttribute="centerY" id="1ic-SP-RWQ"/>
@@ -102,15 +98,11 @@
                                 <constraint firstAttribute="bottom" secondItem="Kcp-Dm-MUc" secondAttribute="bottom" id="b3x-5W-JHW"/>
                                 <constraint firstAttribute="bottom" secondItem="hjQ-nd-euy" secondAttribute="bottom" id="c6Y-G2-903"/>
                                 <constraint firstItem="vF9-hM-ZwU" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="cnq-Jy-lO9"/>
-                                <constraint firstItem="SsV-2e-FdR" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="dqB-Hw-xZC"/>
                                 <constraint firstAttribute="bottom" secondItem="fhU-vh-rXe" secondAttribute="bottom" id="eCS-Y4-vWJ"/>
                                 <constraint firstItem="WHI-7W-VHh" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" constant="26" id="gHo-QA-Umv"/>
                                 <constraint firstItem="fhU-vh-rXe" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="imj-kR-lWi"/>
-                                <constraint firstItem="SsV-2e-FdR" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="jvX-e7-BP6"/>
                                 <constraint firstAttribute="trailing" secondItem="Kcp-Dm-MUc" secondAttribute="trailing" id="k2g-M4-YB2"/>
                                 <constraint firstAttribute="trailing" secondItem="fhU-vh-rXe" secondAttribute="trailing" id="q3x-4S-P2N"/>
-                                <constraint firstAttribute="bottom" secondItem="SsV-2e-FdR" secondAttribute="bottom" id="sWP-oD-juY"/>
-                                <constraint firstAttribute="trailing" secondItem="SsV-2e-FdR" secondAttribute="trailing" id="t67-bV-vuH"/>
                                 <constraint firstItem="UnT-05-LAl" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="twV-KB-gkJ"/>
                                 <constraint firstAttribute="trailing" secondItem="UnT-05-LAl" secondAttribute="trailing" id="u0Q-Uv-sOz"/>
                                 <constraint firstItem="hjQ-nd-euy" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="uSf-Cm-nJp"/>

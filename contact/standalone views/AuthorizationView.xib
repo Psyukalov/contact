@@ -52,10 +52,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1b-dx-pY5">
-                    <rect key="frame" x="0.0" y="407.5" width="172" height="79"/>
+                    <rect key="frame" x="0.0" y="423" width="172" height="68"/>
                     <subviews>
                         <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAi-Jp-11Y">
-                            <rect key="frame" x="0.0" y="0.0" width="151" height="79"/>
+                            <rect key="frame" x="0.0" y="0.0" width="151" height="68"/>
                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="58"/>
                             <inset key="contentEdgeInsets" minX="26" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="login">
@@ -83,7 +83,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEE-bn-pkY">
-                    <rect key="frame" x="0.0" y="506" width="375" height="160.5"/>
+                    <rect key="frame" x="0.0" y="510.5" width="375" height="156"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-AU-M4R">
                             <rect key="frame" x="0.0" y="0.0" width="54" height="44"/>
@@ -118,13 +118,13 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-AE-ctG">
-                            <rect key="frame" x="26" y="52" width="65.5" height="19.5"/>
+                            <rect key="frame" x="26" y="52" width="70" height="16.5"/>
                             <fontDescription key="fontDescription" name="OpenSans-LightItalic" family="Open Sans" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copyright" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj2-8c-Wt7">
-                            <rect key="frame" x="26" y="131.5" width="35" height="11"/>
+                            <rect key="frame" x="26" y="128.5" width="34" height="9.5"/>
                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -146,7 +146,7 @@
                     </constraints>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-BQ-h1N">
-                    <rect key="frame" x="0.0" y="281" width="375" height="386"/>
+                    <rect key="frame" x="0.0" y="287" width="375" height="380"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" adjustsFontSizeToFit="NO" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Klx-ut-egR">
                             <rect key="frame" x="30" y="0.0" width="315" height="44"/>
@@ -172,7 +172,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Ac-Udh">
-                            <rect key="frame" x="218" y="122" width="157" height="38"/>
+                            <rect key="frame" x="216" y="122" width="159" height="35"/>
                             <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="16"/>
                             <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
                             <state key="normal" title="forgot password">
@@ -186,7 +186,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsT-cy-tOv">
-                            <rect key="frame" x="144" y="252" width="87" height="38"/>
+                            <rect key="frame" x="145" y="249" width="85" height="35"/>
                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                             <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                             <state key="normal" title="sign up">
@@ -200,7 +200,7 @@
                             </connections>
                         </button>
                         <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGN-Fl-m5K">
-                            <rect key="frame" x="28" y="306" width="319" height="60"/>
+                            <rect key="frame" x="28" y="300" width="319" height="60"/>
                             <color key="backgroundColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="8Th-2O-1Gy"/>

@@ -14,6 +14,15 @@
 		C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DDA205C0F4300E8F336 /* SMButton.m */; };
 		C7330DDD205C234B00E8F336 /* RegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7330DDC205C234B00E8F336 /* RegistrationView.xib */; };
 		C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DE2205C294E00E8F336 /* UILabel+Custom.m */; };
+		C763786220624BE400C1DD8B /* ManualView.m in Sources */ = {isa = PBXBuildFile; fileRef = C763786120624BE400C1DD8B /* ManualView.m */; };
+		C763786420624C1400C1DD8B /* ManualView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C763786320624C1300C1DD8B /* ManualView.xib */; };
+		C76378672062623D00C1DD8B /* CItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C76378662062623D00C1DD8B /* CItemView.m */; };
+		C763786A2062631C00C1DD8B /* FirstManualItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C76378692062631C00C1DD8B /* FirstManualItemView.m */; };
+		C763786C2062635300C1DD8B /* FirstManualItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C763786B2062635300C1DD8B /* FirstManualItemView.xib */; };
+		C763786F206264E600C1DD8B /* WavesView.m in Sources */ = {isa = PBXBuildFile; fileRef = C763786E206264E600C1DD8B /* WavesView.m */; };
+		C7637871206264F200C1DD8B /* WavesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7637870206264F200C1DD8B /* WavesView.xib */; };
+		C76378772062A04000C1DD8B /* SecondManualItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C76378762062A04000C1DD8B /* SecondManualItemView.m */; };
+		C76378792062A0D400C1DD8B /* SecondManualItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76378782062A0D400C1DD8B /* SecondManualItemView.xib */; };
 		C785C22F205FDC5F00FC3927 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C785C22E205FDC5F00FC3927 /* MainViewController.m */; };
 		C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C785C231205FDCA600FC3927 /* MainViewController.xib */; };
 		C785C235205FEE2900FC3927 /* SearchAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C785C234205FEE2900FC3927 /* SearchAnimationView.m */; };
@@ -69,6 +78,21 @@
 		C7330DDC205C234B00E8F336 /* RegistrationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationView.xib; sourceTree = "<group>"; };
 		C7330DE1205C294E00E8F336 /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
 		C7330DE2205C294E00E8F336 /* UILabel+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Custom.m"; sourceTree = "<group>"; };
+		C763786020624BE400C1DD8B /* ManualView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualView.h; sourceTree = "<group>"; };
+		C763786120624BE400C1DD8B /* ManualView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualView.m; sourceTree = "<group>"; };
+		C763786320624C1300C1DD8B /* ManualView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualView.xib; sourceTree = "<group>"; };
+		C76378652062623D00C1DD8B /* CItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CItemView.h; sourceTree = "<group>"; };
+		C76378662062623D00C1DD8B /* CItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CItemView.m; sourceTree = "<group>"; };
+		C76378682062631C00C1DD8B /* FirstManualItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstManualItemView.h; sourceTree = "<group>"; };
+		C76378692062631C00C1DD8B /* FirstManualItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstManualItemView.m; sourceTree = "<group>"; };
+		C763786B2062635300C1DD8B /* FirstManualItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstManualItemView.xib; sourceTree = "<group>"; };
+		C763786D206264E600C1DD8B /* WavesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WavesView.h; sourceTree = "<group>"; };
+		C763786E206264E600C1DD8B /* WavesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WavesView.m; sourceTree = "<group>"; };
+		C7637870206264F200C1DD8B /* WavesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WavesView.xib; sourceTree = "<group>"; };
+		C76378722062723600C1DD8B /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		C76378752062A04000C1DD8B /* SecondManualItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondManualItemView.h; sourceTree = "<group>"; };
+		C76378762062A04000C1DD8B /* SecondManualItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondManualItemView.m; sourceTree = "<group>"; };
+		C76378782062A0D400C1DD8B /* SecondManualItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondManualItemView.xib; sourceTree = "<group>"; };
 		C785C22D205FDC5F00FC3927 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C785C22E205FDC5F00FC3927 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C785C231205FDCA600FC3927 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -128,7 +152,6 @@
 		C7FBC2752059534A00A49F14 /* AuthorizationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationView.xib; sourceTree = "<group>"; };
 		C7FBC2772059579A00A49F14 /* UIView+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Custom.h"; sourceTree = "<group>"; };
 		C7FBC2782059579A00A49F14 /* UIView+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Custom.m"; sourceTree = "<group>"; };
-		C7FBC27A20595BB300A49F14 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		C7FBC27B2059781F00A49F14 /* UITextField+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Custom.m"; sourceTree = "<group>"; };
 		C7FBC27C2059781F00A49F14 /* UITextField+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Custom.h"; sourceTree = "<group>"; };
 		C7FBC27E20597A3300A49F14 /* RegistrationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationView.h; sourceTree = "<group>"; };
@@ -245,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				C7FBC22720591DD900A49F14 /* categories */,
-				C7FBC27A20595BB300A49F14 /* Macros.h */,
+				C76378722062723600C1DD8B /* Macros.h */,
 				C7FBC233205927F300A49F14 /* project subclasses */,
 				C7E41B71205BDB3300C4B96F /* screen mode subclasses */,
 				C7FBC22820591DD900A49F14 /* subclasses */,
@@ -296,6 +319,8 @@
 		C7FBC233205927F300A49F14 /* project subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				C76378652062623D00C1DD8B /* CItemView.h */,
+				C76378662062623D00C1DD8B /* CItemView.m */,
 				C7F41397205BBC8A00AA316D /* CObject.h */,
 				C7F41396205BBC8A00AA316D /* CObject.m */,
 				C7FBC26F205952E300A49F14 /* CView.h */,
@@ -369,12 +394,24 @@
 				C7FBC2722059533700A49F14 /* AuthorizationView.h */,
 				C7FBC2732059533700A49F14 /* AuthorizationView.m */,
 				C7FBC2752059534A00A49F14 /* AuthorizationView.xib */,
+				C76378682062631C00C1DD8B /* FirstManualItemView.h */,
+				C76378692062631C00C1DD8B /* FirstManualItemView.m */,
+				C763786B2062635300C1DD8B /* FirstManualItemView.xib */,
+				C763786020624BE400C1DD8B /* ManualView.h */,
+				C763786120624BE400C1DD8B /* ManualView.m */,
+				C763786320624C1300C1DD8B /* ManualView.xib */,
 				C7FBC27E20597A3300A49F14 /* RegistrationView.h */,
 				C7FBC27F20597A3300A49F14 /* RegistrationView.m */,
 				C7330DDC205C234B00E8F336 /* RegistrationView.xib */,
 				C785C233205FEE2900FC3927 /* SearchAnimationView.h */,
 				C785C234205FEE2900FC3927 /* SearchAnimationView.m */,
 				C785C236205FEE3F00FC3927 /* SearchAnimationView.xib */,
+				C76378752062A04000C1DD8B /* SecondManualItemView.h */,
+				C76378762062A04000C1DD8B /* SecondManualItemView.m */,
+				C76378782062A0D400C1DD8B /* SecondManualItemView.xib */,
+				C763786D206264E600C1DD8B /* WavesView.h */,
+				C763786E206264E600C1DD8B /* WavesView.m */,
+				C7637870206264F200C1DD8B /* WavesView.xib */,
 			);
 			path = "standalone views";
 			sourceTree = "<group>";
@@ -445,6 +482,8 @@
 				C7FBC2762059534A00A49F14 /* AuthorizationView.xib in Resources */,
 				C7FBC24C2059339500A49F14 /* activity_indicator_image@3x.png in Resources */,
 				C7FBC25C2059383000A49F14 /* OpenSans-ExtraBold.ttf in Resources */,
+				C7637871206264F200C1DD8B /* WavesView.xib in Resources */,
+				C763786C2062635300C1DD8B /* FirstManualItemView.xib in Resources */,
 				C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */,
 				C7FBC2152059087600A49F14 /* Assets.xcassets in Resources */,
 				C7FBC2602059383000A49F14 /* OpenSans-LightItalic.ttf in Resources */,
@@ -455,9 +494,11 @@
 				C7FBC22C20591E2D00A49F14 /* Localizable.strings in Resources */,
 				C7FBC25A2059383000A49F14 /* OpenSans-Bold.ttf in Resources */,
 				C7FBC24B2059339500A49F14 /* activity_indicator_image@2x.png in Resources */,
+				C76378792062A0D400C1DD8B /* SecondManualItemView.xib in Resources */,
 				C7FBC25F2059383000A49F14 /* OpenSans-Light.ttf in Resources */,
 				C7FBC2612059383000A49F14 /* OpenSans-Regular.ttf in Resources */,
 				C7FBC2632059383000A49F14 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				C763786420624C1400C1DD8B /* ManualView.xib in Resources */,
 				C7FBC25D2059383000A49F14 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,8 +513,10 @@
 				C7FBC2792059579A00A49F14 /* UIView+Custom.m in Sources */,
 				C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */,
 				C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */,
+				C76378672062623D00C1DD8B /* CItemView.m in Sources */,
 				C7FBC2362059286F00A49F14 /* View.m in Sources */,
 				C7FBC24820592E3F00A49F14 /* TableView.m in Sources */,
+				C763786220624BE400C1DD8B /* ManualView.m in Sources */,
 				C7FBC28020597A3300A49F14 /* RegistrationView.m in Sources */,
 				C7FBC2742059533700A49F14 /* AuthorizationView.m in Sources */,
 				C7FBC267205939EA00A49F14 /* CViewController.m in Sources */,
@@ -486,11 +529,14 @@
 				C7E41B74205BDB6100C4B96F /* SMView.m in Sources */,
 				C7F41398205BBC8A00AA316D /* CObject.m in Sources */,
 				C7FBC271205952E300A49F14 /* CView.m in Sources */,
+				C763786A2062631C00C1DD8B /* FirstManualItemView.m in Sources */,
+				C76378772062A04000C1DD8B /* SecondManualItemView.m in Sources */,
 				C71CB47920614ED700DC7ADD /* Switch.m in Sources */,
 				C7FBC21B2059087600A49F14 /* main.m in Sources */,
 				C7E41B77205BDC9200C4B96F /* SMLabel.m in Sources */,
 				C785C22F205FDC5F00FC3927 /* MainViewController.m in Sources */,
 				C7FBC24520592CF000A49F14 /* VPActivityIndicatorImageView.m in Sources */,
+				C763786F206264E600C1DD8B /* WavesView.m in Sources */,
 				C7FBC20D2059087600A49F14 /* AppDelegate.m in Sources */,
 				C7330DD8205C099100E8F336 /* SMImageView.m in Sources */,
 				C7330DD3205C075D00E8F336 /* AboutContactView.m in Sources */,
