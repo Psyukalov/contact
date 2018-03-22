@@ -42,6 +42,8 @@ IB_DESIGNABLE
 
 @property (assign, nonatomic) BOOL needed3DEffect;
 
+@property (assign, nonatomic) CGRect keyboardFrame;
+
 @property (copy, nonatomic) CViewCompletion didCloseViewCompletion;
 
 - (void)viewDirection:(ViewDirection)viewDirection animated:(BOOL)animated;

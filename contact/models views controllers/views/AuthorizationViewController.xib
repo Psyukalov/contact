@@ -38,7 +38,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Tqr-Uy-z0u">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Tqr-Uy-z0u">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9p-Vi-14F">
@@ -54,10 +54,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjQ-nd-euy" customClass="AuthorizationView">
-                                    <rect key="frame" x="0.0" y="109.66666666666669" width="414" height="626.33333333333326"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcp-Dm-MUc" customClass="RegistrationView">
-                                    <rect key="frame" x="0.0" y="98" width="414" height="638"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHI-7W-VHh">
                                     <rect key="frame" x="26" y="60" width="98" height="38"/>
@@ -86,9 +86,8 @@
                                 <constraint firstItem="fhU-vh-rXe" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="6aL-I0-kOQ"/>
                                 <constraint firstItem="WHI-7W-VHh" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" constant="60" id="93o-bP-UIi"/>
                                 <constraint firstItem="UnT-05-LAl" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="9zs-bA-ZdF"/>
-                                <constraint firstItem="hjQ-nd-euy" firstAttribute="top" secondItem="hW5-Xd-rpe" secondAttribute="bottom" constant="8" id="H0E-9y-IAk"/>
+                                <constraint firstItem="Kcp-Dm-MUc" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="FGX-8O-jiS"/>
                                 <constraint firstAttribute="bottom" secondItem="UnT-05-LAl" secondAttribute="bottom" id="Kpu-rW-71e"/>
-                                <constraint firstItem="Kcp-Dm-MUc" firstAttribute="top" secondItem="WHI-7W-VHh" secondAttribute="bottom" id="MGn-6h-PK2"/>
                                 <constraint firstItem="Kcp-Dm-MUc" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="Nli-zO-ggU"/>
                                 <constraint firstAttribute="trailing" secondItem="hjQ-nd-euy" secondAttribute="trailing" id="O4J-st-5cM"/>
                                 <constraint firstAttribute="trailing" secondItem="vF9-hM-ZwU" secondAttribute="trailing" id="UTX-eH-Dcv"/>
@@ -106,6 +105,7 @@
                                 <constraint firstItem="UnT-05-LAl" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="twV-KB-gkJ"/>
                                 <constraint firstAttribute="trailing" secondItem="UnT-05-LAl" secondAttribute="trailing" id="u0Q-Uv-sOz"/>
                                 <constraint firstItem="hjQ-nd-euy" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="uSf-Cm-nJp"/>
+                                <constraint firstItem="hjQ-nd-euy" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="xf8-uU-Yc7"/>
                             </constraints>
                         </view>
                     </subviews>

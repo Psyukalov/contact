@@ -56,6 +56,13 @@
     return _preferGenderSwitch.on;
 }
 
+#pragma mark - Override properties
+
+- (CGRect)keyboardFrame {
+    // TODO:
+    return [super keyboardFrame];
+}
+
 #pragma mark - Override methods
 
 - (void)loadViewFromNib {
@@ -96,6 +103,7 @@
 #pragma mark - Other methods
 
 - (void)selectRegistrationAction:(RegistrationAction)registrationAction {
+    [self endEditing:YES];
     if ([_delegate respondsToSelector:@selector(didSelectRegistrationAction:)]) {
         [_delegate didSelectRegistrationAction:registrationAction];
     }
@@ -108,6 +116,7 @@
 }
 
 - (IBAction)signUp_0_Button_TUI:(UIButton *)sender {
+    [self endEditing:YES];
     if (self.didCloseViewCompletion) {
         self.didCloseViewCompletion();
     }

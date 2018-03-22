@@ -29,7 +29,7 @@
 
 #pragma mark - Class methods
 
-- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration {
+- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration completion:(void (^)(void))completion {
     NSLog(@"Keyboard will show: %@; Height: %1.2f; Duration: %1.2f;", show ? @"Yes" : @"No", height, duration);
 }
 
@@ -99,13 +99,13 @@
 - (void)keyboardWillShow:(NSNotification *)notification {
     CGFloat height = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
-    [self keyboardWillShow:YES height:height duration:duration];
+    [self keyboardWillShow:YES height:height duration:duration completion:nil];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
     CGFloat height = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
-    [self keyboardWillShow:NO height:height duration:duration];
+    [self keyboardWillShow:NO height:height duration:duration completion:nil];
 }
 
 @end

@@ -38,6 +38,13 @@
 
 @implementation AuthorizationView
 
+#pragma mark - Override properties
+
+- (CGRect)keyboardFrame {
+    // TODO:
+    return [super keyboardFrame];
+}
+
 #pragma mark - Overriding methods
 
 - (void)loadViewFromNib {
@@ -73,6 +80,7 @@
 #pragma mark - Other methods
 
 - (void)selectAuthorizationAction:(AuthorizationAction)authorizationAction {
+    [self endEditing:YES];
     if ([_delegate respondsToSelector:@selector(didSelectAuthorizationAction:)]) {
         [_delegate didSelectAuthorizationAction:authorizationAction];
     }
@@ -91,8 +99,7 @@
         _layer_2_View.alpha = selected ? 1.f : 0.f;
     }];
     if (!selected) {
-        [_emailTextField resignFirstResponder];
-        [_passwordTextField resignFirstResponder];
+        [self endEditing:YES];
     }
 }
 

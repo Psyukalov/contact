@@ -44,8 +44,7 @@
 
 - (void)setHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion {
     CGAffineTransform bottom_0_Transform = hidden ? CGAffineTransformMakeTranslation(0.f, _layer_0_ImageView.frame.size.height) : CGAffineTransformIdentity;
-    CGAffineTransform topTransform = hidden ? CGAffineTransformMakeTranslation(0.f, -.5f * _layer_1_ImageView.frame.size.height) : CGAffineTransformIdentity;
-    CGAffineTransform bottom_1_Transform = hidden ? CGAffineTransformMakeTranslation(0.f, .5f * _layer_2_ImageView.frame.size.height) : CGAffineTransformIdentity;
+    CGAffineTransform bottom_1_Transform = hidden ? CGAffineTransformMakeTranslation(0.f, _layer_2_ImageView.frame.size.height) : CGAffineTransformIdentity;
     CGFloat alpha = hidden ? 0.f : 1.f;
     if (animated) {
         [UIView animateWithDuration:.64f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -53,7 +52,6 @@
             _layer_0_View.alpha = alpha;
         } completion:nil];
         [UIView animateWithDuration:.64f delay:.64f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            _layer_1_View.transform = topTransform;
             _layer_1_View.alpha = alpha;
         } completion:nil];
         [UIView animateWithDuration:.64f delay:.76f options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -66,7 +64,6 @@
         }];
     } else {
         _layer_0_View.transform = bottom_0_Transform;
-        _layer_1_View.transform = topTransform;
         _layer_2_View.transform = bottom_1_Transform;
         _layer_0_View.alpha = alpha;
         _layer_1_View.alpha = alpha;

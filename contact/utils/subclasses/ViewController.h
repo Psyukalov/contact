@@ -14,7 +14,7 @@
 
 @optional
 
-- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration;
+- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration completion:(void (^)(void))completion;
 
 - (void)deviceOrientationDidChange:(UIDeviceOrientation)deviceOrientation;
 
