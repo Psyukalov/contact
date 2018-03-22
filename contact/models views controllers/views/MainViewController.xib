@@ -30,7 +30,6 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="aboutContactButton" destination="iOF-2k-lrx" id="Aom-oD-bZ8"/>
-                <outlet property="aboutContactView" destination="QtZ-2d-R4h" id="M59-Ex-3k6"/>
                 <outlet property="baseGradientLayer_0_ImageView" destination="hFT-UP-RM1" id="a2J-GK-tFY"/>
                 <outlet property="baseGradientLayer_1_ImageView" destination="RzM-aA-sPn" id="Vwc-iU-anb"/>
                 <outlet property="basePatternImageView" destination="U2s-cw-Lgc" id="Vti-Uc-TQq"/>
@@ -87,13 +86,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-8X-gRM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="532.33333333333337"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="565.66666666666663"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide_image" translatesAutoresizingMaskIntoConstraints="NO" id="f3l-w3-ObT">
                                                     <rect key="frame" x="182" y="0.0" width="50" height="6"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he1-Ey-3SI" customClass="SMView">
-                                                    <rect key="frame" x="10" y="18" width="64" height="546.33333333333337"/>
+                                                    <rect key="frame" x="10" y="18" width="64" height="579.66666666666663"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="kW7-wd-ejS"/>
@@ -108,7 +107,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFD-ai-NYf" customClass="SMView">
-                                                    <rect key="frame" x="340" y="18" width="64" height="546.33333333333337"/>
+                                                    <rect key="frame" x="340" y="18" width="64" height="579.66666666666663"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="bdB-fS-5RB"/>
@@ -123,16 +122,16 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5l-U8-bAG" customClass="SMView">
-                                                    <rect key="frame" x="14" y="18" width="386" height="514.33333333333337"/>
+                                                    <rect key="frame" x="14" y="18" width="386" height="547.66666666666663"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-3e-PWs">
                                                             <rect key="frame" x="0.0" y="0.0" width="386" height="85.333333333333329"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-dH-kZc">
-                                                                    <rect key="frame" x="177" y="33" width="32" height="21"/>
+                                                                    <rect key="frame" x="177" y="30.666666666666664" width="32" height="24.666666666666664"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkT-Bx-Y1d" customClass="SMLabel">
-                                                                            <rect key="frame" x="0.0" y="1" width="10.333333333333334" height="21"/>
+                                                                            <rect key="frame" x="0.0" y="1" width="10.333333333333334" height="24.666666666666668"/>
                                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="18"/>
                                                                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -146,7 +145,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_18_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="l1A-en-3m1" customClass="SMImageView">
-                                                                            <rect key="frame" x="14" y="0.3333333333333357" width="18" height="21"/>
+                                                                            <rect key="frame" x="14" y="2.6666666666666643" width="18" height="21"/>
                                                                             <userDefinedRuntimeAttributes>
                                                                                 <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="contact_logotype_18_pt_mode_day_image"/>
                                                                                 <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="contact_logotype_18_pt_mode_night_image"/>
@@ -169,7 +168,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM3-Mq-rng" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="18" width="32" height="65.333333333333329"/>
+                                                            <rect key="frame" x="14" y="18" width="32" height="76.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="56"/>
                                                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -183,14 +182,14 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_39_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-Q9-mUK" customClass="SMImageView">
-                                                            <rect key="frame" x="60" y="29.333333333333336" width="39" height="45.000000000000007"/>
+                                                            <rect key="frame" x="60" y="34" width="39" height="45"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="contact_logotype_39_pt_mode_day_image"/>
                                                                 <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="contact_logotype_39_pt_mode_night_image"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGh-rc-aId">
-                                                            <rect key="frame" x="0.0" y="83.333333333333329" width="122" height="33"/>
+                                                            <rect key="frame" x="0.0" y="94.333333333333329" width="125" height="35.999999999999986"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
                                                             <state key="normal" title="show history">
@@ -201,7 +200,7 @@
                                                             </state>
                                                         </button>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIG-3h-5r1" customClass="SMView">
-                                                            <rect key="frame" x="14" y="148" width="358" height="1"/>
+                                                            <rect key="frame" x="14" y="162" width="358" height="1"/>
                                                             <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="5gy-ZX-AWI"/>
@@ -216,7 +215,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gi-Yi-Wij" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="175" width="358" height="42"/>
+                                                            <rect key="frame" x="14" y="189" width="358" height="49.333333333333343"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="36"/>
                                                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -230,7 +229,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qM-tw-p69">
-                                                            <rect key="frame" x="0.0" y="217.33333333333334" width="108" height="33"/>
+                                                            <rect key="frame" x="0.0" y="238.66666666666669" width="113" height="36"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
                                                             <state key="normal" title="edit profile">
@@ -241,7 +240,7 @@
                                                             </state>
                                                         </button>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9k-Zb-UkA" customClass="SMView">
-                                                            <rect key="frame" x="14" y="282.33333333333331" width="358" height="1"/>
+                                                            <rect key="frame" x="14" y="306.66666666666669" width="358" height="1"/>
                                                             <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="KLR-vq-WIC"/>
@@ -256,7 +255,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="go invisible" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-A8-hCL" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="309.33333333333331" width="70" height="16.333333333333314"/>
+                                                            <rect key="frame" x="14" y="333.66666666666669" width="72.666666666666671" height="19.333333333333314"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -270,7 +269,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notifications" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jg-2v-3wN" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="353.66666666666669" width="76" height="16.333333333333314"/>
+                                                            <rect key="frame" x="14" y="381" width="80.666666666666671" height="19.333333333333314"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -284,7 +283,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="night mode" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fv-H4-mUb" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="397.33333333333331" width="71" height="16.333333333333314"/>
+                                                            <rect key="frame" x="14" y="427.66666666666669" width="75" height="19.333333333333314"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -298,19 +297,19 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ojG-7a-jmr">
-                                                            <rect key="frame" x="323" y="303" width="51" height="31"/>
+                                                            <rect key="frame" x="323" y="328.33333333333331" width="51" height="31"/>
                                                         </switch>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woY-L2-LY1">
-                                                            <rect key="frame" x="323" y="346.66666666666669" width="51" height="31"/>
+                                                            <rect key="frame" x="323" y="376" width="51" height="31"/>
                                                         </switch>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-G8-VRj" customClass="Switch">
-                                                            <rect key="frame" x="323" y="390.33333333333331" width="51" height="31"/>
+                                                            <rect key="frame" x="323" y="422.66666666666669" width="51" height="31"/>
                                                             <connections>
                                                                 <action selector="screenModeSwitch_VC:" destination="-1" eventType="valueChanged" id="K7S-Nj-Yxb"/>
                                                             </connections>
                                                         </switch>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOF-2k-lrx" customClass="SMButton">
-                                                            <rect key="frame" x="10" y="458.33333333333331" width="362" height="36"/>
+                                                            <rect key="frame" x="10" y="491.66666666666669" width="362" height="36.000000000000057"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -419,19 +418,9 @@
                                         <outlet property="delegate" destination="-1" id="YPi-qT-pTe"/>
                                     </connections>
                                 </scrollView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtZ-2d-R4h" customClass="AboutContactView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
-                                            <real key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="hFT-UP-RM1" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="5JY-rC-Dux"/>
-                                <constraint firstItem="QtZ-2d-R4h" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="7bV-NE-ll8"/>
                                 <constraint firstAttribute="trailing" secondItem="Z73-xA-c2S" secondAttribute="trailing" id="8S7-s8-pFU"/>
                                 <constraint firstItem="uLv-YX-wAD" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="IcB-mX-BeI"/>
                                 <constraint firstItem="Z73-xA-c2S" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="NMN-SD-svS"/>
@@ -439,20 +428,17 @@
                                 <constraint firstItem="RzM-aA-sPn" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="Pbq-jx-YVy"/>
                                 <constraint firstAttribute="bottom" secondItem="RzM-aA-sPn" secondAttribute="bottom" id="Q2m-x5-mgU"/>
                                 <constraint firstAttribute="trailing" secondItem="U2s-cw-Lgc" secondAttribute="trailing" id="RE8-Qh-K0b"/>
-                                <constraint firstItem="QtZ-2d-R4h" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="SMK-OU-Mtm"/>
                                 <constraint firstAttribute="bottom" secondItem="U2s-cw-Lgc" secondAttribute="bottom" id="UqC-Qj-aCL"/>
                                 <constraint firstAttribute="bottom" secondItem="hFT-UP-RM1" secondAttribute="bottom" id="VmU-wE-ekm"/>
                                 <constraint firstAttribute="trailing" secondItem="hFT-UP-RM1" secondAttribute="trailing" id="ZFr-Qy-bGm"/>
                                 <constraint firstItem="hFT-UP-RM1" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="iam-Or-84e"/>
                                 <constraint firstItem="RzM-aA-sPn" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="jQ4-WQ-JTJ"/>
-                                <constraint firstAttribute="trailing" secondItem="QtZ-2d-R4h" secondAttribute="trailing" id="l3v-m9-mYf"/>
                                 <constraint firstItem="Z73-xA-c2S" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="lMT-TM-TLB"/>
                                 <constraint firstItem="U2s-cw-Lgc" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="nww-JY-I71"/>
                                 <constraint firstAttribute="bottom" secondItem="Z73-xA-c2S" secondAttribute="bottom" id="qIF-Ee-jzS"/>
                                 <constraint firstItem="uLv-YX-wAD" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="rKF-Bf-vIn"/>
                                 <constraint firstAttribute="trailing" secondItem="uLv-YX-wAD" secondAttribute="trailing" id="siZ-e1-bth"/>
                                 <constraint firstAttribute="bottom" secondItem="uLv-YX-wAD" secondAttribute="bottom" id="t92-nt-TK5"/>
-                                <constraint firstAttribute="bottom" secondItem="QtZ-2d-R4h" secondAttribute="bottom" id="x38-Gw-MXS"/>
                                 <constraint firstAttribute="trailing" secondItem="RzM-aA-sPn" secondAttribute="trailing" id="xVT-ja-Rq0"/>
                             </constraints>
                         </view>

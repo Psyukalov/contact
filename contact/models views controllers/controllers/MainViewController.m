@@ -51,9 +51,9 @@
 
 @property (weak, nonatomic) IBOutlet SearchAnimationView *searchAnimationView;
 
-@property (weak, nonatomic) IBOutlet AboutContactView *aboutContactView;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftMarginProfileViewLC;
+
+@property (strong, nonatomic) CView *customView;
 
 @property (assign, nonatomic) BOOL isOpen;
 
@@ -81,11 +81,6 @@
     [super viewDidLoad];
     [self.view layoutIfNeeded];
     [_searchAnimationView viewAnimation:ViewAnimationZoomOut animated:NO];
-    [_aboutContactView viewAnimation:ViewAnimationFadeOut animated:NO];
-    _aboutContactView.didCloseViewCompletion = ^{
-        [self stopAccelerometerUpdates];
-        [_aboutContactView viewAnimation:ViewAnimationFadeOut animated:YES];
-    };
     _profileScrollView.contentInset = UIEdgeInsetsMake(HEIGHT - _tokensView.frame.size.height - 18.f, 0.f, 0.f, 0.f);
     top = -(HEIGHT - _profileView.frame.size.height);
     bottom = -_profileScrollView.contentInset.top;
@@ -120,7 +115,7 @@
 
 - (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration {
     [super accelerometerUpdateWithAcceleration:acceleration];
-    _aboutContactView.parallaxPoint = CGPointMake(acceleration.x, acceleration.y);
+    _customView.parallaxPoint = CGPointMake(acceleration.x, acceleration.y);
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -164,7 +159,21 @@
 
 - (IBAction)aboutContactButton_TUI:(UIButton *)sender {
     [self startAccelerometerUpdates];
-    [_aboutContactView viewAnimation:ViewAnimationFadeIn animated:YES];
+    [_searchAnimationView stop];
+    AboutContactView *aboutContactView = [[AboutContactView alloc] initWithFrame:self.view.bounds];
+    _customView = aboutContactView;
+    [self.view addSubview:aboutContactView];
+    [aboutContactView viewAnimation:ViewAnimationFadeOut animated:NO];
+    [aboutContactView viewAnimation:ViewAnimationFadeIn animated:YES];
+    __weak AboutContactView *weakAboutContactView = aboutContactView;
+    aboutContactView.didCloseViewCompletion = ^{
+        [self stopAccelerometerUpdates];
+        [_searchAnimationView play];
+        _customView = nil;
+        [weakAboutContactView viewAnimation:ViewAnimationFadeOut animated:YES completion:^{
+            [weakAboutContactView removeFromSuperview];
+        }];
+    };
 }
 
 - (IBAction)screenModeSwitch_VC:(UISwitch *)sender {
@@ -174,6 +183,7 @@
 #pragma mark - Test
 
 - (void)test {
+    [_searchAnimationView stop];
     AuthorizationViewController *authorizationVC = [AuthorizationViewController new];
     authorizationVC.view.frame = self.view.bounds;
     __weak AuthorizationViewController *weakAuthorizationVC = authorizationVC;

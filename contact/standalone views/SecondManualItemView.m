@@ -10,9 +10,9 @@
 #import "SecondManualItemView.h"
 
 
-#define kLayer_0_Rate (.94f)
-#define kLayer_1_Rate (.74f)
-#define kLayer_2_Rate (.54f)
+#define kLayer_0_Rate (.84f)
+#define kLayer_1_Rate (.64f)
+#define kLayer_2_Rate (.64f)
 
 
 @interface SecondManualItemView ()
@@ -44,8 +44,8 @@
 
 - (void)setHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion {
     CGAffineTransform bottom_0_Transform = hidden ? CGAffineTransformMakeTranslation(0.f, _layer_0_ImageView.frame.size.height) : CGAffineTransformIdentity;
-    CGAffineTransform topTransform = hidden ? CGAffineTransformMakeTranslation(0.f, -_layer_1_ImageView.frame.size.height) : CGAffineTransformIdentity;
-    CGAffineTransform bottom_1_Transform = hidden ? CGAffineTransformMakeTranslation(0.f, _layer_2_ImageView.frame.size.height) : CGAffineTransformIdentity;
+    CGAffineTransform topTransform = hidden ? CGAffineTransformMakeTranslation(0.f, -.5f * _layer_1_ImageView.frame.size.height) : CGAffineTransformIdentity;
+    CGAffineTransform bottom_1_Transform = hidden ? CGAffineTransformMakeTranslation(0.f, .5f * _layer_2_ImageView.frame.size.height) : CGAffineTransformIdentity;
     CGFloat alpha = hidden ? 0.f : 1.f;
     if (animated) {
         [UIView animateWithDuration:.64f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{

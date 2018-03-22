@@ -31,38 +31,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-vy-ibP">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLx-7q-f1r">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_0_image" translatesAutoresizingMaskIntoConstraints="NO" id="943-dv-OcW" customClass="SMImageView">
-                            <rect key="frame" x="38.666666666666657" y="209.66666666666663" width="336" height="317"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_3_image" translatesAutoresizingMaskIntoConstraints="NO" id="Z2d-Cd-khR" customClass="SMImageView">
+                            <rect key="frame" x="39" y="209.66666666666663" width="336" height="317"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_0_image"/>
-                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_0_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_3_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_3_image"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="943-dv-OcW" firstAttribute="centerY" secondItem="HjO-vy-ibP" secondAttribute="centerY" id="35g-rC-FqU"/>
-                        <constraint firstItem="943-dv-OcW" firstAttribute="centerX" secondItem="HjO-vy-ibP" secondAttribute="centerX" id="KF7-an-PWt"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfa-P7-hFU">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_1_image" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-mt-1f0" customClass="SMImageView">
-                            <rect key="frame" x="38.666666666666657" y="209.66666666666663" width="336" height="317"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_1_image"/>
-                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_1_image"/>
-                            </userDefinedRuntimeAttributes>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="Doo-mt-1f0" firstAttribute="centerX" secondItem="Zfa-P7-hFU" secondAttribute="centerX" id="4AW-aD-fow"/>
-                        <constraint firstItem="Doo-mt-1f0" firstAttribute="centerY" secondItem="Zfa-P7-hFU" secondAttribute="centerY" id="qRC-XX-PsW"/>
+                        <constraint firstItem="Z2d-Cd-khR" firstAttribute="centerX" secondItem="PLx-7q-f1r" secondAttribute="centerX" id="3rN-PA-AKk"/>
+                        <constraint firstItem="Z2d-Cd-khR" firstAttribute="centerY" secondItem="PLx-7q-f1r" secondAttribute="centerY" id="46k-Nh-bw0"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vn7-Am-7hf">
@@ -82,21 +65,38 @@
                         <constraint firstItem="svJ-0q-O8Z" firstAttribute="centerX" secondItem="Vn7-Am-7hf" secondAttribute="centerX" id="uNJ-xk-nMf"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLx-7q-f1r">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfa-P7-hFU">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_3_image" translatesAutoresizingMaskIntoConstraints="NO" id="Z2d-Cd-khR" customClass="SMImageView">
-                            <rect key="frame" x="39" y="209.66666666666663" width="336" height="317"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_1_image" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-mt-1f0" customClass="SMImageView">
+                            <rect key="frame" x="38.666666666666657" y="209.66666666666663" width="336" height="317"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_3_image"/>
-                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_3_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_1_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_1_image"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Z2d-Cd-khR" firstAttribute="centerX" secondItem="PLx-7q-f1r" secondAttribute="centerX" id="3rN-PA-AKk"/>
-                        <constraint firstItem="Z2d-Cd-khR" firstAttribute="centerY" secondItem="PLx-7q-f1r" secondAttribute="centerY" id="46k-Nh-bw0"/>
+                        <constraint firstItem="Doo-mt-1f0" firstAttribute="centerX" secondItem="Zfa-P7-hFU" secondAttribute="centerX" id="4AW-aD-fow"/>
+                        <constraint firstItem="Doo-mt-1f0" firstAttribute="centerY" secondItem="Zfa-P7-hFU" secondAttribute="centerY" id="qRC-XX-PsW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-vy-ibP">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_0_image" translatesAutoresizingMaskIntoConstraints="NO" id="943-dv-OcW" customClass="SMImageView">
+                            <rect key="frame" x="38.666666666666657" y="209.66666666666663" width="336" height="317"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_0_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_0_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="943-dv-OcW" firstAttribute="centerY" secondItem="HjO-vy-ibP" secondAttribute="centerY" id="35g-rC-FqU"/>
+                        <constraint firstItem="943-dv-OcW" firstAttribute="centerX" secondItem="HjO-vy-ibP" secondAttribute="centerX" id="KF7-an-PWt"/>
                     </constraints>
                 </view>
             </subviews>
