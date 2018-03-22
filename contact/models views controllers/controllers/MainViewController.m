@@ -158,27 +158,7 @@
         CGFloat margin = _leftMarginProfileViewLC.constant;
         _maskedLeftView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
         _maskedRightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
-        BOOL condition = percent == 0.f || percent == 1.f;
-        NSUInteger i = 0;
-        for (UIView *view in @[_tokens_1_Label, _logotype_1_ImageView, _showHistoryButton, _divide_0_View, _nameLabel, _editProfileButton, _logOutButton, _divide_1_View, _invisibleLabel, _invisibleSwitch, _notificationsLabel, _notificationsSwitch, _nightModeLabel, _nightModeSwitch, _aboutContactButton]) {
-            if (condition) {
-                CGFloat rate = [view isKindOfClass:[UISwitch class]] ? -1.f : 1.f;
-                [UIView animateWithDuration:.32f delay:i * .08f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                    view.alpha = percent;
-                    view.transform = CGAffineTransformMakeTranslation((1.f - percent) * rate * 8.f, 0.f);
-                } completion:nil];
-            } else {
-                view.alpha = 0.f;
-            }
-            i++;
-        }
-        if (condition) {
-            [UIView animate:^{
-                _tokensView.alpha = 1.f - percent;
-            } completion:nil duration:.32f];
-        } else {
-            _tokensView.alpha = 0.f;
-        }
+        [self changeInterfaceWithPercent:.64f]; // Random float between 0 and 1;
         if (scrollView.decelerating) {
             [self changeInterfaceWithScrollView:scrollView];
         }
@@ -194,6 +174,30 @@
 
 #pragma mark - Other methods
 
+- (void)changeInterfaceWithPercent:(CGFloat)percent {
+    BOOL condition = percent == 0.f || percent == 1.f;
+    NSUInteger i = 0;
+    for (UIView *view in @[_tokens_1_Label, _logotype_1_ImageView, _showHistoryButton, _divide_0_View, _nameLabel, _editProfileButton, _logOutButton, _divide_1_View, _invisibleLabel, _invisibleSwitch, _notificationsLabel, _notificationsSwitch, _nightModeLabel, _nightModeSwitch, _aboutContactButton]) {
+        if (condition) {
+            CGFloat rate = [view isKindOfClass:[UISwitch class]] ? -1.f : 1.f;
+            [UIView animateWithDuration:.32f delay:i * .08f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                view.alpha = percent;
+                view.transform = CGAffineTransformMakeTranslation((1.f - percent) * rate * 8.f, 0.f);
+            } completion:nil];
+        } else {
+            view.alpha = 0.f;
+        }
+        i++;
+    }
+    if (condition) {
+        [UIView animate:^{
+            _tokensView.alpha = 1.f - percent;
+        } completion:nil duration:.32f];
+    } else {
+        _tokensView.alpha = 0.f;
+    }
+}
+
 - (void)changeInterfaceWithScrollView:(UIScrollView *)scrollView {
     CGFloat y = scrollView.contentOffset.y;
     CGFloat switchBorder = _isOpen ? top - _deltaSwitchBorder : bottom + _deltaSwitchBorder;
@@ -206,9 +210,11 @@
 
 - (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated completion:(void (^)(void))completion {
     _isOpen = isOpen;
+    [self changeInterfaceWithPercent:.64f]; // Random float between 0 and 1;
     [UIView animateWithDuration:.44f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _profileScrollView.contentOffset = CGPointMake(0.f, _isOpen ? top : bottom);
     } completion:^(BOOL finished) {
+        [self changeInterfaceWithPercent:_isOpen ? 1.f : 0.f];
         if (completion) {
             completion();
         }
