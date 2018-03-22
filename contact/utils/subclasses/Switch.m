@@ -39,6 +39,7 @@
     frame.origin.y = 0.f;
     _imageView.frame = frame;
     _imageView.contentMode = UIViewContentModeCenter;
+    _imageView.transform = CGAffineTransformMakeScale(.92f, .92f);
     [self setImage:[UIImage imageNamed:@"mode_night_image"]];
 }
 

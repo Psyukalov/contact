@@ -29,6 +29,10 @@
 		C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C785C231205FDCA600FC3927 /* MainViewController.xib */; };
 		C785C235205FEE2900FC3927 /* SearchAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C785C234205FEE2900FC3927 /* SearchAnimationView.m */; };
 		C785C237205FEE3F00FC3927 /* SearchAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C785C236205FEE3F00FC3927 /* SearchAnimationView.xib */; };
+		C7A2DC012063D98900BE4B88 /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DC002063D98900BE4B88 /* HistoryView.m */; };
+		C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A2DC022063D99B00BE4B88 /* HistoryView.xib */; };
+		C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DC072063DD2800BE4B88 /* HistoryTableViewCell.m */; };
+		C7A2DC0A2063DD2800BE4B88 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */; };
 		C7E41B74205BDB6100C4B96F /* SMView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E41B73205BDB6100C4B96F /* SMView.m */; };
 		C7E41B77205BDC9200C4B96F /* SMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E41B76205BDC9200C4B96F /* SMLabel.m */; };
 		C7F41395205BBC1000AA316D /* ScreenModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F41394205BBC1000AA316D /* ScreenModeManager.m */; };
@@ -104,6 +108,12 @@
 		C785C233205FEE2900FC3927 /* SearchAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchAnimationView.h; sourceTree = "<group>"; };
 		C785C234205FEE2900FC3927 /* SearchAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchAnimationView.m; sourceTree = "<group>"; };
 		C785C236205FEE3F00FC3927 /* SearchAnimationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnimationView.xib; sourceTree = "<group>"; };
+		C7A2DBFF2063D98900BE4B88 /* HistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryView.h; sourceTree = "<group>"; };
+		C7A2DC002063D98900BE4B88 /* HistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryView.m; sourceTree = "<group>"; };
+		C7A2DC022063D99B00BE4B88 /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryView.xib; sourceTree = "<group>"; };
+		C7A2DC062063DD2800BE4B88 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
+		C7A2DC072063DD2800BE4B88 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
+		C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		C7E41B72205BDB6100C4B96F /* SMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMView.h; sourceTree = "<group>"; };
 		C7E41B73205BDB6100C4B96F /* SMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMView.m; sourceTree = "<group>"; };
 		C7E41B75205BDC9200C4B96F /* SMLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLabel.h; sourceTree = "<group>"; };
@@ -174,6 +184,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7A2DC042063DCEA00BE4B88 /* others views */ = {
+			isa = PBXGroup;
+			children = (
+				C7A2DC052063DD1B00BE4B88 /* table view cells */,
+			);
+			path = "others views";
+			sourceTree = "<group>";
+		};
+		C7A2DC052063DD1B00BE4B88 /* table view cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7A2DC062063DD2800BE4B88 /* HistoryTableViewCell.h */,
+				C7A2DC072063DD2800BE4B88 /* HistoryTableViewCell.m */,
+				C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */,
+			);
+			path = "table view cells";
+			sourceTree = "<group>";
+		};
 		C7E41B71205BDB3300C4B96F /* screen mode subclasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +243,7 @@
 				C7FBC22520591DD900A49F14 /* localizable */,
 				C7FBC21A2059087600A49F14 /* main.m */,
 				C7FBC22120591DD900A49F14 /* models views controllers */,
+				C7A2DC042063DCEA00BE4B88 /* others views */,
 				C7FBC24D2059383000A49F14 /* resources */,
 				C7FBC26E205952B400A49F14 /* standalone views */,
 				C7FBC22620591DD900A49F14 /* utils */,
@@ -402,6 +431,9 @@
 				C76378682062631C00C1DD8B /* FirstManualItemView.h */,
 				C76378692062631C00C1DD8B /* FirstManualItemView.m */,
 				C763786B2062635300C1DD8B /* FirstManualItemView.xib */,
+				C7A2DBFF2063D98900BE4B88 /* HistoryView.h */,
+				C7A2DC002063D98900BE4B88 /* HistoryView.m */,
+				C7A2DC022063D99B00BE4B88 /* HistoryView.xib */,
 				C763786020624BE400C1DD8B /* ManualView.h */,
 				C763786120624BE400C1DD8B /* ManualView.m */,
 				C763786320624C1300C1DD8B /* ManualView.xib */,
@@ -492,6 +524,7 @@
 				C7FBC25C2059383000A49F14 /* OpenSans-ExtraBold.ttf in Resources */,
 				C7637871206264F200C1DD8B /* WavesView.xib in Resources */,
 				C763786C2062635300C1DD8B /* FirstManualItemView.xib in Resources */,
+				C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */,
 				C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */,
 				C7FBC2152059087600A49F14 /* Assets.xcassets in Resources */,
 				C7FBC2602059383000A49F14 /* OpenSans-LightItalic.ttf in Resources */,
@@ -508,6 +541,7 @@
 				C7FBC2632059383000A49F14 /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				C763786420624C1400C1DD8B /* ManualView.xib in Resources */,
 				C7FBC25D2059383000A49F14 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				C7A2DC0A2063DD2800BE4B88 /* HistoryTableViewCell.xib in Resources */,
 				C763787E2062BAC300C1DD8B /* ThirdManualItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,8 +557,10 @@
 				C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */,
 				C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */,
 				C76378672062623D00C1DD8B /* CItemView.m in Sources */,
+				C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */,
 				C7FBC2362059286F00A49F14 /* View.m in Sources */,
 				C7FBC24820592E3F00A49F14 /* TableView.m in Sources */,
+				C7A2DC012063D98900BE4B88 /* HistoryView.m in Sources */,
 				C763786220624BE400C1DD8B /* ManualView.m in Sources */,
 				C7FBC28020597A3300A49F14 /* RegistrationView.m in Sources */,
 				C7FBC2742059533700A49F14 /* AuthorizationView.m in Sources */,

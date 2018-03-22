@@ -64,6 +64,12 @@
     _passwordTextField.placeholder = LOCALIZE(@"av_placeholder_1");
     [_emailTextField placeholderWithDefaultColor];
     [_passwordTextField placeholderWithDefaultColor];
+    UISwipeGestureRecognizer *upSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handlerUpSwipeGR)];
+    UISwipeGestureRecognizer *downSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handlerDownSwipeGR)];
+    upSwipeGR.direction = UISwipeGestureRecognizerDirectionUp;
+    downSwipeGR.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.contentView addGestureRecognizer:upSwipeGR];
+    [self.contentView addGestureRecognizer:downSwipeGR];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -121,6 +127,20 @@
 
 - (IBAction)signUpButton_TUI:(UIButton *)sender {
     [self selectAuthorizationAction:AuthorizationActionSignUp];
+}
+
+- (void)handlerUpSwipeGR {
+    if (_login_0_Button.selected) {
+        return;
+    }
+    [self login_0_Button_TUI:_login_0_Button];
+}
+
+- (void)handlerDownSwipeGR {
+    if (!_login_0_Button.selected) {
+        return;
+    }
+    [self login_0_Button_TUI:_login_0_Button];
 }
 
 @end

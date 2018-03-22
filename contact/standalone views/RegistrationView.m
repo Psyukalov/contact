@@ -85,6 +85,9 @@
         genderSwitch.tintColor = genderSwitch.backgroundColor;
         [genderSwitch cornerRadius:.5f * genderSwitch.frame.size.height];
     }
+    UISwipeGestureRecognizer *downSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handlerDownSwipeGR)];
+    downSwipeGR.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.contentView addGestureRecognizer:downSwipeGR];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -120,6 +123,10 @@
     if (self.didCloseViewCompletion) {
         self.didCloseViewCompletion();
     }
+}
+
+- (void)handlerDownSwipeGR {
+    [self signUp_0_Button_TUI:_signUp_0_Button];
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 
 #import "SearchAnimationView.h"
+#import "HistoryView.h"
 #import "AboutContactView.h"
 
 #import "AuthorizationViewController.h"
@@ -45,6 +46,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *showHistoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *editProfileButton;
+@property (weak, nonatomic) IBOutlet UIButton *logOutButton;
 @property (weak, nonatomic) IBOutlet UIButton *aboutContactButton;
 
 @property (weak, nonatomic) IBOutlet UISwitch *invisibleSwitch;
@@ -77,20 +79,24 @@
 }
 
 - (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion {
-    CGAffineTransform transform = hidden ? CGAffineTransformMakeTranslation(0.f, _tokensView.frame.size.height) : CGAffineTransformIdentity;
-    CGFloat alpha = hidden ? 0.f : 1.f;
+    CGAffineTransform transform = hidden ? CGAffineTransformMakeTranslation(0.f, _tokensView.frame.size.height + 18.f) : CGAffineTransformIdentity;
     if (animated) {
+        if (!hidden) {
+            _profileScrollView.hidden = NO;
+        }
         [UIView animate:^{
             _profileScrollView.transform = transform;
-            _profileScrollView.alpha = alpha;
         } completion:^{
+            if (hidden) {
+                _profileScrollView.hidden = YES;
+            }
             if (completion) {
                 completion();
             }
         } duration:.64f];
     } else {
         _profileScrollView.transform = transform;
-        _profileScrollView.alpha = alpha;
+        _profileScrollView.hidden = hidden;
         if (completion) {
             completion();
         }
@@ -104,7 +110,7 @@
     [self.view layoutIfNeeded];
     [self interfaceHidden:YES animated:NO];
     [_searchAnimationView viewAnimation:ViewAnimationZoomOut animated:NO];
-    _profileScrollView.decelerationRate = 0.f;
+    _profileScrollView.decelerationRate = .16f;
     _profileScrollView.contentInset = UIEdgeInsetsMake(HEIGHT - _tokensView.frame.size.height - 18.f, 0.f, 0.f, 0.f);
     top = -(HEIGHT - _profileView.frame.size.height);
     bottom = -_profileScrollView.contentInset.top;
@@ -122,7 +128,8 @@
     _nightModeSwitch.tintColor = _nightModeSwitch.backgroundColor;
     [_showHistoryButton setTitle:LOCALIZE(@"mvc_button_0") forState:UIControlStateNormal];
     [_editProfileButton setTitle:LOCALIZE(@"mvc_button_1") forState:UIControlStateNormal];
-    [_aboutContactButton setTitle:LOCALIZE(@"mvc_button_2") forState:UIControlStateNormal];
+    [_logOutButton setTitle:LOCALIZE(@"mvc_button_2") forState:UIControlStateNormal];
+    [_aboutContactButton setTitle:LOCALIZE(@"mvc_button_3") forState:UIControlStateNormal];
     _invisibleLabel.text = LOCALIZE(@"mvc_label_0");
     _notificationsLabel.text = LOCALIZE(@"mvc_label_1");
     _nightModeLabel.text = LOCALIZE(@"mvc_label_2");
@@ -153,12 +160,12 @@
         _maskedRightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
         BOOL condition = percent == 0.f || percent == 1.f;
         NSUInteger i = 0;
-        for (UIView *view in @[_tokens_1_Label, _logotype_1_ImageView, _showHistoryButton, _divide_0_View, _nameLabel, _editProfileButton, _divide_1_View, _invisibleLabel, _invisibleSwitch, _notificationsLabel, _notificationsSwitch, _nightModeLabel, _nightModeSwitch, _aboutContactButton]) {
+        for (UIView *view in @[_tokens_1_Label, _logotype_1_ImageView, _showHistoryButton, _divide_0_View, _nameLabel, _editProfileButton, _logOutButton, _divide_1_View, _invisibleLabel, _invisibleSwitch, _notificationsLabel, _notificationsSwitch, _nightModeLabel, _nightModeSwitch, _aboutContactButton]) {
             if (condition) {
                 CGFloat rate = [view isKindOfClass:[UISwitch class]] ? -1.f : 1.f;
                 [UIView animateWithDuration:.32f delay:i * .08f options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     view.alpha = percent;
-                    view.transform = CGAffineTransformMakeTranslation((1.f - percent) * rate * 16.f, 0.f);
+                    view.transform = CGAffineTransformMakeTranslation((1.f - percent) * rate * 8.f, 0.f);
                 } completion:nil];
             } else {
                 view.alpha = 0.f;
@@ -194,11 +201,69 @@
 }
 
 - (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated {
+    [self setIsOpen:isOpen animated:animated completion:nil];
+}
+
+- (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated completion:(void (^)(void))completion {
     _isOpen = isOpen;
-    [_profileScrollView setContentOffset:CGPointMake(0.f, _isOpen ? top : bottom) animated:animated];
+    [UIView animateWithDuration:.44f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        _profileScrollView.contentOffset = CGPointMake(0.f, _isOpen ? top : bottom);
+    } completion:^(BOOL finished) {
+        if (completion) {
+            completion();
+        }
+    }];
 }
 
 #pragma mark - Actions
+
+- (IBAction)showHistoryButton_TUI:(UIButton *)sender {
+    HistoryView *historyView = [[HistoryView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:historyView];
+    [historyView viewDirection:ViewDirectionBottom animated:NO];
+    __weak MainViewController *weakSelf = self;
+    [self setIsOpen:NO animated:YES completion:^{
+        [weakSelf interfaceHidden:YES animated:YES completion:^{
+            [weakSelf.searchAnimationView viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
+                [weakSelf.searchAnimationView stop];
+                [weakSelf gradientLayersHidden:NO animated:YES completion:^{
+                    [historyView viewDirection:ViewDirectionCenter animated:YES];
+                }];
+            }];
+        }];
+    }];
+    __weak HistoryView *weakHistoryView = historyView;
+    historyView.didCloseViewCompletion = ^{
+        [weakHistoryView viewDirection:ViewDirectionBottom animated:YES completion:^{
+            [weakHistoryView removeFromSuperview];
+            [self gradientLayersHidden:YES animated:YES completion:^{
+                [_searchAnimationView play];
+                [_searchAnimationView viewAnimation:ViewAnimationZoomIn animated:YES completion:^{
+                    [self interfaceHidden:NO animated:YES completion:^{
+                        [self setIsOpen:YES];
+                    }];
+                }];
+            }];
+        }];
+    };
+}
+
+- (IBAction)logOutButton_TUI:(UIButton *)sender {
+    // TODO:
+    __weak MainViewController *weakSelf = self;
+    [self setIsOpen:NO animated:YES completion:^{
+        [weakSelf interfaceHidden:YES animated:YES completion:^{
+            [weakSelf.searchAnimationView viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
+                [weakSelf.searchAnimationView stop];
+                [weakSelf test];
+            }];
+        }];
+    }];
+}
+
+- (IBAction)nightModeSwitch_VC:(UISwitch *)sender {
+    [[ScreenModeManager shared] toggleScreenMode];
+}
 
 - (IBAction)aboutContactButton_TUI:(UIButton *)sender {
     [self startAccelerometerUpdates];
@@ -217,10 +282,6 @@
             [weakAboutContactView removeFromSuperview];
         }];
     };
-}
-
-- (IBAction)nightModeSwitch_VC:(UISwitch *)sender {
-    [[ScreenModeManager shared] toggleScreenMode];
 }
 
 #pragma mark - Test

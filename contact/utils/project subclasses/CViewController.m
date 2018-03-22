@@ -113,7 +113,6 @@
 - (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration completion:(void (^)(void))completion {
     [super keyboardWillShow:show height:height duration:duration completion:nil];
     [UIView animateWithDuration:duration delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-//        _scrollView.contentOffset = show ? CGPointMake(0.f, height) : CGPointZero;
         _scrollView.contentInset = show ? UIEdgeInsetsMake(0.f, 0.f, height, 0.f) : UIEdgeInsetsZero;
     } completion:^(BOOL finished) {
         if (completion) {

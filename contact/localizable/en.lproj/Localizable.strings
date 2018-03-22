@@ -54,7 +54,8 @@
 
 "mvc_button_0" = "Show History";
 "mvc_button_1" = "Edit Profile";
-"mvc_button_2" = "About Contact";
+"mvc_button_2" = "Log Out";
+"mvc_button_3" = "About Contact";
 
 "mvc_label_0" = "Go Invisible";
 "mvc_label_1" = "Notifications";
@@ -62,10 +63,14 @@
 
 // Manual view
 
-"mv_title_0" = "Hello!";
-"mv_title_1" = "";
-"mv_title_2" = "";
+"mv_label_0" = "Hello!";
+"mv_label_1" = "";
+"mv_label_2" = "";
 
-"mv_title_3" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
-"mv_title_4" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
-"mv_title_5" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
+"mv_label_3" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
+"mv_label_4" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
+"mv_label_5" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
+
+// History view
+
+"hv_label_0" = "History";

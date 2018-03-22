@@ -55,8 +55,8 @@
 
 - (void)loadViewFromNib {
     [super loadViewFromNib];
-    _titles = @[LOCALIZE(@"mv_title_0"), LOCALIZE(@"mv_title_1"), LOCALIZE(@"mv_title_2")];
-    _descriptions = @[LOCALIZE(@"mv_title_3"), LOCALIZE(@"mv_title_4"), LOCALIZE(@"mv_title_5")];
+    _titles = @[LOCALIZE(@"mv_label_0"), LOCALIZE(@"mv_label_1"), LOCALIZE(@"mv_label_2")];
+    _descriptions = @[LOCALIZE(@"mv_label_3"), LOCALIZE(@"mv_label_4"), LOCALIZE(@"mv_label_5")];
     _carouselView.decelerationRate = .64f;
     _carouselView.bounces = NO;
     [_carouselView reloadData];
