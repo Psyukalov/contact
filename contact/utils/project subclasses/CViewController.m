@@ -73,7 +73,7 @@
 }
 
 - (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration {
-    NSLog(@"Accelerometer update with acceleration components: %1.4f, %1.4f, %1.4f;", acceleration.x, acceleration.y, acceleration.z);
+//    NSLog(@"Accelerometer update with acceleration components: %1.4f, %1.4f, %1.4f;", acceleration.x, acceleration.y, acceleration.z);
 }
 
 - (void)setNeeded3DEffect:(BOOL)needed3DEffect animated:(BOOL)animated {

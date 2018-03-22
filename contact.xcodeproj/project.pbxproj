@@ -23,6 +23,8 @@
 		C7637871206264F200C1DD8B /* WavesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7637870206264F200C1DD8B /* WavesView.xib */; };
 		C76378772062A04000C1DD8B /* SecondManualItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C76378762062A04000C1DD8B /* SecondManualItemView.m */; };
 		C76378792062A0D400C1DD8B /* SecondManualItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76378782062A0D400C1DD8B /* SecondManualItemView.xib */; };
+		C763787D2062BAC300C1DD8B /* ThirdManualItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C763787A2062BAC200C1DD8B /* ThirdManualItemView.m */; };
+		C763787E2062BAC300C1DD8B /* ThirdManualItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C763787B2062BAC300C1DD8B /* ThirdManualItemView.xib */; };
 		C785C22F205FDC5F00FC3927 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C785C22E205FDC5F00FC3927 /* MainViewController.m */; };
 		C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C785C231205FDCA600FC3927 /* MainViewController.xib */; };
 		C785C235205FEE2900FC3927 /* SearchAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C785C234205FEE2900FC3927 /* SearchAnimationView.m */; };
@@ -93,6 +95,9 @@
 		C76378752062A04000C1DD8B /* SecondManualItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondManualItemView.h; sourceTree = "<group>"; };
 		C76378762062A04000C1DD8B /* SecondManualItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondManualItemView.m; sourceTree = "<group>"; };
 		C76378782062A0D400C1DD8B /* SecondManualItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondManualItemView.xib; sourceTree = "<group>"; };
+		C763787A2062BAC200C1DD8B /* ThirdManualItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdManualItemView.m; sourceTree = "<group>"; };
+		C763787B2062BAC300C1DD8B /* ThirdManualItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdManualItemView.xib; sourceTree = "<group>"; };
+		C763787C2062BAC300C1DD8B /* ThirdManualItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdManualItemView.h; sourceTree = "<group>"; };
 		C785C22D205FDC5F00FC3927 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C785C22E205FDC5F00FC3927 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C785C231205FDCA600FC3927 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -409,6 +414,9 @@
 				C76378752062A04000C1DD8B /* SecondManualItemView.h */,
 				C76378762062A04000C1DD8B /* SecondManualItemView.m */,
 				C76378782062A0D400C1DD8B /* SecondManualItemView.xib */,
+				C763787C2062BAC300C1DD8B /* ThirdManualItemView.h */,
+				C763787A2062BAC200C1DD8B /* ThirdManualItemView.m */,
+				C763787B2062BAC300C1DD8B /* ThirdManualItemView.xib */,
 				C763786D206264E600C1DD8B /* WavesView.h */,
 				C763786E206264E600C1DD8B /* WavesView.m */,
 				C7637870206264F200C1DD8B /* WavesView.xib */,
@@ -500,6 +508,7 @@
 				C7FBC2632059383000A49F14 /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				C763786420624C1400C1DD8B /* ManualView.xib in Resources */,
 				C7FBC25D2059383000A49F14 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				C763787E2062BAC300C1DD8B /* ThirdManualItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +538,7 @@
 				C7E41B74205BDB6100C4B96F /* SMView.m in Sources */,
 				C7F41398205BBC8A00AA316D /* CObject.m in Sources */,
 				C7FBC271205952E300A49F14 /* CView.m in Sources */,
+				C763787D2062BAC300C1DD8B /* ThirdManualItemView.m in Sources */,
 				C763786A2062631C00C1DD8B /* FirstManualItemView.m in Sources */,
 				C76378772062A04000C1DD8B /* SecondManualItemView.m in Sources */,
 				C71CB47920614ED700DC7ADD /* Switch.m in Sources */,

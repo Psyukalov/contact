@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdManualItemView">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="layer_0_ImageView" destination="943-dv-OcW" id="RXV-ZE-bUk"/>
+                <outlet property="layer_0_View" destination="HjO-vy-ibP" id="XN9-fN-0vH"/>
+                <outlet property="layer_1_ImageView" destination="Doo-mt-1f0" id="bSW-JB-5kZ"/>
+                <outlet property="layer_1_View" destination="Zfa-P7-hFU" id="u5n-im-Oyn"/>
+                <outlet property="layer_2_ImageView" destination="svJ-0q-O8Z" id="onQ-VP-NZC"/>
+                <outlet property="layer_2_View" destination="Vn7-Am-7hf" id="lO4-kV-cUf"/>
+                <outlet property="layer_3_ImageView" destination="Z2d-Cd-khR" id="shr-B5-M5S"/>
+                <outlet property="layer_3_View" destination="PLx-7q-f1r" id="ixc-04-1Uz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-vy-ibP">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_0_image" translatesAutoresizingMaskIntoConstraints="NO" id="943-dv-OcW" customClass="SMImageView">
+                            <rect key="frame" x="38.666666666666657" y="209.66666666666663" width="336" height="317"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_0_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_0_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="943-dv-OcW" firstAttribute="centerY" secondItem="HjO-vy-ibP" secondAttribute="centerY" id="35g-rC-FqU"/>
+                        <constraint firstItem="943-dv-OcW" firstAttribute="centerX" secondItem="HjO-vy-ibP" secondAttribute="centerX" id="KF7-an-PWt"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfa-P7-hFU">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_1_image" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-mt-1f0" customClass="SMImageView">
+                            <rect key="frame" x="38.666666666666657" y="209.66666666666663" width="336" height="317"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_1_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_1_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Doo-mt-1f0" firstAttribute="centerX" secondItem="Zfa-P7-hFU" secondAttribute="centerX" id="4AW-aD-fow"/>
+                        <constraint firstItem="Doo-mt-1f0" firstAttribute="centerY" secondItem="Zfa-P7-hFU" secondAttribute="centerY" id="qRC-XX-PsW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vn7-Am-7hf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_2_image" translatesAutoresizingMaskIntoConstraints="NO" id="svJ-0q-O8Z" customClass="SMImageView">
+                            <rect key="frame" x="38.666666666666657" y="210" width="336" height="317"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_2_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_2_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="svJ-0q-O8Z" firstAttribute="centerY" secondItem="Vn7-Am-7hf" secondAttribute="centerY" id="Jr0-WK-alK"/>
+                        <constraint firstItem="svJ-0q-O8Z" firstAttribute="centerX" secondItem="Vn7-Am-7hf" secondAttribute="centerX" id="uNJ-xk-nMf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLx-7q-f1r">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_mode_day_2_3_image" translatesAutoresizingMaskIntoConstraints="NO" id="Z2d-Cd-khR" customClass="SMImageView">
+                            <rect key="frame" x="39" y="209.66666666666663" width="336" height="317"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="layer_mode_day_2_3_image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="layer_mode_night_2_3_image"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Z2d-Cd-khR" firstAttribute="centerX" secondItem="PLx-7q-f1r" secondAttribute="centerX" id="3rN-PA-AKk"/>
+                        <constraint firstItem="Z2d-Cd-khR" firstAttribute="centerY" secondItem="PLx-7q-f1r" secondAttribute="centerY" id="46k-Nh-bw0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HjO-vy-ibP" secondAttribute="bottom" id="0x9-Xf-htG"/>
+                <constraint firstItem="PLx-7q-f1r" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2f1-WC-yYX"/>
+                <constraint firstItem="PLx-7q-f1r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="75w-Mc-PqL"/>
+                <constraint firstAttribute="bottom" secondItem="PLx-7q-f1r" secondAttribute="bottom" id="C6p-9Z-88u"/>
+                <constraint firstAttribute="trailing" secondItem="HjO-vy-ibP" secondAttribute="trailing" id="D3U-tg-F88"/>
+                <constraint firstItem="Vn7-Am-7hf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Got-1U-aEB"/>
+                <constraint firstAttribute="trailing" secondItem="Vn7-Am-7hf" secondAttribute="trailing" id="JoC-zP-VQZ"/>
+                <constraint firstItem="Zfa-P7-hFU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LVg-Fv-YjJ"/>
+                <constraint firstItem="HjO-vy-ibP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Trr-ou-n4K"/>
+                <constraint firstAttribute="bottom" secondItem="Vn7-Am-7hf" secondAttribute="bottom" id="XWk-7b-rC3"/>
+                <constraint firstItem="Zfa-P7-hFU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Yky-RI-iht"/>
+                <constraint firstAttribute="trailing" secondItem="Zfa-P7-hFU" secondAttribute="trailing" id="gvq-O0-TiI"/>
+                <constraint firstItem="Vn7-Am-7hf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ljz-hh-H8n"/>
+                <constraint firstItem="HjO-vy-ibP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mgV-Hm-7HF"/>
+                <constraint firstAttribute="bottom" secondItem="Zfa-P7-hFU" secondAttribute="bottom" id="o32-Xy-EVg"/>
+                <constraint firstAttribute="trailing" secondItem="PLx-7q-f1r" secondAttribute="trailing" id="zcG-Hm-Wyd"/>
+            </constraints>
+            <point key="canvasLocation" x="45.5" y="443.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="layer_mode_day_2_0_image" width="336" height="317"/>
+        <image name="layer_mode_day_2_1_image" width="336" height="317"/>
+        <image name="layer_mode_day_2_2_image" width="336" height="317"/>
+        <image name="layer_mode_day_2_3_image" width="336" height="317"/>
+        <image name="layer_mode_night_2_0_image" width="336" height="317"/>
+        <image name="layer_mode_night_2_1_image" width="336" height="317"/>
+        <image name="layer_mode_night_2_2_image" width="336" height="317"/>
+        <image name="layer_mode_night_2_3_image" width="336" height="317"/>
+    </resources>
+</document>

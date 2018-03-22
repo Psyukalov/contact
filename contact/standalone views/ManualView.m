@@ -12,6 +12,8 @@
 #import "iCarousel.h"
 
 #import "FirstManualItemView.h"
+#import "SecondManualItemView.h"
+#import "ThirdManualItemView.h"
 
 
 #define kTitleLabelRate (1.28f)
@@ -79,7 +81,20 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     if (!view) {
-        view = [[FirstManualItemView alloc] initWithFrame:carousel.bounds];
+        switch (index) {
+            case 0:
+                view = [[FirstManualItemView alloc] initWithFrame:carousel.bounds];
+                break;
+            case 1:
+                view = [[SecondManualItemView alloc] initWithFrame:carousel.bounds];
+                break;
+            case 2:
+                view = [[ThirdManualItemView alloc] initWithFrame:carousel.bounds];
+                break;
+            default:
+                view = [[FirstManualItemView alloc] initWithFrame:carousel.bounds];
+                break;
+        }
     }
     return view;
 }
@@ -119,9 +134,12 @@
 
 - (void)resetStartAnimationsWithCarousel:(iCarousel *)carousel {
     for (CItemView *itemView in carousel.visibleItemViews) {
-        [itemView stopAnimation];
+        if ([itemView isEqual:carousel.currentItemView]) {
+            [itemView playAnimation];
+        } else {
+            [itemView stopAnimation];
+        }
     }
-    [((CItemView *)carousel.currentItemView) playAnimation];
 }
 
 #pragma mark - Actions

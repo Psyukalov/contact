@@ -16,4 +16,6 @@
 
 - (void)stopAnimation { /* Without implement */ }
 
+- (void)setHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion { /* Without implement */ }
+
 @end

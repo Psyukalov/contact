@@ -24,9 +24,9 @@
                 <outlet property="layer_1_View" destination="Mku-nw-iDi" id="QeQ-41-TCv"/>
                 <outlet property="layer_2_ImageView" destination="5DY-0X-W1W" id="EaV-eD-Hjt"/>
                 <outlet property="layer_2_View" destination="u0Q-XA-09e" id="kdD-Ku-Unb"/>
-                <outlet property="wawes_0_View" destination="mcB-sp-Xs9" id="8Eh-RR-pQC"/>
-                <outlet property="wawes_1_View" destination="rKX-rI-Gmz" id="x38-X1-J1F"/>
-                <outlet property="wawes_2_View" destination="RV2-j4-jfG" id="naa-cu-n3h"/>
+                <outlet property="wawes_0_View" destination="mcB-sp-Xs9" id="KaC-TG-BQd"/>
+                <outlet property="wawes_1_View" destination="rKX-rI-Gmz" id="WeW-RO-hOo"/>
+                <outlet property="wawes_2_View" destination="RV2-j4-jfG" id="SBK-YB-kF5"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

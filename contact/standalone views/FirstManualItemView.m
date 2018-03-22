@@ -43,6 +43,7 @@
 #pragma mark - Class methods
 
 - (void)playAnimation {
+    [super playAnimation];
     __weak FirstManualItemView *weakSelf = self;
     [self setHidden:NO animated:YES completion:^{
         [weakSelf playAnimationWaves];
@@ -50,6 +51,7 @@
 }
 
 - (void)stopAnimation {
+    [super stopAnimation];
     __weak FirstManualItemView *weakSelf = self;
     [self setHidden:YES animated:YES completion:^{
         [weakSelf stopAnimationWaves];
@@ -57,6 +59,7 @@
 }
 
 - (void)setHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion {
+    [super setHidden:hidden animated:animated completion:nil];
     CGAffineTransform centerTransform = hidden ? CGAffineTransformMakeTranslation(_layer_0_ImageView.frame.size.width, 0.f) : CGAffineTransformIdentity;
     CGAffineTransform leftTransform = hidden ? CGAffineTransformMakeTranslation(-_layer_1_ImageView.frame.size.width, 0.f) : CGAffineTransformIdentity;
     CGAffineTransform rightTransform = hidden ? CGAffineTransformMakeTranslation(_layer_2_ImageView.frame.size.width, 0.f) : CGAffineTransformIdentity;

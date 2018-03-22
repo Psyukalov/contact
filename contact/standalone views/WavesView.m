@@ -51,8 +51,8 @@
 
 #pragma mark - Override methods
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+- (void)loadViewFromNib {
+    [super loadViewFromNib];
     _animationKeys = @[@"wave_animation_0_key", @"wave_animation_1_key", @"wave_animation_2_key"];
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
