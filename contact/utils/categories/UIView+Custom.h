@@ -13,6 +13,7 @@
 @interface UIView (Custom)
 
 - (void)addConstraintsWithView:(UIView *)view;
+- (void)addConstraintsWithView:(UIView *)view customInsert:(BOOL)customInsert;
 
 - (void)cornerRadius:(CGFloat)cornerRadius;
 

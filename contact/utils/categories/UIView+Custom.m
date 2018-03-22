@@ -13,8 +13,14 @@
 @implementation UIView (Custom)
 
 - (void)addConstraintsWithView:(UIView *)view {
+    [self addConstraintsWithView:view customInsert:NO];
+}
+
+- (void)addConstraintsWithView:(UIView *)view customInsert:(BOOL)customInsert {
     view.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:view];
+    if (!customInsert) {
+        [self addSubview:view];
+    }
     NSArray *attributes = @[@(NSLayoutAttributeLeft), @(NSLayoutAttributeTop), @(NSLayoutAttributeRight), @(NSLayoutAttributeBottom)];
     for (NSNumber *attribute in attributes) {
         [self addConstraint:[NSLayoutConstraint constraintWithItem:view attribute:[attribute unsignedIntegerValue] relatedBy:NSLayoutRelationEqual toItem:self attribute:[attribute unsignedIntegerValue] multiplier:1.f constant:0.f]];

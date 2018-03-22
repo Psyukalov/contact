@@ -14,7 +14,7 @@
 
 #import "Macros.h"
 
-// TODO:
+#import "UIView+Custom.h"
 
 
 typedef void(^CViewControllerCompletion)(void);
@@ -55,5 +55,10 @@ IB_DESIGNABLE
 - (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration;
 
 - (void)setNeeded3DEffect:(BOOL)needed3DEffect animated:(BOOL)animated;
+
+- (void)toggleBlurView:(BOOL)on;
+- (void)toggleBlurView:(BOOL)on animated:(BOOL)animated;
+- (void)toggleBlurView:(BOOL)on animated:(BOOL)animated completion:(void (^)(void))completion;
+- (void)toggleBlurView:(BOOL)on animated:(BOOL)animated aboveView:(UIView *)aboveView completion:(void (^)(void))completion;
 
 @end

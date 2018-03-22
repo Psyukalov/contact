@@ -76,6 +76,74 @@
     NSLog(@"Accelerometer update with acceleration components: %1.4f, %1.4f, %1.4f;", acceleration.x, acceleration.y, acceleration.z);
 }
 
+- (void)toggleBlurView:(BOOL)on {
+    [self toggleBlurView:on animated:YES];
+}
+
+- (void)toggleBlurView:(BOOL)on animated:(BOOL)animated {
+    [self toggleBlurView:on animated:animated aboveView:nil completion:nil];
+}
+
+- (void)toggleBlurView:(BOOL)on animated:(BOOL)animated completion:(void (^)(void))completion {
+    [self toggleBlurView:on animated:animated aboveView:nil completion:completion];
+}
+
+- (void)toggleBlurView:(BOOL)on animated:(BOOL)animated aboveView:(UIView *)aboveView completion:(void (^)(void))completion {
+    if (on) {
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        visualEffectView.alpha = 0.f;
+        if (!aboveView) {
+            aboveView = _baseGradientLayer_1_ImageView;
+        }
+        [self.contentView insertSubview:visualEffectView aboveSubview:aboveView];
+        [self.contentView addConstraintsWithView:visualEffectView customInsert:YES];
+        if (animated) {
+            [UIView animate:^{
+                visualEffectView.alpha = 1.f;
+            } completion:^{
+                if (completion) {
+                    completion();
+                }
+            }];
+        } else {
+            visualEffectView.alpha = 1.f;
+            if (completion) {
+                completion();
+            }
+        }
+    } else {
+        UIView *visualEffectView;
+        for (UIView *view in self.contentView.subviews) {
+            if ([view isKindOfClass:[UIVisualEffectView class]]) {
+                visualEffectView = view;
+                break;
+            }
+        }
+        if (!visualEffectView) {
+            if (completion) {
+                completion();
+            }
+            return;
+        }
+        if (animated) {
+            [UIView animate:^{
+                visualEffectView.alpha = 0.f;
+            } completion:^{
+                [visualEffectView removeFromSuperview];
+                if (completion) {
+                    completion();
+                }
+            }];
+        } else {
+            [visualEffectView removeFromSuperview];
+            if (completion) {
+                completion();
+            }
+        }
+    }
+}
+
 - (void)setNeeded3DEffect:(BOOL)needed3DEffect animated:(BOOL)animated {
     _needed3DEffect = needed3DEffect;
     CATransform3D transform = CATransform3DIdentity;
