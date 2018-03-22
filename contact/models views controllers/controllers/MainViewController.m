@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIView *tokensView;
 @property (weak, nonatomic) IBOutlet UIView *maskedLeftView;
 @property (weak, nonatomic) IBOutlet UIView *maskedRightView;
+@property (weak, nonatomic) IBOutlet UIView *divide_0_View;
+@property (weak, nonatomic) IBOutlet UIView *divide_1_View;
 
 @property (weak, nonatomic) IBOutlet UILabel *tokens_0_Label;
 @property (weak, nonatomic) IBOutlet UILabel *tokens_1_Label;
@@ -47,7 +49,7 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *invisibleSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *notificationsSwitch;
-@property (weak, nonatomic) IBOutlet UISwitch *screenModeSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *nightModeSwitch;
 
 @property (weak, nonatomic) IBOutlet SearchAnimationView *searchAnimationView;
 
@@ -70,9 +72,29 @@
 
 #pragma mark - Class methods
 
-- (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated {
-    _isOpen = isOpen;
-    [_profileScrollView setContentOffset:CGPointMake(0.f, _isOpen ? top : bottom) animated:animated];
+- (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated {
+    [self interfaceHidden:hidden animated:animated completion:nil];
+}
+
+- (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion {
+    CGAffineTransform transform = hidden ? CGAffineTransformMakeTranslation(0.f, _tokensView.frame.size.height) : CGAffineTransformIdentity;
+    CGFloat alpha = hidden ? 0.f : 1.f;
+    if (animated) {
+        [UIView animate:^{
+            _profileScrollView.transform = transform;
+            _profileScrollView.alpha = alpha;
+        } completion:^{
+            if (completion) {
+                completion();
+            }
+        } duration:.64f];
+    } else {
+        _profileScrollView.transform = transform;
+        _profileScrollView.alpha = alpha;
+        if (completion) {
+            completion();
+        }
+    }
 }
 
 #pragma mark - Overriding methods
@@ -80,22 +102,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view layoutIfNeeded];
+    [self interfaceHidden:YES animated:NO];
     [_searchAnimationView viewAnimation:ViewAnimationZoomOut animated:NO];
+    _profileScrollView.decelerationRate = 0.f;
     _profileScrollView.contentInset = UIEdgeInsetsMake(HEIGHT - _tokensView.frame.size.height - 18.f, 0.f, 0.f, 0.f);
     top = -(HEIGHT - _profileView.frame.size.height);
     bottom = -_profileScrollView.contentInset.top;
     [_maskedLeftView cornerRadius:4.f];
     [_maskedRightView cornerRadius:4.f];
     [self setIsOpen:NO animated:YES];
-    _screenModeSwitch.on = [ScreenModeManager shared].isScreenModeNight;
-    for (UISwitch *optionSwitch in @[_invisibleSwitch, _notificationsSwitch, _screenModeSwitch]) {
+    _nightModeSwitch.on = [ScreenModeManager shared].isScreenModeNight;
+    for (UISwitch *optionSwitch in @[_invisibleSwitch, _notificationsSwitch, _nightModeSwitch]) {
         optionSwitch.onTintColor = RGB(28.f, 132.f, 242.f);
         optionSwitch.backgroundColor = RGB(168.f, 168.f, 168.f);
         optionSwitch.tintColor = optionSwitch.backgroundColor;
         [optionSwitch cornerRadius:.5f * optionSwitch.frame.size.height];
     }
-    _screenModeSwitch.backgroundColor = RGB(52.f, 54.f, 102.f);
-    _screenModeSwitch.tintColor = _screenModeSwitch.backgroundColor;
+    _nightModeSwitch.backgroundColor = RGB(52.f, 54.f, 102.f);
+    _nightModeSwitch.tintColor = _nightModeSwitch.backgroundColor;
     [_showHistoryButton setTitle:LOCALIZE(@"mvc_button_0") forState:UIControlStateNormal];
     [_editProfileButton setTitle:LOCALIZE(@"mvc_button_1") forState:UIControlStateNormal];
     [_aboutContactButton setTitle:LOCALIZE(@"mvc_button_2") forState:UIControlStateNormal];
@@ -127,10 +151,30 @@
         CGFloat margin = _leftMarginProfileViewLC.constant;
         _maskedLeftView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
         _maskedRightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
-        _tokensView.alpha = 1.f - percent;
-        _tokens_1_Label.alpha = percent;
-        _logotype_1_ImageView.alpha = percent;
-        _showHistoryButton.alpha = percent;
+        BOOL condition = percent == 0.f || percent == 1.f;
+        NSUInteger i = 0;
+        for (UIView *view in @[_tokens_1_Label, _logotype_1_ImageView, _showHistoryButton, _divide_0_View, _nameLabel, _editProfileButton, _divide_1_View, _invisibleLabel, _invisibleSwitch, _notificationsLabel, _notificationsSwitch, _nightModeLabel, _nightModeSwitch, _aboutContactButton]) {
+            if (condition) {
+                CGFloat rate = [view isKindOfClass:[UISwitch class]] ? -1.f : 1.f;
+                [UIView animateWithDuration:.32f delay:i * .08f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                    view.alpha = percent;
+                    view.transform = CGAffineTransformMakeTranslation((1.f - percent) * rate * 16.f, 0.f);
+                } completion:nil];
+            } else {
+                view.alpha = 0.f;
+            }
+            i++;
+        }
+        if (condition) {
+            [UIView animate:^{
+                _tokensView.alpha = 1.f - percent;
+            } completion:nil duration:.32f];
+        } else {
+            _tokensView.alpha = 0.f;
+        }
+        if (scrollView.decelerating) {
+            [self changeInterfaceWithScrollView:scrollView];
+        }
     }
 }
 
@@ -141,18 +185,17 @@
     }
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if (scrollView == _profileScrollView) {
-        [self changeInterfaceWithScrollView:scrollView];
-    }
-}
-
 #pragma mark - Other methods
 
 - (void)changeInterfaceWithScrollView:(UIScrollView *)scrollView {
     CGFloat y = scrollView.contentOffset.y;
     CGFloat switchBorder = _isOpen ? top - _deltaSwitchBorder : bottom + _deltaSwitchBorder;
     [self setIsOpen:y >= switchBorder animated:YES];
+}
+
+- (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated {
+    _isOpen = isOpen;
+    [_profileScrollView setContentOffset:CGPointMake(0.f, _isOpen ? top : bottom) animated:animated];
 }
 
 #pragma mark - Actions
@@ -176,7 +219,7 @@
     };
 }
 
-- (IBAction)screenModeSwitch_VC:(UISwitch *)sender {
+- (IBAction)nightModeSwitch_VC:(UISwitch *)sender {
     [[ScreenModeManager shared] toggleScreenMode];
 }
 
@@ -191,6 +234,7 @@
         [weakAuthorizationVC.view removeFromSuperview];
         [_searchAnimationView viewAnimation:ViewAnimationZoomIn animated:YES completion:^{
             [_searchAnimationView play];
+            [self interfaceHidden:NO animated:YES];
         }];
     };
     [self.view addSubview:authorizationVC.view];

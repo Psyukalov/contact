@@ -20,6 +20,16 @@
 typedef void(^CViewControllerCompletion)(void);
 
 
+@protocol CViewControllerProtocol <NSObject>
+
+@optional
+
+- (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated;
+- (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion;
+
+@end
+
+
 IB_DESIGNABLE
 
 @interface CViewController : ViewController

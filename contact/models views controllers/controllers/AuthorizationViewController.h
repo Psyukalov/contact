@@ -10,9 +10,6 @@
 #import "CViewController.h"
 
 
-@interface AuthorizationViewController : CViewController
-
-- (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated;
-- (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion;
+@interface AuthorizationViewController : CViewController <CViewControllerProtocol>
 
 @end

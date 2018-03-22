@@ -12,10 +12,7 @@
 
 IB_DESIGNABLE
 
-@interface MainViewController : CViewController
-
-//@property (assign, nonatomic) IBInspectable CGFloat topSwitchBorder;
-//@property (assign, nonatomic) IBInspectable CGFloat bottomSwitchBorder;
+@interface MainViewController : CViewController <CViewControllerProtocol>
 
 @property (assign, nonatomic) IBInspectable CGFloat deltaSwitchBorder;
 
