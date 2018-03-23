@@ -10,7 +10,9 @@
 #import "SlidingView.h"
 
 
-@interface SlidingView ()
+@interface SlidingView () {
+    BOOL neededOffsetY;
+}
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -22,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sliderImageView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftLC;
+
+@property (assign, nonatomic) CGFloat percent;
 
 @end
 
@@ -47,6 +51,7 @@
 }
 
 - (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated completion:(void (^)(void))completion {
+    neededOffsetY = NO;
     _isOpen = isOpen;
     CGPoint point = CGPointMake(0.f, _isOpen ? _topBorder : _bottomBorder);
     if (animated) {
@@ -54,14 +59,18 @@
         [UIView animateWithDuration:.48f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _scrollView.contentOffset = point;
         } completion:^(BOOL finished) {
+            [self viewsWithPercent:_isOpen ? 1.f : 0.f];
             [self interfaceWithPercent:_isOpen ? 1.f : 0.f];
+            neededOffsetY = YES;
             if (completion) {
                 completion();
             }
         }];
     } else {
         _scrollView.contentOffset = point;
+        [self viewsWithPercent:_isOpen ? 1.f : 0.f];
         [self interfaceWithPercent:_isOpen ? 1.f : 0.f];
+        neededOffsetY = YES;
         if (completion) {
             completion();
         }
@@ -77,30 +86,36 @@
 - (void)loadViewFromNib {
     [super loadViewFromNib];
     [self layoutIfNeeded];
+    neededOffsetY = YES;
     _scrollView.decelerationRate = .16f;
     [_leftView cornerRadius:4.f];
     [_rightView cornerRadius:4.f];
     [self configureWithUnhideHeight:0.f];
-    [self setIsOpen:NO animated:YES];
+    [self setIsOpen:NO animated:NO];
 }
 
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y;
-    CGFloat percent = (ABS(_bottomBorder) - ABS(offsetY)) / (ABS(_bottomBorder) - ABS(_topBorder));
-    CGFloat margin = _leftLC.constant;
-    _leftView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
-    _rightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
-    [self interfaceWithPercent:percent == 0.f || percent == 1.f ? percent : .08f]; // Or random float between 0.f and 1.f;
+    _percent = (ABS(_bottomBorder) - ABS(offsetY)) / (ABS(_bottomBorder) - ABS(_topBorder));
+    if (_percent < 0.f) {
+        _percent = 0.f;
+    }
+    if (_percent > 1.f) {
+        _percent = 1.f;
+    }
+    [self viewsWithPercent:_percent];
+    if (neededOffsetY) {
+        [self interfaceWithPercent:_percent == 0.f || _percent == 1.f ? _percent : .08f]; // Or random float between 0.f and 1.f;
+    }
     if (scrollView.decelerating) {
         [self positionWithOffsetY:offsetY];
     }
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
-                  willDecelerate:(BOOL)decelerate {
-    if (!decelerate) {
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate && (_percent > 0.f && _percent < 1.f)) {
         [self positionWithOffsetY:scrollView.contentOffset.y];
     }
 }
@@ -110,6 +125,12 @@
 - (void)positionWithOffsetY:(CGFloat)offsetY {
     CGFloat border = _isOpen ? _topBorder - _deltaBorder : _bottomBorder + _deltaBorder;
     [self setIsOpen:offsetY >= border animated:YES];
+}
+
+- (void)viewsWithPercent:(CGFloat)percent {
+    CGFloat margin = _leftLC.constant;
+    _leftView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
+    _rightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
 }
 
 @end

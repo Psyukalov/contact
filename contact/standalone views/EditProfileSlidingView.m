@@ -10,7 +10,9 @@
 #import "EditProfileSlidingView.h"
 
 
-@interface EditProfileSlidingView ()
+@interface EditProfileSlidingView () {
+    BOOL closed;
+}
 
 @end
 
@@ -27,6 +29,16 @@
 
 - (void)loadViewFromNib {
     [super loadViewFromNib];
+    [self setIsOpen:YES animated:NO];
+}
+
+- (void)interfaceWithPercent:(CGFloat)percent {
+    [super interfaceWithPercent:percent];
+    if (!closed && percent == 0.f && self.didCloseViewCompletion) {
+        closed = YES;
+        self.didCloseViewCompletion();
+        return;
+    }
 }
 
 #pragma mark - UIScrollViewDelegate

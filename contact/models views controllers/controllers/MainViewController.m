@@ -86,6 +86,7 @@
         return;
     }
     [self startAnimations];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 - (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration {
@@ -134,19 +135,25 @@
             [editProfileSlidingView viewDirection:ViewDirectionBottom animated:NO];
             __weak MainViewController *weakSelf = self;
             [profileView setIsOpen:NO animated:YES completion:^{
-                [weakSelf.searchAnimationView logotypeHidden:YES];
-                [weakSelf toggleBlurView:YES animated:YES aboveView:weakSelf.searchAnimationView completion:nil];
                 [weakSelf interfaceHidden:YES animated:YES completion:^{
-                    [editProfileSlidingView viewDirection:ViewDirectionCenter animated:YES];
+                    [weakSelf.searchAnimationView logotypeHidden:YES completion:^{
+                        [weakSelf toggleBlurView:YES animated:YES aboveView:weakSelf.searchAnimationView completion:^{
+                            [editProfileSlidingView viewDirection:ViewDirectionCenter animated:YES];
+                        }];
+                    }];
                 }];
             }];
             __weak EditProfileSlidingView *weakEditProfileView = editProfileSlidingView;
             editProfileSlidingView.didCloseViewCompletion = ^{
-                [weakEditProfileView removeFromSuperview];
-                [self toggleBlurView:NO animated:YES];
-                [_searchAnimationView logotypeHidden:NO];
-                [self interfaceHidden:NO animated:YES completion:^{
-                    [profileView setIsOpen:YES];
+                [weakEditProfileView viewAnimation:ViewAnimationFadeOut animated:YES completion:^{
+                    [weakEditProfileView removeFromSuperview];
+                    [self toggleBlurView:NO animated:YES completion:^{
+                        [_searchAnimationView logotypeHidden:NO completion:^{
+                            [self interfaceHidden:NO animated:YES completion:^{
+                                [profileView setIsOpen:YES];
+                            }];
+                        }];
+                    }];
                 }];
             };
         }
@@ -212,6 +219,10 @@
             [_searchAnimationView play];
         }];
     }];
+}
+
+- (void)applicationWillEnterForeground {
+    [_searchAnimationView play];
 }
 
 @end
