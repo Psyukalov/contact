@@ -12,7 +12,8 @@
 
 @interface SearchAnimationView : CView
 
-
+- (void)logotypeHidden:(BOOL)hidden;
+- (void)logotypeHidden:(BOOL)hidden completion:(void (^)(void))completion;
 
 - (void)play;
 - (void)stop;

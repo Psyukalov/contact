@@ -34,6 +34,43 @@
 
 @implementation SearchAnimationView
 
+#pragma mark - Class methods
+
+- (void)logotypeHidden:(BOOL)hidden {
+    [self logotypeHidden:hidden completion:nil];
+}
+
+- (void)logotypeHidden:(BOOL)hidden completion:(void (^)(void))completion {
+    CGAffineTransform transform = hidden ? CGAffineTransformMakeScale(.64f, .64f) : CGAffineTransformIdentity;
+    CGFloat alpha = hidden ? 0.f : 1.f;
+    [UIView animate:^{
+        _logotypeImageView.transform = transform;
+        _logotypeImageView.alpha = alpha;
+    } completion:^{
+        if (completion) {
+            completion();
+        }
+    }];
+}
+
+- (void)play {
+    NSUInteger i = 0;
+    for (UIImageView *imageView in @[_wave_0_ImageView, _wave_1_ImageView, _wave_2_ImageView]) {
+        CAAnimationGroup *animationGroup = [_animationGroup copy];
+        animationGroup.beginTime = CACurrentMediaTime() + i * kDelayTime;
+        [imageView.layer addAnimation:animationGroup forKey:_animationKeys[i]];
+        i++;
+    }
+}
+
+- (void)stop {
+    NSUInteger i = 0;
+    for (UIImageView *imageView in @[_wave_0_ImageView, _wave_1_ImageView, _wave_2_ImageView]) {
+        [imageView.layer removeAnimationForKey:_animationKeys[i]];
+        i++;
+    }
+}
+
 #pragma mark - Overriding methods
 
 - (void)loadViewFromNib {
@@ -77,26 +114,6 @@
     } else {
         _logotypeImageView.transform = logotypeTransform;
         _wavesView.layer.transform = transform;
-    }
-}
-
-#pragma mark - Class methods
-
-- (void)play {
-    NSUInteger i = 0;
-    for (UIImageView *imageView in @[_wave_0_ImageView, _wave_1_ImageView, _wave_2_ImageView]) {
-        CAAnimationGroup *animationGroup = [_animationGroup copy];
-        animationGroup.beginTime = CACurrentMediaTime() + i * kDelayTime;
-        [imageView.layer addAnimation:animationGroup forKey:_animationKeys[i]];
-        i++;
-    }
-}
-
-- (void)stop {
-    NSUInteger i = 0;
-    for (UIImageView *imageView in @[_wave_0_ImageView, _wave_1_ImageView, _wave_2_ImageView]) {
-        [imageView.layer removeAnimationForKey:_animationKeys[i]];
-        i++;
     }
 }
 
