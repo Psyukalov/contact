@@ -33,6 +33,9 @@
 		C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A2DC022063D99B00BE4B88 /* HistoryView.xib */; };
 		C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DC072063DD2800BE4B88 /* HistoryTableViewCell.m */; };
 		C7A2DC0A2063DD2800BE4B88 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */; };
+		C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */; };
+		C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB7E2064FD6F00C5CB0F /* SlidingView.m */; };
+		C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CBFB802064FD7C00C5CB0F /* SlidingView.xib */; };
 		C7E41B74205BDB6100C4B96F /* SMView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E41B73205BDB6100C4B96F /* SMView.m */; };
 		C7E41B77205BDC9200C4B96F /* SMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E41B76205BDC9200C4B96F /* SMLabel.m */; };
 		C7F41395205BBC1000AA316D /* ScreenModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F41394205BBC1000AA316D /* ScreenModeManager.m */; };
@@ -114,6 +117,11 @@
 		C7A2DC062063DD2800BE4B88 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
 		C7A2DC072063DD2800BE4B88 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
 		C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		C7CBFB6E2064E8F600C5CB0F /* SMTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMTextField.h; sourceTree = "<group>"; };
+		C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTextField.m; sourceTree = "<group>"; };
+		C7CBFB7D2064FD6F00C5CB0F /* SlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlidingView.h; sourceTree = "<group>"; };
+		C7CBFB7E2064FD6F00C5CB0F /* SlidingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidingView.m; sourceTree = "<group>"; };
+		C7CBFB802064FD7C00C5CB0F /* SlidingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlidingView.xib; sourceTree = "<group>"; };
 		C7E41B72205BDB6100C4B96F /* SMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMView.h; sourceTree = "<group>"; };
 		C7E41B73205BDB6100C4B96F /* SMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMView.m; sourceTree = "<group>"; };
 		C7E41B75205BDC9200C4B96F /* SMLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLabel.h; sourceTree = "<group>"; };
@@ -211,6 +219,8 @@
 				C7330DD7205C099100E8F336 /* SMImageView.m */,
 				C7E41B75205BDC9200C4B96F /* SMLabel.h */,
 				C7E41B76205BDC9200C4B96F /* SMLabel.m */,
+				C7CBFB6E2064E8F600C5CB0F /* SMTextField.h */,
+				C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */,
 				C7E41B72205BDB6100C4B96F /* SMView.h */,
 				C7E41B73205BDB6100C4B96F /* SMView.m */,
 			);
@@ -446,6 +456,9 @@
 				C76378752062A04000C1DD8B /* SecondManualItemView.h */,
 				C76378762062A04000C1DD8B /* SecondManualItemView.m */,
 				C76378782062A0D400C1DD8B /* SecondManualItemView.xib */,
+				C7CBFB7D2064FD6F00C5CB0F /* SlidingView.h */,
+				C7CBFB7E2064FD6F00C5CB0F /* SlidingView.m */,
+				C7CBFB802064FD7C00C5CB0F /* SlidingView.xib */,
 				C763787C2062BAC300C1DD8B /* ThirdManualItemView.h */,
 				C763787A2062BAC200C1DD8B /* ThirdManualItemView.m */,
 				C763787B2062BAC300C1DD8B /* ThirdManualItemView.xib */,
@@ -526,6 +539,7 @@
 				C763786C2062635300C1DD8B /* FirstManualItemView.xib in Resources */,
 				C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */,
 				C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */,
+				C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */,
 				C7FBC2152059087600A49F14 /* Assets.xcassets in Resources */,
 				C7FBC2602059383000A49F14 /* OpenSans-LightItalic.ttf in Resources */,
 				C7330DD5205C077300E8F336 /* AboutContactView.xib in Resources */,
@@ -562,9 +576,11 @@
 				C7FBC24820592E3F00A49F14 /* TableView.m in Sources */,
 				C7A2DC012063D98900BE4B88 /* HistoryView.m in Sources */,
 				C763786220624BE400C1DD8B /* ManualView.m in Sources */,
+				C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */,
 				C7FBC28020597A3300A49F14 /* RegistrationView.m in Sources */,
 				C7FBC2742059533700A49F14 /* AuthorizationView.m in Sources */,
 				C7FBC267205939EA00A49F14 /* CViewController.m in Sources */,
+				C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */,
 				C7FBC2322059250C00A49F14 /* ViewController.m in Sources */,
 				C7FBC26B2059456E00A49F14 /* AuthorizationViewController.m in Sources */,
 				C7FBC2392059290A00A49F14 /* NavigationController.m in Sources */,

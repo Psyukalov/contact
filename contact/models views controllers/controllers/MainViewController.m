@@ -11,6 +11,7 @@
 
 #import "SearchAnimationView.h"
 #import "HistoryView.h"
+//#import "EditProfileView.h"
 #import "AboutContactView.h"
 
 #import "AuthorizationViewController.h"
@@ -252,6 +253,29 @@
             }];
         }];
     };
+}
+
+- (IBAction)editProfileButton_TUI:(UIButton *)sender {
+//    EditProfileView *editProfileView = [[EditProfileView alloc] initWithFrame:self.view.bounds];
+//    [self.contentView addSubview:editProfileView];
+//    [editProfileView viewDirection:ViewDirectionBottom animated:NO];
+//    __weak MainViewController *weakSelf = self;
+//    [self setIsOpen:NO animated:YES completion:^{
+//        [weakSelf.searchAnimationView logotypeHidden:YES];
+//        [weakSelf toggleBlurView:YES animated:YES aboveView:weakSelf.searchAnimationView completion:nil];
+//        [weakSelf interfaceHidden:YES animated:YES completion:^{
+//            [editProfileView viewDirection:ViewDirectionCenter animated:YES];
+//        }];
+//    }];
+//    __weak EditProfileView *weakEditProfileView = editProfileView;
+//    editProfileView.didCloseViewCompletion = ^{
+//        [weakEditProfileView removeFromSuperview];
+//        [self toggleBlurView:NO animated:YES];
+//        [_searchAnimationView logotypeHidden:NO];
+//        [self interfaceHidden:NO animated:YES completion:^{
+//            [self setIsOpen:YES];
+//        }];
+//    };
 }
 
 - (IBAction)logOutButton_TUI:(UIButton *)sender {
