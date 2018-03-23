@@ -6,17 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="OpenSans-Light.ttf">
-            <string>OpenSans-Light</string>
-        </array>
-        <array key="OpenSans-Regular.ttf">
-            <string>OpenSans-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <userDefinedRuntimeAttributes>
@@ -24,41 +15,15 @@
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isAnimated" value="NO"/>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="neededGradientImageViews" value="NO"/>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="neededAccelerometerUpdates" value="YES"/>
-                <userDefinedRuntimeAttribute type="number" keyPath="deltaSwitchBorder">
-                    <real key="value" value="64"/>
-                </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="aboutContactButton" destination="iOF-2k-lrx" id="Aom-oD-bZ8"/>
                 <outlet property="baseGradientLayer_0_ImageView" destination="hFT-UP-RM1" id="a2J-GK-tFY"/>
                 <outlet property="baseGradientLayer_1_ImageView" destination="RzM-aA-sPn" id="Vwc-iU-anb"/>
                 <outlet property="basePatternImageView" destination="U2s-cw-Lgc" id="Vti-Uc-TQq"/>
-                <outlet property="contentProfileView" destination="W5l-U8-bAG" id="ZOM-yD-pUq"/>
                 <outlet property="contentView" destination="eoS-W0-Bar" id="NI5-kU-w4i"/>
-                <outlet property="divide_0_View" destination="bIG-3h-5r1" id="Iw6-OH-ePd"/>
-                <outlet property="divide_1_View" destination="b9k-Zb-UkA" id="KkC-cB-FiW"/>
-                <outlet property="editProfileButton" destination="2qM-tw-p69" id="RuJ-UF-YEk"/>
-                <outlet property="invisibleLabel" destination="kTR-A8-hCL" id="GCY-2O-0jw"/>
-                <outlet property="invisibleSwitch" destination="ojG-7a-jmr" id="qMp-fd-0H0"/>
-                <outlet property="leftMarginProfileViewLC" destination="Peg-5B-VRk" id="XeW-Z7-SRn"/>
-                <outlet property="logOutButton" destination="Tl3-oU-GJx" id="bLa-xY-iGg"/>
-                <outlet property="logotype_0_ImageView" destination="l1A-en-3m1" id="OsZ-ZC-VxS"/>
-                <outlet property="logotype_1_ImageView" destination="zzp-Q9-mUK" id="Bam-FY-Uu1"/>
-                <outlet property="maskedLeftView" destination="he1-Ey-3SI" id="o1M-Di-DUL"/>
-                <outlet property="maskedRightView" destination="pFD-ai-NYf" id="wjK-IV-OQU"/>
-                <outlet property="nameLabel" destination="0gi-Yi-Wij" id="a7c-6P-CVE"/>
-                <outlet property="nightModeLabel" destination="6Fv-H4-mUb" id="tvW-St-Mjd"/>
-                <outlet property="nightModeSwitch" destination="eeS-G8-VRj" id="VqK-yH-Szr"/>
-                <outlet property="notificationsLabel" destination="2Jg-2v-3wN" id="fja-kk-8NF"/>
-                <outlet property="notificationsSwitch" destination="woY-L2-LY1" id="x6m-Xg-0Wc"/>
-                <outlet property="profileScrollView" destination="uLv-YX-wAD" id="qWs-nK-laP"/>
-                <outlet property="profileView" destination="3Zc-8X-gRM" id="dEt-fq-rIR"/>
+                <outlet property="profileSlidingView" destination="bcJ-SF-wKr" id="ybG-WS-K3m"/>
                 <outlet property="scrollView" destination="5Xy-oI-UWQ" id="Lt6-Pf-f1Q"/>
                 <outlet property="searchAnimationView" destination="Z73-xA-c2S" id="jnE-h2-ebt"/>
-                <outlet property="showHistoryButton" destination="zGh-rc-aId" id="yMc-dF-dOB"/>
-                <outlet property="tokensView" destination="X2g-3e-PWs" id="inE-8H-Cec"/>
-                <outlet property="tokens_0_Label" destination="UkT-Bx-Y1d" id="Rkp-Qj-Md6"/>
-                <outlet property="tokens_1_Label" destination="EM3-Mq-rng" id="JYe-lt-cwC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -84,386 +49,44 @@
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z73-xA-c2S" customClass="SearchAnimationView">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
-                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-YX-wAD">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcJ-SF-wKr" customClass="ProfileSlidingView">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                    <subviews>
-                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-8X-gRM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="565.33333333333337"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider_image" translatesAutoresizingMaskIntoConstraints="NO" id="f3l-w3-ObT">
-                                                    <rect key="frame" x="182" y="0.0" width="50" height="6"/>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he1-Ey-3SI" customClass="SMView">
-                                                    <rect key="frame" x="10" y="18" width="64" height="579.33333333333337"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="64" id="kW7-wd-ejS"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
-                                                            <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFD-ai-NYf" customClass="SMView">
-                                                    <rect key="frame" x="340" y="18" width="64" height="579.33333333333337"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="64" id="bdB-fS-5RB"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
-                                                            <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5l-U8-bAG" customClass="SMView">
-                                                    <rect key="frame" x="14" y="18" width="386" height="547.33333333333337"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-3e-PWs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="386" height="85.333333333333329"/>
-                                                            <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-dH-kZc">
-                                                                    <rect key="frame" x="177" y="32.333333333333336" width="32" height="21"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkT-Bx-Y1d" customClass="SMLabel">
-                                                                            <rect key="frame" x="0.0" y="0.6666666666666643" width="10.333333333333334" height="21"/>
-                                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="18"/>
-                                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
-                                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
-                                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </label>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_18_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="l1A-en-3m1" customClass="SMImageView">
-                                                                            <rect key="frame" x="14" y="-0.3333333333333357" width="18" height="21"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="contact_logotype_18_pt_mode_day_image"/>
-                                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="contact_logotype_18_pt_mode_night_image"/>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </imageView>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstItem="l1A-en-3m1" firstAttribute="leading" secondItem="UkT-Bx-Y1d" secondAttribute="trailing" constant="4" id="9bJ-4E-QSd"/>
-                                                                        <constraint firstItem="UkT-Bx-Y1d" firstAttribute="top" secondItem="6ua-dH-kZc" secondAttribute="top" id="DB0-Ej-VUU"/>
-                                                                        <constraint firstItem="UkT-Bx-Y1d" firstAttribute="leading" secondItem="6ua-dH-kZc" secondAttribute="leading" id="L38-2U-Cpx"/>
-                                                                        <constraint firstItem="l1A-en-3m1" firstAttribute="centerY" secondItem="UkT-Bx-Y1d" secondAttribute="centerY" id="P6K-cA-wFx"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="UkT-Bx-Y1d" secondAttribute="bottom" id="RqU-p0-1eZ"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="l1A-en-3m1" secondAttribute="trailing" id="rEO-r8-32Z"/>
-                                                                    </constraints>
-                                                                </view>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="6ua-dH-kZc" firstAttribute="centerY" secondItem="X2g-3e-PWs" secondAttribute="centerY" id="5LR-dm-npE"/>
-                                                                <constraint firstItem="6ua-dH-kZc" firstAttribute="centerX" secondItem="X2g-3e-PWs" secondAttribute="centerX" id="VTl-B3-sKf"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM3-Mq-rng" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="18" width="32" height="65.333333333333329"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="56"/>
-                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
-                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_logotype_39_pt_mode_day_image" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-Q9-mUK" customClass="SMImageView">
-                                                            <rect key="frame" x="60" y="28.666666666666664" width="39" height="44.999999999999993"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayImage" value="contact_logotype_39_pt_mode_day_image"/>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighImage" value="contact_logotype_39_pt_mode_night_image"/>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGh-rc-aId">
-                                                            <rect key="frame" x="0.0" y="83.333333333333329" width="122" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
-                                                            <state key="normal" title="show history">
-                                                                <color key="titleColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <state key="highlighted">
-                                                                <color key="titleColor" red="0.36862745099999999" green="0.6588235294" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="showHistoryButton_TUI:" destination="-1" eventType="touchUpInside" id="R2e-Cq-TOB"/>
-                                                            </connections>
-                                                        </button>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIG-3h-5r1" customClass="SMView">
-                                                            <rect key="frame" x="14" y="148" width="358" height="1"/>
-                                                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="1" id="5gy-ZX-AWI"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
-                                                                    <color key="value" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
-                                                                    <color key="value" red="0.26666666666666666" green="0.29019607843137252" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gi-Yi-Wij" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="175" width="358" height="42"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="36"/>
-                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
-                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qM-tw-p69">
-                                                            <rect key="frame" x="0.0" y="217.33333333333334" width="108" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
-                                                            <state key="normal" title="edit profile">
-                                                                <color key="titleColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <state key="highlighted">
-                                                                <color key="titleColor" red="0.36862745099999999" green="0.6588235294" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="editProfileButton_TUI:" destination="-1" eventType="touchUpInside" id="KAb-1U-G8t"/>
-                                                            </connections>
-                                                        </button>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9k-Zb-UkA" customClass="SMView">
-                                                            <rect key="frame" x="14" y="315.33333333333331" width="358" height="1"/>
-                                                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="1" id="KLR-vq-WIC"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
-                                                                    <color key="value" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
-                                                                    <color key="value" red="0.2666666667" green="0.2901960784" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="go invisible" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-A8-hCL" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="342.33333333333331" width="70" height="16.333333333333314"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
-                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notifications" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jg-2v-3wN" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="386.66666666666669" width="76" height="16.333333333333314"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
-                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="night mode" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fv-H4-mUb" customClass="SMLabel">
-                                                            <rect key="frame" x="14" y="430.33333333333331" width="71" height="16.333333333333314"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
-                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ojG-7a-jmr">
-                                                            <rect key="frame" x="323" y="335.33333333333331" width="51" height="31"/>
-                                                        </switch>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woY-L2-LY1">
-                                                            <rect key="frame" x="323" y="380" width="51" height="31"/>
-                                                        </switch>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-G8-VRj" customClass="Switch">
-                                                            <rect key="frame" x="323" y="423.66666666666669" width="51" height="31"/>
-                                                            <connections>
-                                                                <action selector="nightModeSwitch_VC:" destination="-1" eventType="valueChanged" id="9Bo-6b-OfA"/>
-                                                            </connections>
-                                                        </switch>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOF-2k-lrx" customClass="SMButton">
-                                                            <rect key="frame" x="10" y="491.33333333333331" width="362" height="35.999999999999943"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                            <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            <state key="normal" title="about contact" image="about_contact_mode_day_button">
-                                                                <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <state key="highlighted">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayDefaultImage" value="about_contact_mode_day_button"/>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighDefaultImage" value="about_contact_mode_night_button"/>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayDefaultTextColor">
-                                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighDefaultTextColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayHighlightedTextColor">
-                                                                    <color key="value" red="0.29019607843137252" green="0.29019607843137252" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighHighlightedTextColor">
-                                                                    <color key="value" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayHighlightedImage" value="about_contact_mode_day_button"/>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighHighlightedImage" value="about_contact_mode_night_button"/>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="aboutContactButton_TUI:" destination="-1" eventType="touchUpInside" id="eGz-li-PCB"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tl3-oU-GJx">
-                                                            <rect key="frame" x="0.0" y="250.33333333333331" width="86" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="26" maxY="8"/>
-                                                            <state key="normal" title="log out">
-                                                                <color key="titleColor" red="0.96470588235294119" green="0.29019607843137252" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <state key="highlighted">
-                                                                <color key="titleColor" red="0.36862745099999999" green="0.6588235294" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="logOutButton_TUI:" destination="-1" eventType="touchUpInside" id="esh-lG-akb"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="0gi-Yi-Wij" firstAttribute="top" secondItem="bIG-3h-5r1" secondAttribute="bottom" constant="26" id="3dA-Me-Z4F"/>
-                                                        <constraint firstItem="bIG-3h-5r1" firstAttribute="leading" secondItem="EM3-Mq-rng" secondAttribute="leading" id="4OS-gY-nfN"/>
-                                                        <constraint firstItem="zzp-Q9-mUK" firstAttribute="centerY" secondItem="EM3-Mq-rng" secondAttribute="centerY" id="7At-ac-b5I"/>
-                                                        <constraint firstItem="eeS-G8-VRj" firstAttribute="trailing" secondItem="woY-L2-LY1" secondAttribute="trailing" id="7Su-Fu-JaJ"/>
-                                                        <constraint firstItem="zzp-Q9-mUK" firstAttribute="leading" secondItem="EM3-Mq-rng" secondAttribute="trailing" constant="14" id="9wp-p2-RSt"/>
-                                                        <constraint firstItem="b9k-Zb-UkA" firstAttribute="leading" secondItem="bIG-3h-5r1" secondAttribute="leading" id="BDD-Cg-7aF"/>
-                                                        <constraint firstItem="bIG-3h-5r1" firstAttribute="centerX" secondItem="W5l-U8-bAG" secondAttribute="centerX" id="CDH-Il-WSh"/>
-                                                        <constraint firstItem="ojG-7a-jmr" firstAttribute="centerY" secondItem="kTR-A8-hCL" secondAttribute="centerY" id="DYD-8L-nOu"/>
-                                                        <constraint firstItem="kTR-A8-hCL" firstAttribute="top" secondItem="b9k-Zb-UkA" secondAttribute="bottom" constant="26" id="DZJ-UG-Eco"/>
-                                                        <constraint firstItem="eeS-G8-VRj" firstAttribute="centerY" secondItem="6Fv-H4-mUb" secondAttribute="centerY" id="JQ2-ex-KBW"/>
-                                                        <constraint firstItem="kTR-A8-hCL" firstAttribute="leading" secondItem="b9k-Zb-UkA" secondAttribute="leading" id="KPR-DD-lDq"/>
-                                                        <constraint firstItem="X2g-3e-PWs" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" id="Mej-s7-b3v"/>
-                                                        <constraint firstItem="2Jg-2v-3wN" firstAttribute="leading" secondItem="kTR-A8-hCL" secondAttribute="leading" id="MoE-Yd-IOn"/>
-                                                        <constraint firstItem="EM3-Mq-rng" firstAttribute="leading" secondItem="W5l-U8-bAG" secondAttribute="leading" constant="14" id="P5u-H0-8rB"/>
-                                                        <constraint firstItem="ojG-7a-jmr" firstAttribute="trailing" secondItem="b9k-Zb-UkA" secondAttribute="trailing" id="PYa-AE-a69"/>
-                                                        <constraint firstItem="b9k-Zb-UkA" firstAttribute="top" secondItem="Tl3-oU-GJx" secondAttribute="bottom" constant="32" id="QFc-Ss-a0S"/>
-                                                        <constraint firstItem="X2g-3e-PWs" firstAttribute="leading" secondItem="W5l-U8-bAG" secondAttribute="leading" id="QMs-bO-Q1D"/>
-                                                        <constraint firstItem="Tl3-oU-GJx" firstAttribute="top" secondItem="2qM-tw-p69" secondAttribute="bottom" id="Qh0-1d-Epk"/>
-                                                        <constraint firstItem="2Jg-2v-3wN" firstAttribute="top" secondItem="kTR-A8-hCL" secondAttribute="bottom" constant="28" id="TH1-Zq-a6n"/>
-                                                        <constraint firstItem="b9k-Zb-UkA" firstAttribute="trailing" secondItem="bIG-3h-5r1" secondAttribute="trailing" id="Vlm-bo-Sdc"/>
-                                                        <constraint firstItem="0gi-Yi-Wij" firstAttribute="trailing" secondItem="bIG-3h-5r1" secondAttribute="trailing" id="Vvh-m2-Ga7"/>
-                                                        <constraint firstItem="2qM-tw-p69" firstAttribute="leading" secondItem="zGh-rc-aId" secondAttribute="leading" id="XvT-Gh-Q22"/>
-                                                        <constraint firstAttribute="trailing" secondItem="X2g-3e-PWs" secondAttribute="trailing" id="Y6U-AY-871"/>
-                                                        <constraint firstItem="2qM-tw-p69" firstAttribute="top" secondItem="0gi-Yi-Wij" secondAttribute="bottom" id="daD-Km-UHE"/>
-                                                        <constraint firstItem="zGh-rc-aId" firstAttribute="top" secondItem="EM3-Mq-rng" secondAttribute="bottom" id="gE0-mu-Bp7"/>
-                                                        <constraint firstAttribute="bottom" secondItem="iOF-2k-lrx" secondAttribute="bottom" constant="20" id="gbZ-gu-D3r"/>
-                                                        <constraint firstItem="EM3-Mq-rng" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" constant="18" id="iqL-eN-ufH"/>
-                                                        <constraint firstItem="iOF-2k-lrx" firstAttribute="top" secondItem="6Fv-H4-mUb" secondAttribute="bottom" constant="44" id="lU4-3j-dql"/>
-                                                        <constraint firstItem="zGh-rc-aId" firstAttribute="leading" secondItem="EM3-Mq-rng" secondAttribute="leading" constant="-14" id="okh-JF-Gxu"/>
-                                                        <constraint firstItem="woY-L2-LY1" firstAttribute="centerY" secondItem="2Jg-2v-3wN" secondAttribute="centerY" id="pov-8t-c6Q"/>
-                                                        <constraint firstItem="0gi-Yi-Wij" firstAttribute="leading" secondItem="bIG-3h-5r1" secondAttribute="leading" id="rXL-tJ-ro6"/>
-                                                        <constraint firstItem="bIG-3h-5r1" firstAttribute="top" secondItem="zGh-rc-aId" secondAttribute="bottom" constant="32" id="s7y-gh-vSv"/>
-                                                        <constraint firstItem="iOF-2k-lrx" firstAttribute="trailing" secondItem="eeS-G8-VRj" secondAttribute="trailing" id="tmr-Ws-1Y0"/>
-                                                        <constraint firstItem="woY-L2-LY1" firstAttribute="trailing" secondItem="ojG-7a-jmr" secondAttribute="trailing" id="uuU-U4-esu"/>
-                                                        <constraint firstItem="Tl3-oU-GJx" firstAttribute="leading" secondItem="W5l-U8-bAG" secondAttribute="leading" id="v9B-dZ-34i"/>
-                                                        <constraint firstItem="6Fv-H4-mUb" firstAttribute="leading" secondItem="2Jg-2v-3wN" secondAttribute="leading" id="vrw-L2-9Ih"/>
-                                                        <constraint firstItem="iOF-2k-lrx" firstAttribute="leading" secondItem="6Fv-H4-mUb" secondAttribute="leading" constant="-4" id="waI-Sh-SVE"/>
-                                                        <constraint firstItem="6Fv-H4-mUb" firstAttribute="top" secondItem="2Jg-2v-3wN" secondAttribute="bottom" constant="28" id="xi2-Ao-ELS"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
-                                                            <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="he1-Ey-3SI" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" id="1AR-Yd-th1"/>
-                                                <constraint firstAttribute="trailing" secondItem="W5l-U8-bAG" secondAttribute="trailing" constant="14" id="3zW-UG-2r7"/>
-                                                <constraint firstItem="he1-Ey-3SI" firstAttribute="leading" secondItem="3Zc-8X-gRM" secondAttribute="leading" constant="10" id="7pe-KS-qsC"/>
-                                                <constraint firstAttribute="trailing" secondItem="pFD-ai-NYf" secondAttribute="trailing" constant="10" id="Gf5-0R-tFk"/>
-                                                <constraint firstItem="pFD-ai-NYf" firstAttribute="top" secondItem="W5l-U8-bAG" secondAttribute="top" id="JGw-gR-XVd"/>
-                                                <constraint firstItem="f3l-w3-ObT" firstAttribute="centerX" secondItem="3Zc-8X-gRM" secondAttribute="centerX" id="Kao-3b-Opi"/>
-                                                <constraint firstItem="W5l-U8-bAG" firstAttribute="leading" secondItem="3Zc-8X-gRM" secondAttribute="leading" constant="14" id="Peg-5B-VRk"/>
-                                                <constraint firstItem="W5l-U8-bAG" firstAttribute="top" secondItem="f3l-w3-ObT" secondAttribute="bottom" constant="12" id="QyX-2M-pgV"/>
-                                                <constraint firstItem="pFD-ai-NYf" firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" constant="32" id="U5n-hq-s4i"/>
-                                                <constraint firstItem="he1-Ey-3SI" firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" constant="32" id="WRC-ce-TrU"/>
-                                                <constraint firstItem="f3l-w3-ObT" firstAttribute="top" secondItem="3Zc-8X-gRM" secondAttribute="top" id="iDE-mx-DoN"/>
-                                                <constraint firstAttribute="bottom" secondItem="W5l-U8-bAG" secondAttribute="bottom" id="klh-dg-oqz"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="3Zc-8X-gRM" firstAttribute="leading" secondItem="uLv-YX-wAD" secondAttribute="leading" id="N7O-HE-ybz"/>
-                                        <constraint firstItem="3Zc-8X-gRM" firstAttribute="centerX" secondItem="uLv-YX-wAD" secondAttribute="centerX" id="QFr-PE-juY"/>
-                                        <constraint firstAttribute="trailing" secondItem="3Zc-8X-gRM" secondAttribute="trailing" id="bQf-Yr-T0I"/>
-                                        <constraint firstItem="3Zc-8X-gRM" firstAttribute="top" secondItem="uLv-YX-wAD" secondAttribute="top" id="cgY-aj-egV"/>
-                                        <constraint firstAttribute="bottom" secondItem="3Zc-8X-gRM" secondAttribute="bottom" id="yCM-3y-19F"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="delegate" destination="-1" id="YPi-qT-pTe"/>
-                                    </connections>
-                                </scrollView>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="deltaBorder">
+                                            <real key="value" value="64"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="hFT-UP-RM1" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="5JY-rC-Dux"/>
                                 <constraint firstAttribute="trailing" secondItem="Z73-xA-c2S" secondAttribute="trailing" id="8S7-s8-pFU"/>
-                                <constraint firstItem="uLv-YX-wAD" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="IcB-mX-BeI"/>
+                                <constraint firstAttribute="bottom" secondItem="bcJ-SF-wKr" secondAttribute="bottom" id="Bn2-WK-aQm"/>
                                 <constraint firstItem="Z73-xA-c2S" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="NMN-SD-svS"/>
                                 <constraint firstItem="U2s-cw-Lgc" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="Pba-RM-oJP"/>
                                 <constraint firstItem="RzM-aA-sPn" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="Pbq-jx-YVy"/>
                                 <constraint firstAttribute="bottom" secondItem="RzM-aA-sPn" secondAttribute="bottom" id="Q2m-x5-mgU"/>
                                 <constraint firstAttribute="trailing" secondItem="U2s-cw-Lgc" secondAttribute="trailing" id="RE8-Qh-K0b"/>
+                                <constraint firstItem="bcJ-SF-wKr" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="ULE-r0-3D6"/>
                                 <constraint firstAttribute="bottom" secondItem="U2s-cw-Lgc" secondAttribute="bottom" id="UqC-Qj-aCL"/>
                                 <constraint firstAttribute="bottom" secondItem="hFT-UP-RM1" secondAttribute="bottom" id="VmU-wE-ekm"/>
+                                <constraint firstAttribute="trailing" secondItem="bcJ-SF-wKr" secondAttribute="trailing" id="XrS-k1-EAn"/>
                                 <constraint firstAttribute="trailing" secondItem="hFT-UP-RM1" secondAttribute="trailing" id="ZFr-Qy-bGm"/>
+                                <constraint firstItem="bcJ-SF-wKr" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="gPm-OQ-fQ5"/>
                                 <constraint firstItem="hFT-UP-RM1" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="iam-Or-84e"/>
                                 <constraint firstItem="RzM-aA-sPn" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="jQ4-WQ-JTJ"/>
                                 <constraint firstItem="Z73-xA-c2S" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="lMT-TM-TLB"/>
                                 <constraint firstItem="U2s-cw-Lgc" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="nww-JY-I71"/>
                                 <constraint firstAttribute="bottom" secondItem="Z73-xA-c2S" secondAttribute="bottom" id="qIF-Ee-jzS"/>
-                                <constraint firstItem="uLv-YX-wAD" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="rKF-Bf-vIn"/>
-                                <constraint firstAttribute="trailing" secondItem="uLv-YX-wAD" secondAttribute="trailing" id="siZ-e1-bth"/>
-                                <constraint firstAttribute="bottom" secondItem="uLv-YX-wAD" secondAttribute="bottom" id="t92-nt-TK5"/>
                                 <constraint firstAttribute="trailing" secondItem="RzM-aA-sPn" secondAttribute="trailing" id="xVT-ja-Rq0"/>
                             </constraints>
                         </view>
@@ -481,7 +104,6 @@
             <color key="backgroundColor" red="0.10980392160000001" green="0.015686274510000001" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="5Xy-oI-UWQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1xF-rT-G9T"/>
-                <constraint firstItem="X2g-3e-PWs" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="94:812" id="H7X-xo-iaY"/>
                 <constraint firstAttribute="bottom" secondItem="5Xy-oI-UWQ" secondAttribute="bottom" id="ME1-ZC-mCS"/>
                 <constraint firstItem="5Xy-oI-UWQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gyM-nj-Fjp"/>
                 <constraint firstAttribute="trailing" secondItem="5Xy-oI-UWQ" secondAttribute="trailing" id="mCI-jk-Rsi"/>
@@ -490,15 +112,8 @@
         </view>
     </objects>
     <resources>
-        <image name="about_contact_mode_day_button" width="36" height="36"/>
-        <image name="about_contact_mode_night_button" width="36" height="36"/>
         <image name="base_gradient_layer_0_image" width="32" height="812"/>
         <image name="base_gradient_layer_1_image" width="32" height="460"/>
         <image name="base_pattern_image" width="553" height="1091"/>
-        <image name="contact_logotype_18_pt_mode_day_image" width="18" height="21"/>
-        <image name="contact_logotype_18_pt_mode_night_image" width="18" height="21"/>
-        <image name="contact_logotype_39_pt_mode_day_image" width="39" height="45"/>
-        <image name="contact_logotype_39_pt_mode_night_image" width="39" height="45"/>
-        <image name="slider_image" width="50" height="6"/>
     </resources>
 </document>

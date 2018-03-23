@@ -36,21 +36,36 @@
 
 #pragma mark - Class methods
 
+- (void)configureWithUnhideHeight:(CGFloat)unhideHeight {
+    _scrollView.contentInset = UIEdgeInsetsMake(HEIGHT - unhideHeight - 18.f, 0.f, 0.f, 0.f);
+    _topBorder = -(HEIGHT - _slidingView.frame.size.height);
+    _bottomBorder = -_scrollView.contentInset.top;
+}
+
 - (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated {
     [self setIsOpen:isOpen animated:animated completion:nil];
 }
 
 - (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated completion:(void (^)(void))completion {
     _isOpen = isOpen;
-    [self interfaceWithPercent:.08f]; // Random float between 0.f and 1.f;
-    [UIView animateWithDuration:.48f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _scrollView.contentOffset = CGPointMake(0.f, _isOpen ? _topBorder : _bottomBorder);
-    } completion:^(BOOL finished) {
+    CGPoint point = CGPointMake(0.f, _isOpen ? _topBorder : _bottomBorder);
+    if (animated) {
+        [self interfaceWithPercent:.08f]; // Random float between 0.f and 1.f;
+        [UIView animateWithDuration:.48f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            _scrollView.contentOffset = point;
+        } completion:^(BOOL finished) {
+            [self interfaceWithPercent:_isOpen ? 1.f : 0.f];
+            if (completion) {
+                completion();
+            }
+        }];
+    } else {
+        _scrollView.contentOffset = point;
         [self interfaceWithPercent:_isOpen ? 1.f : 0.f];
         if (completion) {
             completion();
         }
-    }];
+    }
 }
 
 - (void)interfaceWithPercent:(CGFloat)percent {
@@ -61,12 +76,12 @@
 
 - (void)loadViewFromNib {
     [super loadViewFromNib];
+    [self layoutIfNeeded];
     _scrollView.decelerationRate = .16f;
-    _scrollView.contentInset = UIEdgeInsetsMake(HEIGHT - _unhideHeightLC.constant - 18.f, 0.f, 0.f, 0.f);
-    _topBorder = -(HEIGHT - _slidingView.frame.size.height);
-    _bottomBorder = -_scrollView.contentInset.top;
     [_leftView cornerRadius:4.f];
     [_rightView cornerRadius:4.f];
+    [self configureWithUnhideHeight:0.f];
+    [self setIsOpen:NO animated:YES];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -77,7 +92,7 @@
     CGFloat margin = _leftLC.constant;
     _leftView.transform = CGAffineTransformMakeTranslation(percent * -margin, 0.f);
     _rightView.transform = CGAffineTransformMakeTranslation(percent * margin, 0.f);
-    [self interfaceWithPercent:.08f]; // Random float between 0.f and 1.f;
+    [self interfaceWithPercent:percent == 0.f || percent == 1.f ? percent : .08f]; // Or random float between 0.f and 1.f;
     if (scrollView.decelerating) {
         [self positionWithOffsetY:offsetY];
     }

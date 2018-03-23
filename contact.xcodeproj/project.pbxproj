@@ -14,6 +14,10 @@
 		C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DDA205C0F4300E8F336 /* SMButton.m */; };
 		C7330DDD205C234B00E8F336 /* RegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7330DDC205C234B00E8F336 /* RegistrationView.xib */; };
 		C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DE2205C294E00E8F336 /* UILabel+Custom.m */; };
+		C75D4F9C2065088D00FBC213 /* ProfileSlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75D4F9B2065088C00FBC213 /* ProfileSlidingView.xib */; };
+		C75D4F9F206508AD00FBC213 /* ProfileSlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D4F9E206508AD00FBC213 /* ProfileSlidingView.m */; };
+		C75D4FA12065214100FBC213 /* EditProfileSlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75D4FA02065214100FBC213 /* EditProfileSlidingView.xib */; };
+		C75D4FA42065215700FBC213 /* EditProfileSlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D4FA32065215700FBC213 /* EditProfileSlidingView.m */; };
 		C763786220624BE400C1DD8B /* ManualView.m in Sources */ = {isa = PBXBuildFile; fileRef = C763786120624BE400C1DD8B /* ManualView.m */; };
 		C763786420624C1400C1DD8B /* ManualView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C763786320624C1300C1DD8B /* ManualView.xib */; };
 		C76378672062623D00C1DD8B /* CItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C76378662062623D00C1DD8B /* CItemView.m */; };
@@ -87,6 +91,12 @@
 		C7330DDC205C234B00E8F336 /* RegistrationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationView.xib; sourceTree = "<group>"; };
 		C7330DE1205C294E00E8F336 /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
 		C7330DE2205C294E00E8F336 /* UILabel+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Custom.m"; sourceTree = "<group>"; };
+		C75D4F9B2065088C00FBC213 /* ProfileSlidingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSlidingView.xib; sourceTree = "<group>"; };
+		C75D4F9D206508AD00FBC213 /* ProfileSlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileSlidingView.h; sourceTree = "<group>"; };
+		C75D4F9E206508AD00FBC213 /* ProfileSlidingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileSlidingView.m; sourceTree = "<group>"; };
+		C75D4FA02065214100FBC213 /* EditProfileSlidingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileSlidingView.xib; sourceTree = "<group>"; };
+		C75D4FA22065215700FBC213 /* EditProfileSlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileSlidingView.h; sourceTree = "<group>"; };
+		C75D4FA32065215700FBC213 /* EditProfileSlidingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileSlidingView.m; sourceTree = "<group>"; };
 		C763786020624BE400C1DD8B /* ManualView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualView.h; sourceTree = "<group>"; };
 		C763786120624BE400C1DD8B /* ManualView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualView.m; sourceTree = "<group>"; };
 		C763786320624C1300C1DD8B /* ManualView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualView.xib; sourceTree = "<group>"; };
@@ -438,6 +448,9 @@
 				C7FBC2722059533700A49F14 /* AuthorizationView.h */,
 				C7FBC2732059533700A49F14 /* AuthorizationView.m */,
 				C7FBC2752059534A00A49F14 /* AuthorizationView.xib */,
+				C75D4FA22065215700FBC213 /* EditProfileSlidingView.h */,
+				C75D4FA32065215700FBC213 /* EditProfileSlidingView.m */,
+				C75D4FA02065214100FBC213 /* EditProfileSlidingView.xib */,
 				C76378682062631C00C1DD8B /* FirstManualItemView.h */,
 				C76378692062631C00C1DD8B /* FirstManualItemView.m */,
 				C763786B2062635300C1DD8B /* FirstManualItemView.xib */,
@@ -447,6 +460,9 @@
 				C763786020624BE400C1DD8B /* ManualView.h */,
 				C763786120624BE400C1DD8B /* ManualView.m */,
 				C763786320624C1300C1DD8B /* ManualView.xib */,
+				C75D4F9D206508AD00FBC213 /* ProfileSlidingView.h */,
+				C75D4F9E206508AD00FBC213 /* ProfileSlidingView.m */,
+				C75D4F9B2065088C00FBC213 /* ProfileSlidingView.xib */,
 				C7FBC27E20597A3300A49F14 /* RegistrationView.h */,
 				C7FBC27F20597A3300A49F14 /* RegistrationView.m */,
 				C7330DDC205C234B00E8F336 /* RegistrationView.xib */,
@@ -535,8 +551,10 @@
 				C7FBC2762059534A00A49F14 /* AuthorizationView.xib in Resources */,
 				C7FBC24C2059339500A49F14 /* activity_indicator_image@3x.png in Resources */,
 				C7FBC25C2059383000A49F14 /* OpenSans-ExtraBold.ttf in Resources */,
+				C75D4FA12065214100FBC213 /* EditProfileSlidingView.xib in Resources */,
 				C7637871206264F200C1DD8B /* WavesView.xib in Resources */,
 				C763786C2062635300C1DD8B /* FirstManualItemView.xib in Resources */,
+				C75D4F9C2065088D00FBC213 /* ProfileSlidingView.xib in Resources */,
 				C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */,
 				C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */,
 				C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */,
@@ -569,6 +587,7 @@
 			files = (
 				C7FBC2792059579A00A49F14 /* UIView+Custom.m in Sources */,
 				C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */,
+				C75D4F9F206508AD00FBC213 /* ProfileSlidingView.m in Sources */,
 				C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */,
 				C76378672062623D00C1DD8B /* CItemView.m in Sources */,
 				C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */,
@@ -593,6 +612,7 @@
 				C763787D2062BAC300C1DD8B /* ThirdManualItemView.m in Sources */,
 				C763786A2062631C00C1DD8B /* FirstManualItemView.m in Sources */,
 				C76378772062A04000C1DD8B /* SecondManualItemView.m in Sources */,
+				C75D4FA42065215700FBC213 /* EditProfileSlidingView.m in Sources */,
 				C71CB47920614ED700DC7ADD /* Switch.m in Sources */,
 				C7FBC21B2059087600A49F14 /* main.m in Sources */,
 				C7E41B77205BDC9200C4B96F /* SMLabel.m in Sources */,

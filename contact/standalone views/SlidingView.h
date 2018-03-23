@@ -14,14 +14,14 @@ IB_DESIGNABLE
 
 @interface SlidingView : CView <UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *unhideHeightLC;
-
 @property (assign, nonatomic) IBInspectable CGFloat deltaBorder;
 
 @property (assign, nonatomic) CGFloat topBorder;
 @property (assign, nonatomic) CGFloat bottomBorder;
 
 @property (assign, nonatomic) BOOL isOpen;
+
+- (void)configureWithUnhideHeight:(CGFloat)unhideHeight;
 
 - (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated;
 - (void)setIsOpen:(BOOL)isOpen animated:(BOOL)animated completion:(void (^)(void))completion;

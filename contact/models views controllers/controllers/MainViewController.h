@@ -10,10 +10,6 @@
 #import "CViewController.h"
 
 
-IB_DESIGNABLE
-
 @interface MainViewController : CViewController <CViewControllerProtocol>
-
-@property (assign, nonatomic) IBInspectable CGFloat deltaSwitchBorder;
 
 @end
