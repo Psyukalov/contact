@@ -89,6 +89,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
+- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration completion:(void (^)(void))completion {
+    [super keyboardWillShow:show height:height duration:duration completion:nil];
+    _profileSlidingView.isScrollEnabled = !show;
+}
+
 - (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration {
     [super accelerometerUpdateWithAcceleration:acceleration];
     _customView.parallaxPoint = CGPointMake(acceleration.x, acceleration.y);

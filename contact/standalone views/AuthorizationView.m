@@ -38,13 +38,6 @@
 
 @implementation AuthorizationView
 
-#pragma mark - Override properties
-
-- (CGRect)keyboardFrame {
-    // TODO:
-    return [super keyboardFrame];
-}
-
 #pragma mark - Overriding methods
 
 - (void)loadViewFromNib {

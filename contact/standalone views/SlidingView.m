@@ -38,6 +38,11 @@
     [self setIsOpen:isOpen animated:YES];
 }
 
+- (void)setIsScrollEnabled:(BOOL)isScrollEnabled {
+    _isScrollEnabled = isScrollEnabled;
+    _scrollView.scrollEnabled = _isScrollEnabled;
+}
+
 #pragma mark - Class methods
 
 - (void)configureWithUnhideHeight:(CGFloat)unhideHeight {
@@ -97,25 +102,27 @@
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat offsetY = scrollView.contentOffset.y;
-    _percent = (ABS(_bottomBorder) - ABS(offsetY)) / (ABS(_bottomBorder) - ABS(_topBorder));
-    if (_percent < 0.f) {
-        _percent = 0.f;
-    }
-    if (_percent > 1.f) {
-        _percent = 1.f;
-    }
-    [self viewsWithPercent:_percent];
-    if (neededOffsetY) {
-        [self interfaceWithPercent:_percent == 0.f || _percent == 1.f ? _percent : .08f]; // Or random float between 0.f and 1.f;
-    }
-    if (scrollView.decelerating) {
-        [self positionWithOffsetY:offsetY];
+    if (scrollView == _scrollView) {
+        CGFloat offsetY = scrollView.contentOffset.y;
+        _percent = (ABS(_bottomBorder) - ABS(offsetY)) / (ABS(_bottomBorder) - ABS(_topBorder));
+        if (_percent < 0.f) {
+            _percent = 0.f;
+        }
+        if (_percent > 1.f) {
+            _percent = 1.f;
+        }
+        [self viewsWithPercent:_percent];
+        if (neededOffsetY) {
+            [self interfaceWithPercent:_percent == 0.f || _percent == 1.f ? _percent : .08f]; // Or random float between 0.f and 1.f;
+        }
+        if (scrollView.decelerating) {
+            [self positionWithOffsetY:offsetY];
+        }
     }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    if (!decelerate && (_percent > 0.f && _percent < 1.f)) {
+    if (scrollView == _scrollView && !decelerate && (_percent > 0.f && _percent < 1.f)) {
         [self positionWithOffsetY:scrollView.contentOffset.y];
     }
 }

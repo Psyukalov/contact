@@ -56,13 +56,6 @@
     return _preferGenderSwitch.on;
 }
 
-#pragma mark - Override properties
-
-- (CGRect)keyboardFrame {
-    // TODO:
-    return [super keyboardFrame];
-}
-
 #pragma mark - Override methods
 
 - (void)loadViewFromNib {

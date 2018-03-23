@@ -50,16 +50,16 @@
 
 "sav_label_0" = "Searching for contact";
 
-// Main view controller
+// Profile sliding view
 
-"mvc_button_0" = "Show History";
-"mvc_button_1" = "Edit Profile";
-"mvc_button_2" = "Log Out";
-"mvc_button_3" = "About Contact";
+"psv_button_0" = "Show History";
+"psv_button_1" = "Edit Profile";
+"psv_button_2" = "Log Out";
+"psv_button_3" = "About Contact";
 
-"mvc_label_0" = "Go Invisible";
-"mvc_label_1" = "Notifications";
-"mvc_label_2" = "Night Mode";
+"psv_label_0" = "Go Invisible";
+"psv_label_1" = "Notifications";
+"psv_label_2" = "Night Mode";
 
 // Manual view
 
@@ -74,3 +74,16 @@
 // History view
 
 "hv_label_0" = "History";
+
+// Edit profile sliding view
+
+"epsv_button_0" = "I'm ready";
+
+"epsv_label_0" = "A bit about your self:";
+"epsv_label_1" = "Male";
+"epsv_label_2" = "Prefer Male";
+"epsv_label_3" = "Female";
+"epsv_label_4" = "Prefer Female";
+
+"epsv_placeholder_0" = "Your Name";
+"epsv_placeholder_1" = "Your Age";

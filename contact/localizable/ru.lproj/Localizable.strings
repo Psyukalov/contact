@@ -50,16 +50,16 @@
 
 "sav_label_0" = "Поиск контактов";
 
-// Main view controller
+// Profile sliding view
 
-"mvc_button_0" = "История";
-"mvc_button_1" = "Редактировать";
-"mvc_button_2" = "Выйти";
-"mvc_button_3" = "Информация";
+"psv_button_0" = "История";
+"psv_button_1" = "Редактировать";
+"psv_button_2" = "Выйти";
+"psv_button_3" = "Информация";
 
-"mvc_label_0" = "Невидимый";
-"mvc_label_1" = "Уведомления";
-"mvc_label_2" = "Ночной режим";
+"psv_label_0" = "Невидимый";
+"psv_label_1" = "Уведомления";
+"psv_label_2" = "Ночной режим";
 
 // Manual view
 
@@ -74,3 +74,16 @@
 // History view
 
 "hv_label_0" = "История";
+
+// Edit profile sliding view
+
+"epsv_button_0" = "Применить";
+
+"epsv_label_0" = "Немного о себе:";
+"epsv_label_1" = "Мужчина";
+"epsv_label_2" = "Ищу Мужчину";
+"epsv_label_3" = "Женщина";
+"epsv_label_4" = "Ищу Женщину";
+
+"epsv_placeholder_0" = "Ваше Имя";
+"epsv_placeholder_1" = "Ваш Возраст";

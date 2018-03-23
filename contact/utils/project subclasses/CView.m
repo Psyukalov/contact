@@ -26,10 +26,6 @@
     [self setNeeded3DEffect:needed3DEffect animated:YES];
 }
 
-- (CGRect)keyboardFrame {
-    return CGRectZero;
-}
-
 #pragma mark - Class methods
 
 - (void)viewDirection:(ViewDirection)viewDirection animated:(BOOL)animated {

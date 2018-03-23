@@ -57,13 +57,13 @@
     }
     _nightModeSwitch.backgroundColor = RGB(52.f, 54.f, 102.f);
     _nightModeSwitch.tintColor = _nightModeSwitch.backgroundColor;
-    [_showHistoryButton setTitle:LOCALIZE(@"mvc_button_0") forState:UIControlStateNormal];
-    [_editProfileButton setTitle:LOCALIZE(@"mvc_button_1") forState:UIControlStateNormal];
-    [_logOutButton setTitle:LOCALIZE(@"mvc_button_2") forState:UIControlStateNormal];
-    [_aboutContactButton setTitle:LOCALIZE(@"mvc_button_3") forState:UIControlStateNormal];
-    _invisibleLabel.text = LOCALIZE(@"mvc_label_0");
-    _notificationsLabel.text = LOCALIZE(@"mvc_label_1");
-    _nightModeLabel.text = LOCALIZE(@"mvc_label_2");
+    [_showHistoryButton setTitle:LOCALIZE(@"psv_button_0") forState:UIControlStateNormal];
+    [_editProfileButton setTitle:LOCALIZE(@"psv_button_1") forState:UIControlStateNormal];
+    [_logOutButton setTitle:LOCALIZE(@"psv_button_2") forState:UIControlStateNormal];
+    [_aboutContactButton setTitle:LOCALIZE(@"psv_button_3") forState:UIControlStateNormal];
+    _invisibleLabel.text = LOCALIZE(@"psv_label_0");
+    _notificationsLabel.text = LOCALIZE(@"psv_label_1");
+    _nightModeLabel.text = LOCALIZE(@"psv_label_2");
 }
 
 - (void)interfaceWithPercent:(CGFloat)percent {

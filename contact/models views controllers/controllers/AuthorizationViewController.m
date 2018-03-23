@@ -62,16 +62,6 @@
     _customView.parallaxPoint = CGPointMake(acceleration.x, acceleration.y);
 }
 
-- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration completion:(void (^)(void))completion {
-    [super keyboardWillShow:show height:height duration:duration completion:^{
-        [UIView animate:^{
-            if (show) {
-                // TODO:
-            }
-        } completion:nil];
-    }];
-}
-
 #pragma mark - Class methods
 
 - (void)interfaceHidden:(BOOL)hidden animated:(BOOL)animated {

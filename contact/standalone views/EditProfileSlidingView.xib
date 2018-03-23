@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileSlidingView">
             <userDefinedRuntimeAttributes>
@@ -19,8 +24,18 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="ageTextField" destination="Pxb-1O-Ioo" id="mdF-g9-x43"/>
+                <outlet property="confirmButton" destination="e0Q-HK-8fE" id="840-PX-zEi"/>
+                <outlet property="descriptionLabel" destination="C2K-Dp-z5o" id="Q6c-0W-MTJ"/>
+                <outlet property="femaleLabel" destination="mxs-eh-fGG" id="kUL-jP-UgA"/>
+                <outlet property="genderSwitch" destination="TKk-bx-Dwb" id="XCf-QN-JRc"/>
                 <outlet property="leftLC" destination="apy-gt-LZn" id="uI5-1e-iXz"/>
                 <outlet property="leftView" destination="gAB-aF-827" id="T6N-n7-AHo"/>
+                <outlet property="maleLabel" destination="Y8J-Sg-Ca0" id="wxU-sH-Y7k"/>
+                <outlet property="nameTextField" destination="dvB-NG-HSa" id="x9c-0n-eOf"/>
+                <outlet property="preferFemaleLabel" destination="oo3-2e-Wfe" id="PL6-TG-dOU"/>
+                <outlet property="preferGenderSwitch" destination="GAM-RC-96u" id="hyJ-zI-Hff"/>
+                <outlet property="preferMaleLabel" destination="ZKI-90-RA6" id="nQL-WP-czh"/>
                 <outlet property="rightView" destination="qet-wU-TvO" id="37o-TC-rxD"/>
                 <outlet property="scrollView" destination="z8m-R7-N3W" id="2de-vd-eTp"/>
                 <outlet property="sliderImageView" destination="AaE-uL-rNS" id="B2d-1i-Oag"/>
@@ -37,13 +52,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzW-3e-JPa">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="468"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider_image" translatesAutoresizingMaskIntoConstraints="NO" id="AaE-uL-rNS">
                                     <rect key="frame" x="162.5" y="0.0" width="50" height="6"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAB-aF-827" customClass="SMView">
-                                    <rect key="frame" x="10" y="18" width="64" height="288"/>
+                                    <rect key="frame" x="10" y="18" width="64" height="482"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="64" id="t0K-X1-u5H"/>
@@ -58,7 +73,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qet-wU-TvO" customClass="SMView">
-                                    <rect key="frame" x="301" y="18" width="64" height="288"/>
+                                    <rect key="frame" x="301" y="18" width="64" height="482"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="64" id="Xmq-dn-HN3"/>
@@ -73,13 +88,197 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fir-hb-4bi" customClass="SMView">
-                                    <rect key="frame" x="0.0" y="18" width="375" height="256"/>
+                                    <rect key="frame" x="0.0" y="18" width="375" height="450"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2K-Dp-z5o" customClass="SMLabel">
+                                            <rect key="frame" x="28" y="32" width="339" height="22"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                    <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" adjustsFontSizeToFit="NO" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="dvB-NG-HSa" customClass="SMTextField">
+                                            <rect key="frame" x="28" y="96" width="319" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="WcJ-4M-fUa"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" textContentType="name"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                    <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayPlaceholderColor">
+                                                    <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighPlaceholderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="Tgk-3Z-VLu"/>
+                                            </connections>
+                                        </textField>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwW-tq-duI" customClass="SMView">
+                                            <rect key="frame" x="28" y="144" width="319" height="1"/>
+                                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="Apk-r7-f4C"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                                                    <color key="value" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                                                    <color key="value" red="0.2666666667" green="0.2901960784" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="age" adjustsFontSizeToFit="NO" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Pxb-1O-Ioo" customClass="SMTextField">
+                                            <rect key="frame" x="28" y="161" width="319" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="IBL-Hg-ycy"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                    <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayPlaceholderColor">
+                                                    <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighPlaceholderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="thr-gD-V8b"/>
+                                            </connections>
+                                        </textField>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gX-mu-IIw" customClass="SMView">
+                                            <rect key="frame" x="28" y="209" width="319" height="1"/>
+                                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="g2n-ip-Alc"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                                                    <color key="value" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                                                    <color key="value" red="0.2666666667" green="0.2901960784" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="male" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8J-Sg-Ca0" customClass="SMLabel">
+                                            <rect key="frame" x="28" y="248" width="32.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                            <color key="textColor" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                    <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="female" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxs-eh-fGG" customClass="SMLabel">
+                                            <rect key="frame" x="302" y="248" width="45" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                            <color key="textColor" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                    <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TKk-bx-Dwb">
+                                            <rect key="frame" x="163" y="242" width="51" height="31"/>
+                                        </switch>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-s2-DUk" customClass="SMView">
-                                            <rect key="frame" x="0.0" y="128" width="375" height="128"/>
+                                            <rect key="frame" x="0.0" y="295" width="375" height="155"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prefer male" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKI-90-RA6" customClass="SMLabel">
+                                                    <rect key="frame" x="28" y="28" width="76.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                    <color key="textColor" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                            <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prefer female" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oo3-2e-Wfe" customClass="SMLabel">
+                                                    <rect key="frame" x="258" y="28" width="89" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                    <color key="textColor" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                                            <color key="value" red="0.1333333333" green="0.15686274510000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAM-RC-96u">
+                                                    <rect key="frame" x="163" y="22" width="51" height="31"/>
+                                                </switch>
+                                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0Q-HK-8fE">
+                                                    <rect key="frame" x="28" y="75" width="319" height="60"/>
+                                                    <color key="backgroundColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="glP-Ne-9lD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                                    <state key="normal" title="confirm"/>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="confirmButton_TUI:" destination="-1" eventType="touchUpInside" id="eiy-7o-byT"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="128" id="qtj-V0-khe"/>
+                                                <constraint firstAttribute="trailing" secondItem="oo3-2e-Wfe" secondAttribute="trailing" constant="28" id="16J-v5-A3d"/>
+                                                <constraint firstItem="e0Q-HK-8fE" firstAttribute="trailing" secondItem="oo3-2e-Wfe" secondAttribute="trailing" id="3id-Qh-T9d"/>
+                                                <constraint firstAttribute="bottom" secondItem="e0Q-HK-8fE" secondAttribute="bottom" constant="20" id="I66-Fs-0aC"/>
+                                                <constraint firstItem="e0Q-HK-8fE" firstAttribute="top" secondItem="GAM-RC-96u" secondAttribute="bottom" constant="22" id="LTC-Xo-da5"/>
+                                                <constraint firstItem="ZKI-90-RA6" firstAttribute="leading" secondItem="oLf-s2-DUk" secondAttribute="leading" constant="28" id="YQa-8J-JWB"/>
+                                                <constraint firstItem="e0Q-HK-8fE" firstAttribute="leading" secondItem="ZKI-90-RA6" secondAttribute="leading" id="bb1-bq-wtW"/>
+                                                <constraint firstItem="ZKI-90-RA6" firstAttribute="centerY" secondItem="GAM-RC-96u" secondAttribute="centerY" id="go3-ZZ-1cY"/>
+                                                <constraint firstItem="GAM-RC-96u" firstAttribute="centerX" secondItem="oLf-s2-DUk" secondAttribute="centerX" id="jVZ-Z3-vxk"/>
+                                                <constraint firstItem="oo3-2e-Wfe" firstAttribute="centerY" secondItem="GAM-RC-96u" secondAttribute="centerY" id="u9M-VV-Lbk"/>
+                                                <constraint firstItem="GAM-RC-96u" firstAttribute="top" secondItem="oLf-s2-DUk" secondAttribute="top" constant="22" id="y2e-cN-ZUS"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
@@ -93,10 +292,31 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstItem="Y8J-Sg-Ca0" firstAttribute="leading" secondItem="0gX-mu-IIw" secondAttribute="leading" id="05O-Hb-jF6"/>
+                                        <constraint firstAttribute="trailing" secondItem="C2K-Dp-z5o" secondAttribute="trailing" constant="8" id="4TL-Co-RnV"/>
                                         <constraint firstAttribute="trailing" secondItem="oLf-s2-DUk" secondAttribute="trailing" id="7b3-x5-7w8"/>
-                                        <constraint firstAttribute="height" constant="256" id="gty-Gw-nFL"/>
+                                        <constraint firstItem="0gX-mu-IIw" firstAttribute="leading" secondItem="Pxb-1O-Ioo" secondAttribute="leading" id="BS7-uK-xUd"/>
+                                        <constraint firstItem="Pxb-1O-Ioo" firstAttribute="trailing" secondItem="gwW-tq-duI" secondAttribute="trailing" id="CiC-1R-xn7"/>
+                                        <constraint firstItem="gwW-tq-duI" firstAttribute="trailing" secondItem="dvB-NG-HSa" secondAttribute="trailing" id="Eo4-mF-CyV"/>
+                                        <constraint firstItem="dvB-NG-HSa" firstAttribute="leading" secondItem="C2K-Dp-z5o" secondAttribute="leading" id="Gpl-d4-ah0"/>
+                                        <constraint firstItem="mxs-eh-fGG" firstAttribute="trailing" secondItem="0gX-mu-IIw" secondAttribute="trailing" id="KIr-iP-KN6"/>
+                                        <constraint firstItem="Pxb-1O-Ioo" firstAttribute="leading" secondItem="gwW-tq-duI" secondAttribute="leading" id="LUK-1r-Inh"/>
+                                        <constraint firstItem="dvB-NG-HSa" firstAttribute="centerX" secondItem="fir-hb-4bi" secondAttribute="centerX" id="MIP-qZ-MgX"/>
+                                        <constraint firstItem="Y8J-Sg-Ca0" firstAttribute="centerY" secondItem="TKk-bx-Dwb" secondAttribute="centerY" id="S3r-EH-vU5"/>
+                                        <constraint firstItem="0gX-mu-IIw" firstAttribute="top" secondItem="Pxb-1O-Ioo" secondAttribute="bottom" constant="4" id="Scf-kz-mId"/>
+                                        <constraint firstItem="gwW-tq-duI" firstAttribute="top" secondItem="dvB-NG-HSa" secondAttribute="bottom" constant="4" id="VUn-qW-Boa"/>
+                                        <constraint firstItem="dvB-NG-HSa" firstAttribute="top" secondItem="C2K-Dp-z5o" secondAttribute="bottom" constant="42" id="Vay-eH-Bkm"/>
+                                        <constraint firstItem="0gX-mu-IIw" firstAttribute="trailing" secondItem="Pxb-1O-Ioo" secondAttribute="trailing" id="bQF-SO-rIS"/>
+                                        <constraint firstItem="TKk-bx-Dwb" firstAttribute="centerX" secondItem="fir-hb-4bi" secondAttribute="centerX" id="gmb-V0-y1J"/>
+                                        <constraint firstItem="TKk-bx-Dwb" firstAttribute="top" secondItem="0gX-mu-IIw" secondAttribute="bottom" constant="32" id="h3v-rv-9VG"/>
                                         <constraint firstAttribute="bottom" secondItem="oLf-s2-DUk" secondAttribute="bottom" id="k8Z-Gq-q2a"/>
+                                        <constraint firstItem="C2K-Dp-z5o" firstAttribute="top" secondItem="fir-hb-4bi" secondAttribute="top" constant="32" id="ljS-u8-u9X"/>
+                                        <constraint firstItem="gwW-tq-duI" firstAttribute="leading" secondItem="dvB-NG-HSa" secondAttribute="leading" id="oAU-1Y-fry"/>
+                                        <constraint firstItem="oLf-s2-DUk" firstAttribute="top" secondItem="TKk-bx-Dwb" secondAttribute="bottom" constant="22" id="v2b-Py-EZ4"/>
                                         <constraint firstItem="oLf-s2-DUk" firstAttribute="leading" secondItem="fir-hb-4bi" secondAttribute="leading" id="vD1-qL-XCz"/>
+                                        <constraint firstItem="C2K-Dp-z5o" firstAttribute="leading" secondItem="fir-hb-4bi" secondAttribute="leading" constant="28" id="vLt-pY-dC6"/>
+                                        <constraint firstItem="mxs-eh-fGG" firstAttribute="centerY" secondItem="TKk-bx-Dwb" secondAttribute="centerY" id="xki-N7-eGW"/>
+                                        <constraint firstItem="Pxb-1O-Ioo" firstAttribute="top" secondItem="gwW-tq-duI" secondAttribute="bottom" constant="16" id="xvb-CF-7kg"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
@@ -143,6 +363,7 @@
                 <constraint firstAttribute="trailing" secondItem="z8m-R7-N3W" secondAttribute="trailing" id="UKg-QY-837"/>
                 <constraint firstItem="z8m-R7-N3W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zD8-4a-8w1"/>
             </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
     <resources>
