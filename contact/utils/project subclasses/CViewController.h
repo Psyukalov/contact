@@ -16,6 +16,8 @@
 
 #import "UIView+Custom.h"
 
+#import "ErrorMessageView.h"
+
 
 typedef void(^CViewControllerCompletion)(void);
 

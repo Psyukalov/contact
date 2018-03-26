@@ -42,6 +42,10 @@
 		C7B78E702068F1C200730BF8 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78E6F2068F1C200730BF8 /* QRCodeView.m */; };
 		C7B78E722068F1FC00730BF8 /* QRCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78E712068F1FC00730BF8 /* QRCodeView.xib */; };
 		C7B78EBF2068FEC000730BF8 /* VPQRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78EBE2068FEC000730BF8 /* VPQRCodeGenerator.m */; };
+		C7B78EC2206909EC00730BF8 /* ErrorMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78EC1206909EC00730BF8 /* ErrorMessageView.m */; };
+		C7B78EC420690A2600730BF8 /* ErrorMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78EC320690A2500730BF8 /* ErrorMessageView.xib */; };
+		C7B78EC6206914B300730BF8 /* QRScanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78EC5206914B300730BF8 /* QRScanView.xib */; };
+		C7B78EC9206914CF00730BF8 /* QRScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78EC8206914CF00730BF8 /* QRScanView.m */; };
 		C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */; };
 		C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB7E2064FD6F00C5CB0F /* SlidingView.m */; };
 		C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CBFB802064FD7C00C5CB0F /* SlidingView.xib */; };
@@ -140,6 +144,12 @@
 		C7B78E712068F1FC00730BF8 /* QRCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeView.xib; sourceTree = "<group>"; };
 		C7B78EBD2068FEC000730BF8 /* VPQRCodeGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPQRCodeGenerator.h; sourceTree = "<group>"; };
 		C7B78EBE2068FEC000730BF8 /* VPQRCodeGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPQRCodeGenerator.m; sourceTree = "<group>"; };
+		C7B78EC0206909EC00730BF8 /* ErrorMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorMessageView.h; sourceTree = "<group>"; };
+		C7B78EC1206909EC00730BF8 /* ErrorMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorMessageView.m; sourceTree = "<group>"; };
+		C7B78EC320690A2500730BF8 /* ErrorMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorMessageView.xib; sourceTree = "<group>"; };
+		C7B78EC5206914B300730BF8 /* QRScanView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRScanView.xib; sourceTree = "<group>"; };
+		C7B78EC7206914CF00730BF8 /* QRScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRScanView.h; sourceTree = "<group>"; };
+		C7B78EC8206914CF00730BF8 /* QRScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRScanView.m; sourceTree = "<group>"; };
 		C7CBFB6E2064E8F600C5CB0F /* SMTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMTextField.h; sourceTree = "<group>"; };
 		C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTextField.m; sourceTree = "<group>"; };
 		C7CBFB7D2064FD6F00C5CB0F /* SlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlidingView.h; sourceTree = "<group>"; };
@@ -474,6 +484,9 @@
 				C75D4FA22065215700FBC213 /* EditProfileSlidingView.h */,
 				C75D4FA32065215700FBC213 /* EditProfileSlidingView.m */,
 				C75D4FA5206532FE00FBC213 /* EditProfileSlidingView.xib */,
+				C7B78EC0206909EC00730BF8 /* ErrorMessageView.h */,
+				C7B78EC1206909EC00730BF8 /* ErrorMessageView.m */,
+				C7B78EC320690A2500730BF8 /* ErrorMessageView.xib */,
 				C76378682062631C00C1DD8B /* FirstManualItemView.h */,
 				C76378692062631C00C1DD8B /* FirstManualItemView.m */,
 				C763786B2062635300C1DD8B /* FirstManualItemView.xib */,
@@ -492,6 +505,9 @@
 				C7B78E6E2068F1C200730BF8 /* QRCodeView.h */,
 				C7B78E6F2068F1C200730BF8 /* QRCodeView.m */,
 				C7B78E712068F1FC00730BF8 /* QRCodeView.xib */,
+				C7B78EC7206914CF00730BF8 /* QRScanView.h */,
+				C7B78EC8206914CF00730BF8 /* QRScanView.m */,
+				C7B78EC5206914B300730BF8 /* QRScanView.xib */,
 				C7FBC27E20597A3300A49F14 /* RegistrationView.h */,
 				C7FBC27F20597A3300A49F14 /* RegistrationView.m */,
 				C7330DDC205C234B00E8F336 /* RegistrationView.xib */,
@@ -580,6 +596,7 @@
 				C7B78E722068F1FC00730BF8 /* QRCodeView.xib in Resources */,
 				C7FBC25B2059383000A49F14 /* OpenSans-BoldItalic.ttf in Resources */,
 				C7FBC2762059534A00A49F14 /* AuthorizationView.xib in Resources */,
+				C7B78EC420690A2600730BF8 /* ErrorMessageView.xib in Resources */,
 				C7FBC24C2059339500A49F14 /* activity_indicator_image@3x.png in Resources */,
 				C7FBC25C2059383000A49F14 /* OpenSans-ExtraBold.ttf in Resources */,
 				C75D4FA6206532FE00FBC213 /* EditProfileSlidingView.xib in Resources */,
@@ -596,6 +613,7 @@
 				C7330DDD205C234B00E8F336 /* RegistrationView.xib in Resources */,
 				C7FBC2622059383000A49F14 /* OpenSans-SemiBold.ttf in Resources */,
 				C7FBC22C20591E2D00A49F14 /* Localizable.strings in Resources */,
+				C7B78EC6206914B300730BF8 /* QRScanView.xib in Resources */,
 				C7FBC25A2059383000A49F14 /* OpenSans-Bold.ttf in Resources */,
 				C7FBC24B2059339500A49F14 /* activity_indicator_image@2x.png in Resources */,
 				C76378792062A0D400C1DD8B /* SecondManualItemView.xib in Resources */,
@@ -620,6 +638,7 @@
 				C7FBC2792059579A00A49F14 /* UIView+Custom.m in Sources */,
 				C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */,
 				C75D4F9F206508AD00FBC213 /* ProfileSlidingView.m in Sources */,
+				C7B78EC9206914CF00730BF8 /* QRScanView.m in Sources */,
 				C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */,
 				C76378672062623D00C1DD8B /* CItemView.m in Sources */,
 				C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */,
@@ -643,6 +662,7 @@
 				C7F41398205BBC8A00AA316D /* CObject.m in Sources */,
 				C7FBC271205952E300A49F14 /* CView.m in Sources */,
 				C763787D2062BAC300C1DD8B /* ThirdManualItemView.m in Sources */,
+				C7B78EC2206909EC00730BF8 /* ErrorMessageView.m in Sources */,
 				C763786A2062631C00C1DD8B /* FirstManualItemView.m in Sources */,
 				C76378772062A04000C1DD8B /* SecondManualItemView.m in Sources */,
 				C75D4FA42065215700FBC213 /* EditProfileSlidingView.m in Sources */,

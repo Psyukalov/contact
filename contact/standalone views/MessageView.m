@@ -9,6 +9,8 @@
 
 #import "MessageView.h"
 
+#import "AppDelegate.h"
+
 
 @interface MessageView ()
 
@@ -26,40 +28,31 @@
     self.backgroundColor = [UIColor clearColor];
     [_messageView shadowWithOffset:CGSizeZero ];
     [_messageView gradientLayerWithColors:@[(id)RGB(32.f, 28.f, 100.f).CGColor, (id)RGB(28.f, 132.f, 242.f).CGColor] horizontal:NO];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate.window addConstraintsWithView:self];
+    [self viewAnimation:ViewAnimationZoomOut animated:NO];
 }
 
 - (void)viewAnimation:(ViewAnimation)viewAnimation animated:(BOOL)animated completion:(void (^)(void))completion {
-    CGAffineTransform transform;
-    CGFloat alpha;
-    switch (viewAnimation) {
-        case ViewAnimationFadeIn: {
-            transform = CGAffineTransformIdentity;
-            alpha = 1.f;
-        }
-            break;
-        case ViewAnimationFadeOut: {
-            transform = CGAffineTransformIdentity;
-            alpha = 0.f;
-        }
-            break;
-        case ViewAnimationZoomIn: {
-            transform = CGAffineTransformIdentity;
-            alpha = 1.f;
-        }
-            break;
-        case ViewAnimationZoomOut: {
-            transform = CGAffineTransformMakeScale(.64f, .64f);
-            alpha = 0.f;
-        }
-            break;
-    }
+    BOOL inAnimation = viewAnimation == ViewAnimationFadeIn || viewAnimation == ViewAnimationZoomIn;
+    CGAffineTransform transform = inAnimation ? CGAffineTransformIdentity : CGAffineTransformMakeScale(.64f, .64f);
+    CGFloat alpha = inAnimation ? 1.f : 0.f;
     if (animated) {
         [UIView animateWithDuration:.32f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            _messageView.alpha = alpha;
-            _messageView.transform = transform;
+            if (inAnimation) {
+                self.alpha = alpha;
+            } else {
+                _messageView.alpha = alpha;
+                _messageView.transform = transform;
+            }
         } completion:nil];
         [UIView animateWithDuration:.32f delay:.32f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self.alpha = alpha;
+            if (!inAnimation) {
+                self.alpha = alpha;
+            } else {
+                _messageView.alpha = alpha;
+                _messageView.transform = transform;
+            }
         } completion:^(BOOL finished) {
             if (completion) {
                 completion();
@@ -79,6 +72,7 @@
 
 - (IBAction)closeButton_TUI:(UIButton *)sender {
     [self viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
+        [self removeFromSuperview];
         if (self.didCloseViewCompletion) {
             self.didCloseViewCompletion();
         }

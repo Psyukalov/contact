@@ -244,7 +244,15 @@
 #pragma mark - Test
 
 - (IBAction)message_tui:(UIButton *)sender {
-    
+    ErrorMessageView *errorMV = [ErrorMessageView new];
+    errorMV.title = @"Error";
+    errorMV.message = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor. Vestibulum eget rutrum lorem. Etiam luctus volutpat nisi, at aliquam risus varius quis.";
+    errorMV.didCloseViewCompletion = ^{
+        NSLog(@"Error message view did close;");
+    };
+    [errorMV viewAnimation:ViewAnimationZoomIn animated:YES completion:^{
+        NSLog(@"Showed error message view;");
+    }];
 }
 
 - (IBAction)generatingQR_tui:(UIButton *)sender {
