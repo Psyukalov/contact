@@ -37,6 +37,8 @@
 		C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A2DC022063D99B00BE4B88 /* HistoryView.xib */; };
 		C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DC072063DD2800BE4B88 /* HistoryTableViewCell.m */; };
 		C7A2DC0A2063DD2800BE4B88 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */; };
+		C7B78E6B2068E3FA00730BF8 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78E6A2068E3FA00730BF8 /* MessageView.m */; };
+		C7B78E6D2068E40600730BF8 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78E6C2068E40600730BF8 /* MessageView.xib */; };
 		C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */; };
 		C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB7E2064FD6F00C5CB0F /* SlidingView.m */; };
 		C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CBFB802064FD7C00C5CB0F /* SlidingView.xib */; };
@@ -127,6 +129,9 @@
 		C7A2DC062063DD2800BE4B88 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
 		C7A2DC072063DD2800BE4B88 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
 		C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		C7B78E692068E3FA00730BF8 /* MessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
+		C7B78E6A2068E3FA00730BF8 /* MessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		C7B78E6C2068E40600730BF8 /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		C7CBFB6E2064E8F600C5CB0F /* SMTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMTextField.h; sourceTree = "<group>"; };
 		C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTextField.m; sourceTree = "<group>"; };
 		C7CBFB7D2064FD6F00C5CB0F /* SlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlidingView.h; sourceTree = "<group>"; };
@@ -460,6 +465,9 @@
 				C763786020624BE400C1DD8B /* ManualView.h */,
 				C763786120624BE400C1DD8B /* ManualView.m */,
 				C763786320624C1300C1DD8B /* ManualView.xib */,
+				C7B78E692068E3FA00730BF8 /* MessageView.h */,
+				C7B78E6A2068E3FA00730BF8 /* MessageView.m */,
+				C7B78E6C2068E40600730BF8 /* MessageView.xib */,
 				C75D4F9D206508AD00FBC213 /* ProfileSlidingView.h */,
 				C75D4F9E206508AD00FBC213 /* ProfileSlidingView.m */,
 				C75D4F9B2065088C00FBC213 /* ProfileSlidingView.xib */,
@@ -544,6 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B78E6D2068E40600730BF8 /* MessageView.xib in Resources */,
 				C7FBC26D205945A500A49F14 /* AuthorizationViewController.xib in Resources */,
 				C7FBC268205939EA00A49F14 /* CViewController.xib in Resources */,
 				C7FBC25E2059383000A49F14 /* OpenSans-Italic.ttf in Resources */,
@@ -615,6 +624,7 @@
 				C75D4FA42065215700FBC213 /* EditProfileSlidingView.m in Sources */,
 				C71CB47920614ED700DC7ADD /* Switch.m in Sources */,
 				C7FBC21B2059087600A49F14 /* main.m in Sources */,
+				C7B78E6B2068E3FA00730BF8 /* MessageView.m in Sources */,
 				C7E41B77205BDC9200C4B96F /* SMLabel.m in Sources */,
 				C785C22F205FDC5F00FC3927 /* MainViewController.m in Sources */,
 				C7FBC24520592CF000A49F14 /* VPActivityIndicatorImageView.m in Sources */,

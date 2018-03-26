@@ -48,7 +48,7 @@
 - (void)shadowWithOffset:(CGSize)offset color:(UIColor *)color {
     self.layer.shadowOffset = offset;
     self.layer.shadowColor = color.CGColor;
-    self.layer.shadowOpacity = .32f;
+    self.layer.shadowOpacity = .64f;
     self.layer.shadowRadius = 6.4f;
     self.layer.masksToBounds = NO;
 }

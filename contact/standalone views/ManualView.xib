@@ -39,7 +39,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGC-kR-o7Y" customClass="SMLabel">
-                            <rect key="frame" x="159" y="74" width="58" height="42"/>
+                            <rect key="frame" x="159.5" y="74" width="58" height="42"/>
                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="36"/>
                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
