@@ -17,6 +17,10 @@
 
 #import "AuthorizationViewController.h"
 
+// TODO:
+
+#import "QRCodeView.h"
+
 
 @interface MainViewController () <ProfileSlidingViewDelegate>
 
@@ -25,6 +29,10 @@
 @property (weak, nonatomic) IBOutlet ProfileSlidingView *profileSlidingView;
 
 @property (strong, nonatomic) CView *customView;
+
+// TODO:
+
+@property (weak, nonatomic) IBOutlet QRCodeView *generatingQRView;
 
 @end
 
@@ -72,6 +80,9 @@
     _profileSlidingView.delegate = self;
     [_searchAnimationView viewAnimation:ViewAnimationZoomOut animated:NO];
     [self interfaceHidden:YES animated:NO];
+    // TODO:
+    [_generatingQRView viewAnimation:ViewAnimationFadeOut animated:NO];
+    //
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -228,6 +239,20 @@
 
 - (void)applicationWillEnterForeground {
     [_searchAnimationView play];
+}
+
+#pragma mark - Test
+
+- (IBAction)message_tui:(UIButton *)sender {
+    
+}
+
+- (IBAction)generatingQR_tui:(UIButton *)sender {
+    [_generatingQRView viewAnimation:ViewAnimationFadeIn animated:YES];
+}
+
+- (IBAction)readingQR_tui:(UIButton *)sender {
+    
 }
 
 @end

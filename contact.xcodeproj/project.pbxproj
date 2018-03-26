@@ -39,6 +39,9 @@
 		C7A2DC0A2063DD2800BE4B88 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */; };
 		C7B78E6B2068E3FA00730BF8 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78E6A2068E3FA00730BF8 /* MessageView.m */; };
 		C7B78E6D2068E40600730BF8 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78E6C2068E40600730BF8 /* MessageView.xib */; };
+		C7B78E702068F1C200730BF8 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78E6F2068F1C200730BF8 /* QRCodeView.m */; };
+		C7B78E722068F1FC00730BF8 /* QRCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78E712068F1FC00730BF8 /* QRCodeView.xib */; };
+		C7B78EBF2068FEC000730BF8 /* VPQRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78EBE2068FEC000730BF8 /* VPQRCodeGenerator.m */; };
 		C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */; };
 		C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB7E2064FD6F00C5CB0F /* SlidingView.m */; };
 		C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CBFB802064FD7C00C5CB0F /* SlidingView.xib */; };
@@ -132,6 +135,11 @@
 		C7B78E692068E3FA00730BF8 /* MessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
 		C7B78E6A2068E3FA00730BF8 /* MessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
 		C7B78E6C2068E40600730BF8 /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		C7B78E6E2068F1C200730BF8 /* QRCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		C7B78E6F2068F1C200730BF8 /* QRCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		C7B78E712068F1FC00730BF8 /* QRCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeView.xib; sourceTree = "<group>"; };
+		C7B78EBD2068FEC000730BF8 /* VPQRCodeGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPQRCodeGenerator.h; sourceTree = "<group>"; };
+		C7B78EBE2068FEC000730BF8 /* VPQRCodeGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPQRCodeGenerator.m; sourceTree = "<group>"; };
 		C7CBFB6E2064E8F600C5CB0F /* SMTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMTextField.h; sourceTree = "<group>"; };
 		C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTextField.m; sourceTree = "<group>"; };
 		C7CBFB7D2064FD6F00C5CB0F /* SlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlidingView.h; sourceTree = "<group>"; };
@@ -223,6 +231,15 @@
 				C7A2DC082063DD2800BE4B88 /* HistoryTableViewCell.xib */,
 			);
 			path = "table view cells";
+			sourceTree = "<group>";
+		};
+		C7B78EBC2068FE8D00730BF8 /* VPQRCodeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				C7B78EBD2068FEC000730BF8 /* VPQRCodeGenerator.h */,
+				C7B78EBE2068FEC000730BF8 /* VPQRCodeGenerator.m */,
+			);
+			path = VPQRCodeGenerator;
 			sourceTree = "<group>";
 		};
 		C7E41B71205BDB3300C4B96F /* screen mode subclasses */ = {
@@ -369,6 +386,7 @@
 		C7FBC22920591DD900A49F14 /* third party */ = {
 			isa = PBXGroup;
 			children = (
+				C7B78EBC2068FE8D00730BF8 /* VPQRCodeGenerator */,
 				C7FBC23A20592A4800A49F14 /* iCarousel */,
 				C7FBC24220592CF000A49F14 /* VPActivityIndicatorImageView */,
 			);
@@ -471,6 +489,9 @@
 				C75D4F9D206508AD00FBC213 /* ProfileSlidingView.h */,
 				C75D4F9E206508AD00FBC213 /* ProfileSlidingView.m */,
 				C75D4F9B2065088C00FBC213 /* ProfileSlidingView.xib */,
+				C7B78E6E2068F1C200730BF8 /* QRCodeView.h */,
+				C7B78E6F2068F1C200730BF8 /* QRCodeView.m */,
+				C7B78E712068F1FC00730BF8 /* QRCodeView.xib */,
 				C7FBC27E20597A3300A49F14 /* RegistrationView.h */,
 				C7FBC27F20597A3300A49F14 /* RegistrationView.m */,
 				C7330DDC205C234B00E8F336 /* RegistrationView.xib */,
@@ -556,6 +577,7 @@
 				C7FBC26D205945A500A49F14 /* AuthorizationViewController.xib in Resources */,
 				C7FBC268205939EA00A49F14 /* CViewController.xib in Resources */,
 				C7FBC25E2059383000A49F14 /* OpenSans-Italic.ttf in Resources */,
+				C7B78E722068F1FC00730BF8 /* QRCodeView.xib in Resources */,
 				C7FBC25B2059383000A49F14 /* OpenSans-BoldItalic.ttf in Resources */,
 				C7FBC2762059534A00A49F14 /* AuthorizationView.xib in Resources */,
 				C7FBC24C2059339500A49F14 /* activity_indicator_image@3x.png in Resources */,
@@ -594,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B78E702068F1C200730BF8 /* QRCodeView.m in Sources */,
 				C7FBC2792059579A00A49F14 /* UIView+Custom.m in Sources */,
 				C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */,
 				C75D4F9F206508AD00FBC213 /* ProfileSlidingView.m in Sources */,
@@ -603,6 +626,7 @@
 				C7FBC2362059286F00A49F14 /* View.m in Sources */,
 				C7FBC24820592E3F00A49F14 /* TableView.m in Sources */,
 				C7A2DC012063D98900BE4B88 /* HistoryView.m in Sources */,
+				C7B78EBF2068FEC000730BF8 /* VPQRCodeGenerator.m in Sources */,
 				C763786220624BE400C1DD8B /* ManualView.m in Sources */,
 				C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */,
 				C7FBC28020597A3300A49F14 /* RegistrationView.m in Sources */,

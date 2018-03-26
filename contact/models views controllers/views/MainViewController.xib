@@ -21,6 +21,7 @@
                 <outlet property="baseGradientLayer_1_ImageView" destination="RzM-aA-sPn" id="Vwc-iU-anb"/>
                 <outlet property="basePatternImageView" destination="U2s-cw-Lgc" id="Vti-Uc-TQq"/>
                 <outlet property="contentView" destination="eoS-W0-Bar" id="NI5-kU-w4i"/>
+                <outlet property="generatingQRView" destination="qOZ-9O-3oK" id="j1a-vI-12U"/>
                 <outlet property="profileSlidingView" destination="bcJ-SF-wKr" id="ybG-WS-K3m"/>
                 <outlet property="scrollView" destination="5Xy-oI-UWQ" id="Lt6-Pf-f1Q"/>
                 <outlet property="searchAnimationView" destination="Z73-xA-c2S" id="jnE-h2-ebt"/>
@@ -100,13 +101,85 @@
                         <constraint firstAttribute="trailing" secondItem="eoS-W0-Bar" secondAttribute="trailing" id="tTc-YW-xxr"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZe-fp-Gww">
+                    <rect key="frame" x="8" y="8" width="398" height="88.333333333333329"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test functions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-Ei-v55">
+                            <rect key="frame" x="8" y="7.9999999999999982" width="102.66666666666667" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lE-4X-Fuz">
+                            <rect key="frame" x="8" y="36.333333333333336" width="128" height="44.000000000000007"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="0V8-xE-InF"/>
+                                <constraint firstAttribute="height" constant="44" id="jgZ-S1-Sjl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Error popup"/>
+                            <connections>
+                                <action selector="message_tui:" destination="-1" eventType="touchUpInside" id="2OA-Ed-5Nt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2B-rf-TQv">
+                            <rect key="frame" x="144" y="36" width="128" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="HDz-wh-eeA"/>
+                                <constraint firstAttribute="width" constant="128" id="g0k-Ta-50I"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Generating QR"/>
+                            <connections>
+                                <action selector="generatingQR_tui:" destination="-1" eventType="touchUpInside" id="QDX-yf-SKA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIh-Sz-JhO">
+                            <rect key="frame" x="280" y="36" width="110" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="RHJ-Ae-NPw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Reading QR"/>
+                            <connections>
+                                <action selector="readingQR_tui:" destination="-1" eventType="touchUpInside" id="W9i-0s-lIx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1lE-4X-Fuz" firstAttribute="top" secondItem="OYm-Ei-v55" secondAttribute="bottom" constant="8" id="0Nh-oe-NIH"/>
+                        <constraint firstItem="1lE-4X-Fuz" firstAttribute="leading" secondItem="OYm-Ei-v55" secondAttribute="leading" id="EKS-5p-xbL"/>
+                        <constraint firstItem="OYm-Ei-v55" firstAttribute="top" secondItem="IZe-fp-Gww" secondAttribute="top" constant="8" id="Gn2-BC-Jkx"/>
+                        <constraint firstItem="v2B-rf-TQv" firstAttribute="centerY" secondItem="1lE-4X-Fuz" secondAttribute="centerY" id="Ho3-6D-BVi"/>
+                        <constraint firstItem="WIh-Sz-JhO" firstAttribute="leading" secondItem="v2B-rf-TQv" secondAttribute="trailing" constant="8" id="LXB-ez-DzN"/>
+                        <constraint firstItem="OYm-Ei-v55" firstAttribute="leading" secondItem="IZe-fp-Gww" secondAttribute="leading" constant="8" id="VhP-a6-FNk"/>
+                        <constraint firstItem="WIh-Sz-JhO" firstAttribute="centerY" secondItem="v2B-rf-TQv" secondAttribute="centerY" id="YT6-hf-5zg"/>
+                        <constraint firstAttribute="trailing" secondItem="WIh-Sz-JhO" secondAttribute="trailing" constant="8" id="ZL8-lZ-syh"/>
+                        <constraint firstItem="v2B-rf-TQv" firstAttribute="leading" secondItem="1lE-4X-Fuz" secondAttribute="trailing" constant="8" id="smq-OC-Pfl"/>
+                        <constraint firstAttribute="bottom" secondItem="1lE-4X-Fuz" secondAttribute="bottom" constant="8" id="xRP-tE-F0I"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOZ-9O-3oK" customClass="QRCodeView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.10980392160000001" green="0.015686274510000001" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="IZe-fp-Gww" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="0l4-WO-CtT"/>
                 <constraint firstItem="5Xy-oI-UWQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1xF-rT-G9T"/>
+                <constraint firstItem="IZe-fp-Gww" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6ue-Kg-g9b"/>
                 <constraint firstAttribute="bottom" secondItem="5Xy-oI-UWQ" secondAttribute="bottom" id="ME1-ZC-mCS"/>
+                <constraint firstAttribute="trailing" secondItem="qOZ-9O-3oK" secondAttribute="trailing" id="Ssm-C3-K4V"/>
                 <constraint firstItem="5Xy-oI-UWQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gyM-nj-Fjp"/>
+                <constraint firstItem="qOZ-9O-3oK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lVS-LD-KxI"/>
                 <constraint firstAttribute="trailing" secondItem="5Xy-oI-UWQ" secondAttribute="trailing" id="mCI-jk-Rsi"/>
+                <constraint firstItem="qOZ-9O-3oK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sox-gr-RbM"/>
+                <constraint firstItem="IZe-fp-Gww" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="t2Y-Wp-GZq"/>
+                <constraint firstAttribute="bottom" secondItem="qOZ-9O-3oK" secondAttribute="bottom" id="u9M-nX-4jV"/>
             </constraints>
             <point key="canvasLocation" x="24" y="52"/>
         </view>

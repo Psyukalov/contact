@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeView">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="closeButton" destination="zNE-uz-94d" id="Er0-GD-Np7"/>
+                <outlet property="codeImageView" destination="5Sg-t3-nH1" id="Wmr-j2-xnM"/>
+                <outlet property="descriptionLabel" destination="PJS-Wd-k6t" id="YxG-1L-hwD"/>
+                <outlet property="okButton" destination="FGz-lM-Boa" id="dcv-V2-VeT"/>
+                <outlet property="titleLabel" destination="U2d-dr-jFA" id="O4N-SN-Glm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SMView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qr code" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2d-dr-jFA" customClass="SMLabel">
+                    <rect key="frame" x="20" y="74" width="159" height="54"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="46"/>
+                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                            <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJS-Wd-k6t" customClass="SMLabel">
+                    <rect key="frame" x="20" y="160" width="335" height="16.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                            <color key="value" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNE-uz-94d" customClass="SMButton">
+                    <rect key="frame" x="321" y="74" width="50" height="50"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                    <state key="normal" image="close_mode_day_button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeDayDefaultImage" value="close_mode_day_button"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="screenModeNighDefaultImage" value="close_mode_night_button"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="closeButton_TUI:" destination="-1" eventType="touchUpInside" id="okY-KP-LHb"/>
+                    </connections>
+                </button>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGz-lM-Boa">
+                    <rect key="frame" x="28" y="587" width="319" height="60"/>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="wgB-f3-0Yk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                    <state key="normal" title="ok"/>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="okButton_TUI:" destination="-1" eventType="touchUpInside" id="36R-2C-QaV"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c31-ln-yM5">
+                    <rect key="frame" x="0.0" y="176.5" width="375" height="410.5"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B92-CA-wgS">
+                            <rect key="frame" x="64" y="66" width="247" height="247"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Sg-t3-nH1">
+                                    <rect key="frame" x="16" y="16" width="214" height="214"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="B92-CA-wgS" secondAttribute="height" multiplier="1:1" id="5YC-8f-Tkq"/>
+                                <constraint firstItem="5Sg-t3-nH1" firstAttribute="top" secondItem="B92-CA-wgS" secondAttribute="top" constant="16" id="TWy-pn-CaW"/>
+                                <constraint firstItem="5Sg-t3-nH1" firstAttribute="leading" secondItem="B92-CA-wgS" secondAttribute="leading" constant="16" id="huA-TZ-axq"/>
+                                <constraint firstItem="5Sg-t3-nH1" firstAttribute="centerX" secondItem="B92-CA-wgS" secondAttribute="centerX" id="jLt-D9-hvM"/>
+                                <constraint firstItem="5Sg-t3-nH1" firstAttribute="centerY" secondItem="B92-CA-wgS" secondAttribute="centerY" id="zls-5o-LDC"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="B92-CA-wgS" firstAttribute="centerY" secondItem="c31-ln-yM5" secondAttribute="centerY" constant="-16" id="8G5-8D-7dL"/>
+                        <constraint firstItem="B92-CA-wgS" firstAttribute="leading" secondItem="c31-ln-yM5" secondAttribute="leading" constant="64" id="Vfq-dU-9wU"/>
+                        <constraint firstItem="B92-CA-wgS" firstAttribute="centerX" secondItem="c31-ln-yM5" secondAttribute="centerX" id="ldX-U2-EXY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FGz-lM-Boa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="09B-VT-LRi"/>
+                <constraint firstItem="FGz-lM-Boa" firstAttribute="top" secondItem="c31-ln-yM5" secondAttribute="bottom" id="8cl-Cv-Gi4"/>
+                <constraint firstItem="U2d-dr-jFA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="74" id="D4p-Ok-v7k"/>
+                <constraint firstItem="c31-ln-yM5" firstAttribute="top" secondItem="PJS-Wd-k6t" secondAttribute="bottom" id="Da3-WA-vog"/>
+                <constraint firstItem="zNE-uz-94d" firstAttribute="top" secondItem="U2d-dr-jFA" secondAttribute="top" id="F71-Gw-1OB"/>
+                <constraint firstItem="PJS-Wd-k6t" firstAttribute="top" secondItem="U2d-dr-jFA" secondAttribute="bottom" constant="32" id="Gck-bU-tOU"/>
+                <constraint firstItem="PJS-Wd-k6t" firstAttribute="leading" secondItem="U2d-dr-jFA" secondAttribute="leading" id="KOx-8T-IPj"/>
+                <constraint firstItem="c31-ln-yM5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TmD-jQ-2iR"/>
+                <constraint firstItem="FGz-lM-Boa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="ZdV-jX-Hwn"/>
+                <constraint firstAttribute="trailing" secondItem="c31-ln-yM5" secondAttribute="trailing" id="g1K-zn-WbD"/>
+                <constraint firstAttribute="bottom" secondItem="FGz-lM-Boa" secondAttribute="bottom" constant="20" id="hf0-Po-fmp"/>
+                <constraint firstItem="U2d-dr-jFA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="mnP-h4-PKt"/>
+                <constraint firstAttribute="trailing" secondItem="zNE-uz-94d" secondAttribute="trailing" constant="4" id="nS5-L1-gKR"/>
+                <constraint firstItem="PJS-Wd-k6t" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vTZ-sg-M11"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                    <color key="value" red="0.15686274510000001" green="0.18039215689999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_mode_day_button" width="18" height="18"/>
+        <image name="close_mode_night_button" width="18" height="18"/>
+    </resources>
+</document>

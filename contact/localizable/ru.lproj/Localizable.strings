@@ -87,3 +87,10 @@
 
 "epsv_placeholder_0" = "Ваше Имя";
 "epsv_placeholder_1" = "Ваш Возраст";
+
+// QR Code view
+
+"qrcv_label_0" = "QR Code";
+"qrcv_label_1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor.";
+
+"qrcv_button_0" = "Ок";
