@@ -34,32 +34,18 @@
 
 - (void)loadViewFromNib {
     [super loadViewFromNib];
-    [self configure];
     _titleLabel.text = LOCALIZE(@"qrsv_label_0");
     _descriptionLabel.text = LOCALIZE(@"qrsv_label_1");
     [_okButton setTitle:LOCALIZE(@"qrsv_button_0") forState:UIControlStateNormal];
-    for (UIView *view in @[_titleLabel, _descriptionLabel, _okButton]) {
-        [view shadowWithOffset:CGSizeZero color:[UIColor blackColor] opacity:.68f];
+    for (UIView *view in @[_titleLabel, _descriptionLabel]) {
+        [view shadowWithOffset:CGSizeZero color:[UIColor blackColor] opacity:1.f];
     }
+    [_okButton shadowWithOffset:CGSizeZero color:[UIColor blackColor] opacity:.16f];
     UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
     [self.contentView insertSubview:visualEffectView belowSubview:_titleLabel];
     [self.contentView addConstraintsWithView:visualEffectView customInsert:YES];
-    [self performSelector:@selector(removeBlurView:) withObject:visualEffectView afterDelay:3.2f];
-}
-
-#pragma mark - Other methods
-
-- (void)closeView {
-    [NSObject cancelPreviousPerformRequestsWithTarget:self];
-    [self viewAnimation:ViewAnimationFadeOut animated:YES completion:^{
-        if (self.didCloseViewCompletion) {
-            self.didCloseViewCompletion();
-        }
-    }];
-}
-
-- (void)configure {
+    [self performSelector:@selector(removeBlurView:) withObject:visualEffectView afterDelay:2.56f];
     NSError *error;
     AVCaptureSession *captureSession = [AVCaptureSession new];
     AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -84,6 +70,17 @@
     layer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     [self.contentView.layer insertSublayer:layer atIndex:0];
     [captureSession startRunning];
+}
+
+#pragma mark - Other methods
+
+- (void)closeView {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    [self viewAnimation:ViewAnimationFadeOut animated:YES completion:^{
+        if (self.didCloseViewCompletion) {
+            self.didCloseViewCompletion();
+        }
+    }];
 }
 
 - (void)removeBlurView:(UIView *)blurView {
