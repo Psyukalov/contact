@@ -22,8 +22,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *scanImageView;
+
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
+
+@property (strong, nonatomic) CAAnimationGroup *animationGroup;
 
 @end
 
@@ -46,6 +50,19 @@
     [self.contentView insertSubview:visualEffectView belowSubview:_titleLabel];
     [self.contentView addConstraintsWithView:visualEffectView customInsert:YES];
     [self performSelector:@selector(removeBlurView:) withObject:visualEffectView afterDelay:2.56f];
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+    scaleAnimation.fromValue = @(1.f);
+    scaleAnimation.toValue = @(1.032f);
+    opacityAnimation.keyTimes = @[@(0.f), @(1.f)];
+    opacityAnimation.values = @[@(1.f), @(.64f)];
+    _animationGroup = [CAAnimationGroup animation];
+    _animationGroup.animations = @[scaleAnimation, opacityAnimation];
+    _animationGroup.duration = .64f;
+    _animationGroup.autoreverses = YES;
+    _animationGroup.repeatCount = INFINITY;
+    _animationGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [self playAnimation];
     NSError *error;
     AVCaptureSession *captureSession = [AVCaptureSession new];
     AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -91,6 +108,14 @@
     }];
 }
 
+- (void)playAnimation {
+    [_scanImageView.layer addAnimation:_animationGroup forKey:nil];
+}
+
+- (void)stopAnimation {
+    [_scanImageView.layer removeAllAnimations];
+}
+
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
 
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
@@ -105,12 +130,14 @@
         return;
     }
     // TODO:
+    [self stopAnimation];
     isDetected = YES;
     AudioServicesPlaySystemSound(1258);
     ErrorMessageView *errorMessageView = [ErrorMessageView new];
     errorMessageView.title = @"QR Scan";
     errorMessageView.message = [NSString stringWithFormat:@"Decoded string:\n%@\n(This popup just for test)", string];
     errorMessageView.didCloseViewCompletion = ^{
+        [self playAnimation];
         isDetected = NO;
     };
     [errorMessageView viewAnimation:ViewAnimationZoomIn animated:YES];
