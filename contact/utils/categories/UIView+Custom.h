@@ -22,6 +22,7 @@
 
 - (void)shadowWithOffset:(CGSize)offset;
 - (void)shadowWithOffset:(CGSize)offset color:(UIColor *)color;
+- (void)shadowWithOffset:(CGSize)offset color:(UIColor *)color opacity:(CGFloat)opacity;
 
 - (void)gradientLayerWithColors:(NSArray *)colors;
 - (void)gradientLayerWithColors:(NSArray *)colors horizontal:(BOOL)horizontal;

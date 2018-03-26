@@ -94,3 +94,14 @@
 "qrcv_label_1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor.";
 
 "qrcv_button_0" = "Ok";
+
+// QR Scan view
+
+"qrsv_label_0" = "Scan QR";
+"qrsv_label_1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lacus vitae velit volutpat tempor.";
+
+"qrsv_button_0" = "Ok";
+
+// Error message view
+
+"emv_label_0" = "Error";

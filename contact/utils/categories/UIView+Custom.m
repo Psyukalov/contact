@@ -46,9 +46,13 @@
 }
 
 - (void)shadowWithOffset:(CGSize)offset color:(UIColor *)color {
+    [self shadowWithOffset:offset color:color opacity:.64f];
+}
+
+- (void)shadowWithOffset:(CGSize)offset color:(UIColor *)color opacity:(CGFloat)opacity {
     self.layer.shadowOffset = offset;
     self.layer.shadowColor = color.CGColor;
-    self.layer.shadowOpacity = .64f;
+    self.layer.shadowOpacity = opacity;
     self.layer.shadowRadius = 6.4f;
     self.layer.masksToBounds = NO;
 }

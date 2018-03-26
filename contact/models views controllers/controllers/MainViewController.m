@@ -20,6 +20,7 @@
 // TODO:
 
 #import "QRCodeView.h"
+#import "QRScanView.h"
 
 
 @interface MainViewController () <ProfileSlidingViewDelegate>
@@ -260,7 +261,17 @@
 }
 
 - (IBAction)readingQR_tui:(UIButton *)sender {
-    
+    QRScanView *scan = [QRScanView new];
+    scan.frame = self.view.bounds;
+    __weak QRScanView *weakScan = scan;
+    scan.didCloseViewCompletion = ^{
+        [weakScan viewAnimation:ViewAnimationFadeOut animated:YES completion:^{
+            [weakScan removeFromSuperview];
+        }];
+    };
+    [self.view addSubview:scan];
+    [scan viewAnimation:ViewAnimationFadeOut animated:NO];
+    [scan viewAnimation:ViewAnimationFadeIn animated:YES];
 }
 
 @end
