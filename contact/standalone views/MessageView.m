@@ -26,11 +26,11 @@
 - (void)loadViewFromNib {
     [super loadViewFromNib];
     self.backgroundColor = [UIColor clearColor];
-    [_messageView shadowWithOffset:CGSizeZero ];
-    [_messageView gradientLayerWithColors:@[(id)RGB(32.f, 28.f, 100.f).CGColor, (id)RGB(28.f, 132.f, 242.f).CGColor] horizontal:NO];
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate.window addConstraintsWithView:self];
     [self viewAnimation:ViewAnimationZoomOut animated:NO];
+    [_messageView shadowWithOffset:CGSizeZero];
+    [_messageView gradientLayerWithColors:@[(id)RGB(32.f, 28.f, 100.f).CGColor, (id)RGB(28.f, 132.f, 242.f).CGColor] horizontal:NO];
 }
 
 - (void)viewAnimation:(ViewAnimation)viewAnimation animated:(BOOL)animated completion:(void (^)(void))completion {

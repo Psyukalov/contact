@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatView">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="parallaxRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="pointsActivityIndicatoreView" destination="Q50-13-0Ml" id="FDd-8G-NCU"/>
+                <outlet property="roundedView" destination="YDx-kt-toc" id="ZU3-7P-Yl3"/>
+                <outlet property="tableFooterView" destination="JOU-Hz-he8" id="ZY7-7u-eZR"/>
+                <outlet property="tableView" destination="zAJ-s5-ZlT" id="BQo-Wx-bPO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zAJ-s5-ZlT" customClass="TableView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ns1-WT-Pcb"/>
+                        <outlet property="delegate" destination="-1" id="ThX-1g-Jsg"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zAJ-s5-ZlT" secondAttribute="trailing" id="eR8-oe-YHP"/>
+                <constraint firstItem="zAJ-s5-ZlT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lvk-gu-QPH"/>
+                <constraint firstItem="zAJ-s5-ZlT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="m4V-SG-3IJ"/>
+                <constraint firstAttribute="bottom" secondItem="zAJ-s5-ZlT" secondAttribute="bottom" id="nHY-Pp-Y2O"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="JOU-Hz-he8">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDx-kt-toc" customClass="SMView">
+                    <rect key="frame" x="20" y="10" width="60" height="32"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q50-13-0Ml" customClass="VPPointsActivityIndicatorView">
+                            <rect key="frame" x="17" y="13" width="26" height="6"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="GWG-lw-uB3"/>
+                                <constraint firstAttribute="width" constant="26" id="UZe-dT-Seo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="2ek-9d-T1S"/>
+                        <constraint firstItem="Q50-13-0Ml" firstAttribute="centerY" secondItem="YDx-kt-toc" secondAttribute="centerY" id="WUm-7b-e1I"/>
+                        <constraint firstAttribute="width" constant="60" id="bBm-lI-OXO"/>
+                        <constraint firstItem="Q50-13-0Ml" firstAttribute="centerX" secondItem="YDx-kt-toc" secondAttribute="centerX" id="z57-cb-CVo"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                            <color key="value" red="0.24313725490196078" green="0.25098039215686274" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qI-KW-w6h" customClass="SMView">
+                    <rect key="frame" x="20" y="26" width="16" height="16"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3qI-KW-w6h" secondAttribute="height" multiplier="1:1" id="TpS-Zj-ULc"/>
+                        <constraint firstAttribute="width" constant="16" id="wZi-k3-9o1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                            <color key="value" red="0.24313725489999999" green="0.25098039220000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YDx-kt-toc" secondAttribute="bottom" constant="20" id="8i9-AQ-9mv"/>
+                <constraint firstItem="3qI-KW-w6h" firstAttribute="leading" secondItem="YDx-kt-toc" secondAttribute="leading" id="B5h-Ey-ZOQ"/>
+                <constraint firstItem="YDx-kt-toc" firstAttribute="top" secondItem="JOU-Hz-he8" secondAttribute="top" constant="10" id="BoT-iQ-Eky"/>
+                <constraint firstItem="3qI-KW-w6h" firstAttribute="bottom" secondItem="YDx-kt-toc" secondAttribute="bottom" id="V2T-I5-pdx"/>
+                <constraint firstItem="YDx-kt-toc" firstAttribute="leading" secondItem="JOU-Hz-he8" secondAttribute="leading" constant="20" id="te2-U4-2X9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33" y="-352"/>
+        </view>
+    </objects>
+</document>

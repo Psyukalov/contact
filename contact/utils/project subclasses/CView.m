@@ -26,6 +26,10 @@
     [self setNeeded3DEffect:needed3DEffect animated:YES];
 }
 
+- (void)setIsScrollEnabled:(BOOL)isScrollEnabled {
+    _isScrollEnabled = isScrollEnabled;
+}
+
 #pragma mark - Class methods
 
 - (void)viewDirection:(ViewDirection)viewDirection animated:(BOOL)animated {

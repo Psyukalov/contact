@@ -25,6 +25,7 @@
                 <outlet property="profileSlidingView" destination="bcJ-SF-wKr" id="ybG-WS-K3m"/>
                 <outlet property="scrollView" destination="5Xy-oI-UWQ" id="Lt6-Pf-f1Q"/>
                 <outlet property="searchAnimationView" destination="Z73-xA-c2S" id="jnE-h2-ebt"/>
+                <outlet property="testFuncView" destination="IZe-fp-Gww" id="R2F-ZH-Gtl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -102,7 +103,7 @@
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZe-fp-Gww">
-                    <rect key="frame" x="8" y="8" width="398" height="88.333333333333329"/>
+                    <rect key="frame" x="8" y="8" width="398" height="140"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test functions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-Ei-v55">
                             <rect key="frame" x="8" y="7.9999999999999982" width="102.66666666666667" height="20.333333333333329"/>
@@ -148,6 +149,19 @@
                                 <action selector="readingQR_tui:" destination="-1" eventType="touchUpInside" id="W9i-0s-lIx"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Qn-yye">
+                            <rect key="frame" x="8" y="88" width="128" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="gdR-ce-lcf"/>
+                                <constraint firstAttribute="height" constant="44" id="k9W-WK-Nsq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="conversation"/>
+                            <connections>
+                                <action selector="conv:" destination="-1" eventType="touchUpInside" id="Ilh-uj-Mkp"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -156,11 +170,13 @@
                         <constraint firstItem="OYm-Ei-v55" firstAttribute="top" secondItem="IZe-fp-Gww" secondAttribute="top" constant="8" id="Gn2-BC-Jkx"/>
                         <constraint firstItem="v2B-rf-TQv" firstAttribute="centerY" secondItem="1lE-4X-Fuz" secondAttribute="centerY" id="Ho3-6D-BVi"/>
                         <constraint firstItem="WIh-Sz-JhO" firstAttribute="leading" secondItem="v2B-rf-TQv" secondAttribute="trailing" constant="8" id="LXB-ez-DzN"/>
+                        <constraint firstAttribute="bottom" secondItem="hS2-Qn-yye" secondAttribute="bottom" constant="8" id="TMY-HC-gGk"/>
                         <constraint firstItem="OYm-Ei-v55" firstAttribute="leading" secondItem="IZe-fp-Gww" secondAttribute="leading" constant="8" id="VhP-a6-FNk"/>
                         <constraint firstItem="WIh-Sz-JhO" firstAttribute="centerY" secondItem="v2B-rf-TQv" secondAttribute="centerY" id="YT6-hf-5zg"/>
                         <constraint firstAttribute="trailing" secondItem="WIh-Sz-JhO" secondAttribute="trailing" constant="8" id="ZL8-lZ-syh"/>
+                        <constraint firstItem="hS2-Qn-yye" firstAttribute="top" secondItem="1lE-4X-Fuz" secondAttribute="bottom" constant="8" id="i8u-A2-hSM"/>
+                        <constraint firstItem="hS2-Qn-yye" firstAttribute="leading" secondItem="1lE-4X-Fuz" secondAttribute="leading" id="nPT-ag-YMn"/>
                         <constraint firstItem="v2B-rf-TQv" firstAttribute="leading" secondItem="1lE-4X-Fuz" secondAttribute="trailing" constant="8" id="smq-OC-Pfl"/>
-                        <constraint firstAttribute="bottom" secondItem="1lE-4X-Fuz" secondAttribute="bottom" constant="8" id="xRP-tE-F0I"/>
                     </constraints>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOZ-9O-3oK" customClass="QRCodeView">

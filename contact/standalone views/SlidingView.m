@@ -39,8 +39,8 @@
 }
 
 - (void)setIsScrollEnabled:(BOOL)isScrollEnabled {
-    _isScrollEnabled = isScrollEnabled;
-    _scrollView.scrollEnabled = _isScrollEnabled;
+    [super setIsScrollEnabled:isScrollEnabled];
+    _scrollView.scrollEnabled = self.isScrollEnabled;
 }
 
 #pragma mark - Class methods

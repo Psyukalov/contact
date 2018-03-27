@@ -14,6 +14,7 @@
 #import "HistoryView.h"
 #import "EditProfileSlidingView.h"
 #import "AboutContactView.h"
+#import "ConversationView.h"
 
 #import "AuthorizationViewController.h"
 
@@ -31,9 +32,12 @@
 
 @property (strong, nonatomic) CView *customView;
 
+@property (strong, nonatomic) ConversationView *conversationView;
+
 // TODO:
 
 @property (weak, nonatomic) IBOutlet QRCodeView *generatingQRView;
+@property (weak, nonatomic) IBOutlet UIView *testFuncView;
 
 @end
 
@@ -102,8 +106,10 @@
 }
 
 - (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration completion:(void (^)(void))completion {
-    [super keyboardWillShow:show height:height duration:duration completion:nil];
-    _profileSlidingView.isScrollEnabled = !show;
+    if (_conversationView) {
+        [super keyboardWillShow:show height:height duration:duration completion:nil];
+        _profileSlidingView.isScrollEnabled = !show;
+    }
 }
 
 - (void)accelerometerUpdateWithAcceleration:(CMAcceleration)acceleration {
@@ -243,6 +249,37 @@
 }
 
 #pragma mark - Test
+
+- (IBAction)conv:(UIButton *)sender {
+    _testFuncView.hidden = YES;
+    ConversationView *conversationView = [[ConversationView alloc] initWithFrame:self.view.bounds];
+    [self.contentView addSubview:conversationView];
+    [conversationView viewAnimation:ViewAnimationFadeOut animated:NO];
+    __weak ConversationView *weakConversationView = conversationView;
+    conversationView.didCloseViewCompletion = ^{
+        [weakConversationView viewAnimation:ViewAnimationFadeOut animated:YES completion:^{
+            [weakConversationView removeFromSuperview];
+            _conversationView = nil;
+            [self gradientLayersHidden:YES animated:YES completion:^{
+                [_searchAnimationView viewAnimation:ViewAnimationZoomIn animated:YES completion:^{
+                    [self interfaceHidden:NO animated:YES completion:^{
+                        _testFuncView.hidden = NO;
+                    }];
+                }];
+            }];
+        }];
+    };
+    [_profileSlidingView setIsOpen:NO animated:YES completion:^{
+        [self interfaceHidden:YES animated:YES completion:^{
+            [_searchAnimationView viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
+                [self gradientLayersHidden:NO animated:YES completion:^{
+                    [conversationView viewAnimation:ViewAnimationFadeIn animated:YES];
+                }];
+            }];
+        }];
+    }];
+    _conversationView = conversationView;
+}
 
 - (IBAction)message_tui:(UIButton *)sender {
     ErrorMessageView *errorMV = [ErrorMessageView new];

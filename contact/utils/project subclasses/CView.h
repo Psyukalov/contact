@@ -41,6 +41,7 @@ IB_DESIGNABLE
 @property (assign, nonatomic) CGPoint parallaxPoint;
 
 @property (assign, nonatomic) BOOL needed3DEffect;
+@property (assign, nonatomic) BOOL isScrollEnabled;
 
 @property (copy, nonatomic) CViewCompletion didCloseViewCompletion;
 

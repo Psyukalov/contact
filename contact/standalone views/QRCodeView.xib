@@ -38,7 +38,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qr code" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2d-dr-jFA" customClass="SMLabel">
-                    <rect key="frame" x="20" y="74" width="159" height="54"/>
+                    <rect key="frame" x="20" y="74" width="159" height="63"/>
                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="46"/>
                     <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJS-Wd-k6t" customClass="SMLabel">
-                    <rect key="frame" x="20" y="160" width="335" height="16.5"/>
+                    <rect key="frame" x="20" y="169" width="335" height="19.5"/>
                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                     <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNE-uz-94d" customClass="SMButton">
-                    <rect key="frame" x="321" y="74" width="50" height="50"/>
+                    <rect key="frame" x="321" y="74" width="50" height="52"/>
                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                     <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                     <state key="normal" image="close_mode_day_button">
@@ -84,10 +84,10 @@
                     </connections>
                 </button>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c31-ln-yM5">
-                    <rect key="frame" x="0.0" y="176" width="375" height="410.5"/>
+                    <rect key="frame" x="0.0" y="188" width="375" height="398.5"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B92-CA-wgS">
-                            <rect key="frame" x="64" y="66" width="247" height="247"/>
+                            <rect key="frame" x="64" y="60" width="247" height="247"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Sg-t3-nH1">
                                     <rect key="frame" x="16" y="16" width="214" height="214"/>

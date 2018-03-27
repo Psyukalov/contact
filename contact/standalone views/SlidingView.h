@@ -20,7 +20,6 @@ IB_DESIGNABLE
 @property (assign, nonatomic) CGFloat bottomBorder;
 
 @property (assign, nonatomic) BOOL isOpen;
-@property (assign, nonatomic) BOOL isScrollEnabled;
 
 - (void)configureWithUnhideHeight:(CGFloat)unhideHeight;
 

@@ -62,6 +62,7 @@
                 <constraint firstItem="W6Q-Hn-qbi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iG2-Yc-NgA"/>
                 <constraint firstItem="W6Q-Hn-qbi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="n8C-da-KaS"/>
             </constraints>
+            <point key="canvasLocation" x="-86.5" y="-61.5"/>
         </view>
     </objects>
     <resources>
