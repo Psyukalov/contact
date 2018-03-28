@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C71CB47920614ED700DC7ADD /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CB47820614ED700DC7ADD /* Switch.m */; };
+		C7208D06206BC8B200E1292A /* ReceiverMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7208D05206BC8B200E1292A /* ReceiverMessageTableViewCell.m */; };
+		C7208D08206BC92C00E1292A /* ReceiverMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7208D07206BC92C00E1292A /* ReceiverMessageTableViewCell.xib */; };
 		C7330DD3205C075D00E8F336 /* AboutContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DD2205C075D00E8F336 /* AboutContactView.m */; };
 		C7330DD5205C077300E8F336 /* AboutContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7330DD4205C077300E8F336 /* AboutContactView.xib */; };
 		C7330DD8205C099100E8F336 /* SMImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DD7205C099100E8F336 /* SMImageView.m */; };
@@ -98,6 +100,9 @@
 /* Begin PBXFileReference section */
 		C71CB47720614ED700DC7ADD /* Switch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Switch.h; sourceTree = "<group>"; };
 		C71CB47820614ED700DC7ADD /* Switch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Switch.m; sourceTree = "<group>"; };
+		C7208D04206BC8B200E1292A /* ReceiverMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiverMessageTableViewCell.h; sourceTree = "<group>"; };
+		C7208D05206BC8B200E1292A /* ReceiverMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiverMessageTableViewCell.m; sourceTree = "<group>"; };
+		C7208D07206BC92C00E1292A /* ReceiverMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiverMessageTableViewCell.xib; sourceTree = "<group>"; };
 		C7330DD1205C075D00E8F336 /* AboutContactView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutContactView.h; sourceTree = "<group>"; };
 		C7330DD2205C075D00E8F336 /* AboutContactView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutContactView.m; sourceTree = "<group>"; };
 		C7330DD4205C077300E8F336 /* AboutContactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutContactView.xib; sourceTree = "<group>"; };
@@ -272,6 +277,9 @@
 				C7884333206A9FFB00A15235 /* OwnerMessageTableViewCell.h */,
 				C7884334206A9FFB00A15235 /* OwnerMessageTableViewCell.m */,
 				C7884335206A9FFB00A15235 /* OwnerMessageTableViewCell.xib */,
+				C7208D04206BC8B200E1292A /* ReceiverMessageTableViewCell.h */,
+				C7208D05206BC8B200E1292A /* ReceiverMessageTableViewCell.m */,
+				C7208D07206BC92C00E1292A /* ReceiverMessageTableViewCell.xib */,
 			);
 			path = "table view cells";
 			sourceTree = "<group>";
@@ -648,6 +656,7 @@
 				C763786C2062635300C1DD8B /* FirstManualItemView.xib in Resources */,
 				C75D4F9C2065088D00FBC213 /* ProfileSlidingView.xib in Resources */,
 				C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */,
+				C7208D08206BC92C00E1292A /* ReceiverMessageTableViewCell.xib in Resources */,
 				C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */,
 				C7884332206A8FFF00A15235 /* ConversationView.xib in Resources */,
 				C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */,
@@ -679,6 +688,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7208D06206BC8B200E1292A /* ReceiverMessageTableViewCell.m in Sources */,
 				C7B78E702068F1C200730BF8 /* QRCodeView.m in Sources */,
 				C7FBC2792059579A00A49F14 /* UIView+Custom.m in Sources */,
 				C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */,
