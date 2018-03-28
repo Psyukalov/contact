@@ -26,7 +26,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7d-eb-4oF">
-                        <rect key="frame" x="286" y="65.5" width="16" height="16"/>
+                        <rect key="frame" x="284" y="65.5" width="16" height="16"/>
                         <color key="backgroundColor" red="0.33725490200000002" green="0.6588235294" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="O7d-eb-4oF" secondAttribute="height" multiplier="1:1" id="dVD-hD-vZH"/>
@@ -34,10 +34,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbx-Tc-bWd">
-                        <rect key="frame" x="213" y="4" width="89" height="77.5"/>
+                        <rect key="frame" x="211" y="4" width="89" height="77.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBp-Kk-7Bf">
-                                <rect key="frame" x="16" y="6" width="57" height="54"/>
+                                <rect key="frame" x="16" y="10" width="57" height="50"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="a0U-Kp-kbp"/>
                             <constraint firstItem="vml-FW-8By" firstAttribute="centerY" secondItem="ccP-VA-yEH" secondAttribute="centerY" id="cBM-IO-1en"/>
                             <constraint firstAttribute="bottom" secondItem="ccP-VA-yEH" secondAttribute="bottom" constant="2" id="fqo-Yl-HGD"/>
-                            <constraint firstItem="yBp-Kk-7Bf" firstAttribute="top" secondItem="pbx-Tc-bWd" secondAttribute="top" constant="6" id="rIP-Cj-G2r"/>
+                            <constraint firstItem="yBp-Kk-7Bf" firstAttribute="top" secondItem="pbx-Tc-bWd" secondAttribute="top" constant="10" id="rIP-Cj-G2r"/>
                             <constraint firstAttribute="trailing" secondItem="vml-FW-8By" secondAttribute="trailing" constant="8" id="yjY-S4-yRb"/>
                         </constraints>
                     </view>
@@ -71,12 +71,13 @@
                     <constraint firstItem="O7d-eb-4oF" firstAttribute="bottom" secondItem="pbx-Tc-bWd" secondAttribute="bottom" id="DtC-cW-26O"/>
                     <constraint firstItem="O7d-eb-4oF" firstAttribute="trailing" secondItem="pbx-Tc-bWd" secondAttribute="trailing" id="FYH-cC-qsd"/>
                     <constraint firstItem="pbx-Tc-bWd" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="68:100" id="IlM-U3-EdQ"/>
-                    <constraint firstAttribute="trailing" secondItem="pbx-Tc-bWd" secondAttribute="trailing" constant="18" id="h6U-Gk-qax"/>
+                    <constraint firstAttribute="trailing" secondItem="pbx-Tc-bWd" secondAttribute="trailing" constant="20" id="h6U-Gk-qax"/>
                     <constraint firstItem="pbx-Tc-bWd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="sfg-F9-7J2"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="cornerView" destination="O7d-eb-4oF" id="4DS-8Q-jCD"/>
                 <outlet property="dateLabel" destination="ccP-VA-yEH" id="FoR-hv-oZw"/>
                 <outlet property="iconImageview" destination="vml-FW-8By" id="F2i-vt-gmU"/>
                 <outlet property="messageLabel" destination="yBp-Kk-7Bf" id="ij6-AQ-Rni"/>

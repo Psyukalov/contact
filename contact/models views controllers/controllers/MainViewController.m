@@ -107,6 +107,8 @@
 
 - (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration completion:(void (^)(void))completion {
     if (_conversationView) {
+        [_conversationView.chatView keyboardWillShow:show height:height duration:duration];
+    } else {
         [super keyboardWillShow:show height:height duration:duration completion:nil];
         _profileSlidingView.isScrollEnabled = !show;
     }

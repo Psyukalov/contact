@@ -22,6 +22,7 @@
 @optional
 
 - (void)chatView:(ChatView *)chatView didSendMessage:(Message *)message;
+- (void)chatView:(ChatView *)chatView didScrollWithPoint:(CGPoint)point;
 
 @end
 
@@ -32,11 +33,16 @@
 
 @property (strong, nonatomic) NSMutableArray<Message *> *messages;
 
+@property (assign, nonatomic) CGSize headerSize;
+@property (assign, nonatomic) CGSize footerSize;
+
 - (void)addMessage:(Message *)message;
 - (void)removeMessage:(Message *)message;
 
 - (void)receiverIsTypingText:(BOOL)isTypingText;
 
 - (void)refresh;
+
+- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration;
 
 @end

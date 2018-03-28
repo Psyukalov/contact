@@ -16,5 +16,7 @@
 @property (strong, nonatomic) NSString *date;
 
 @property (assign, nonatomic) BOOL isDelivered;
+@property (assign, nonatomic) BOOL isNightMode;
+@property (assign, nonatomic) BOOL neededNightMode;
 
 @end

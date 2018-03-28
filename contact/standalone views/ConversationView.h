@@ -9,7 +9,11 @@
 
 #import "CView.h"
 
+#import "ChatView.h"
+
 
 @interface ConversationView : CView
+
+@property (weak, nonatomic) IBOutlet ChatView *chatView;
 
 @end

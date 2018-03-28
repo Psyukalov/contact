@@ -9,11 +9,17 @@
 
 #import "OwnerMessageTableViewCell.h"
 
+#import "Macros.h"
+
 #import "UIView+Custom.h"
+
+#import "SMView.h"
+#import "SMLabel.h"
 
 
 @interface OwnerMessageTableViewCell ()
 
+@property (weak, nonatomic) IBOutlet UIView *cornerView;
 @property (weak, nonatomic) IBOutlet UIView *roundedView;
 
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
@@ -41,6 +47,20 @@
 - (void)setIsDelivered:(BOOL)isDelivered {
     _isDelivered = isDelivered;
     _iconImageview.highlighted = _isDelivered;
+}
+
+- (void)setIsNightMode:(BOOL)isNightMode {
+    _isNightMode = isNightMode;
+    if (_neededNightMode) {
+        UIColor *nightModeColor = RGB(62.f, 64.f, 122.f);
+        UIColor *dayModeColor = RGB(255.f, 255.f, 255.f);
+        _cornerView.backgroundColor = _isNightMode ? nightModeColor : dayModeColor;
+        _roundedView.backgroundColor = _isNightMode ? nightModeColor : dayModeColor;
+        nightModeColor = RGB(255.f, 255.f, 255.f);
+        dayModeColor = RGB(34.f, 34.f, 40.f);
+        _messageLabel.textColor = _isNightMode ? nightModeColor : dayModeColor;
+        _dateLabel.textColor = _isNightMode ? nightModeColor : dayModeColor;
+    }
 }
 
 #pragma mark - Overriding methods
