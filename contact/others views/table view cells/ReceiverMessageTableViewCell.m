@@ -16,7 +16,7 @@
 
 #pragma mark - Overriding methods
 
-- (void)animate {
+- (void)show {
     self.transform = CGAffineTransformMakeTranslation(-32.f, 0.f);
     self.alpha = 0.f;
     [UIView animate:^{

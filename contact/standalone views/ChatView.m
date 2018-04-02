@@ -70,7 +70,7 @@
     [UIView performWithoutAnimation:^{
         [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
     }];
-    [cell animate];
+    [cell show];
 }
 
 - (void)removeMessage:(Message *)message {
@@ -93,7 +93,6 @@
 - (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration {
     keyboardHeight = height;
     [UIView animate:^{
-        _editView.transform = CGAffineTransformMakeTranslation(0.f, -height);
         [self configureBottomInset];
     } completion:^{
         isKeyboardShow = show;
@@ -113,7 +112,6 @@
     _textView.textContainerInset = UIEdgeInsetsZero;
     _textView.textContainer.lineFragmentPadding = 0.f;
     [_textView sizeToFit];
-    NSLog(@"%f", _textView.frame.size.height);
     _textView.keyboardAppearance = [ScreenModeManager shared].isScreenModeDay ? UIKeyboardAppearanceDefault : UIKeyboardAppearanceDark;
     _textView.didChangeConstraint = ^{
         [self configureBottomInset];
@@ -197,6 +195,7 @@
 #pragma mark - Other methods
 
 - (void)configureBottomInset {
+    _editView.transform = CGAffineTransformMakeTranslation(0.f, -keyboardHeight);
     _tableView.contentInset = UIEdgeInsetsMake(0.f, 0.f, _editView.frame.size.height + keyboardHeight, 0.f);
 }
 
@@ -230,7 +229,9 @@
     message.isDelivered = NO;
     [self addMessage:message];
     _textView.text = [NSString new];
-    // TODO:
+    if ([_delegate respondsToSelector:@selector(chatView:didSendMessage:)]) {
+        [_delegate chatView:self didSendMessage:message];
+    }
 }
 
 @end
