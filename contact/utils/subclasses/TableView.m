@@ -96,6 +96,14 @@
     });
 }
 
+- (void)updatesCompletion:(void (^)(void))completion {
+    [self beginUpdates];
+    if (completion) {
+        completion();
+    }
+    [self endUpdates];
+}
+
 #pragma mark - Overriding properties
 
 - (void)setContentOffset:(CGPoint)contentOffset {

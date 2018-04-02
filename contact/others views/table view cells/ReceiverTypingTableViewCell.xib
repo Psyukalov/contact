@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="ReceiverTypingTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="40.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cut-0m-7U9" customClass="SMView">
+                        <rect key="frame" x="20" y="4" width="60" height="32"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-BZ-9Kf" customClass="VPPointsActivityIndicatorView">
+                                <rect key="frame" x="17" y="13" width="26" height="6"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="6j8-cz-3Wh"/>
+                                    <constraint firstAttribute="width" constant="26" id="6wR-tb-giP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gk1-BZ-9Kf" firstAttribute="centerY" secondItem="cut-0m-7U9" secondAttribute="centerY" id="EV6-0w-xO7"/>
+                            <constraint firstAttribute="height" constant="32" id="Puu-wk-W8f"/>
+                            <constraint firstItem="Gk1-BZ-9Kf" firstAttribute="centerX" secondItem="cut-0m-7U9" secondAttribute="centerX" id="bzz-Q9-73s"/>
+                            <constraint firstAttribute="width" constant="60" id="xQh-zt-N80"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                                <color key="value" red="0.24313725489999999" green="0.25098039220000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qD-u3-0rB" customClass="SMView">
+                        <rect key="frame" x="20" y="20" width="16" height="16"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="46E-LU-nEB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighColor">
+                                <color key="value" red="0.24313725489999999" green="0.25098039220000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3qD-u3-0rB" firstAttribute="width" secondItem="3qD-u3-0rB" secondAttribute="height" multiplier="1:1" id="7ub-ET-eZp"/>
+                    <constraint firstItem="3qD-u3-0rB" firstAttribute="bottom" secondItem="cut-0m-7U9" secondAttribute="bottom" id="TT2-xT-oBW"/>
+                    <constraint firstItem="3qD-u3-0rB" firstAttribute="leading" secondItem="cut-0m-7U9" secondAttribute="leading" id="f0M-Ft-tRF"/>
+                    <constraint firstItem="cut-0m-7U9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vzF-tb-tkU"/>
+                    <constraint firstItem="cut-0m-7U9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="yqk-Lb-2GX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="cornerView" destination="3qD-u3-0rB" id="Hn9-qI-V7x"/>
+                <outlet property="pointsActivityIndicatorView" destination="Gk1-BZ-9Kf" id="IiD-Rr-urm"/>
+                <outlet property="roundedView" destination="cut-0m-7U9" id="Dsq-5l-UOq"/>
+            </connections>
+            <point key="canvasLocation" x="23" y="61"/>
+        </tableViewCell>
+    </objects>
+</document>

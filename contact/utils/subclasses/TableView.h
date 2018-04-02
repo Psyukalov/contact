@@ -38,4 +38,6 @@
 - (void)setCellsHidden:(BOOL)hidden animated:(BOOL)animated;
 - (void)setCellsHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion;
 
+- (void)updatesCompletion:(void (^)(void))completion;
+
 @end

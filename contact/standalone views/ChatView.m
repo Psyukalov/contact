@@ -28,7 +28,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *tableFooterView;
 
-@property (weak, nonatomic) IBOutlet UIView *roundedView;
+@property (weak, nonatomic) IBOutlet UIView *roundedView; // Receiver typing;
 @property (weak, nonatomic) IBOutlet UIView *editView;
 @property (weak, nonatomic) IBOutlet UIView *sendView;
 @property (weak, nonatomic) IBOutlet UIView *textViewContainerView;
@@ -48,7 +48,7 @@
 
 - (void)setMessages:(NSMutableArray<Message *> *)messages {
     _messages = messages;
-    [self refresh];
+    [self reloadData];
 }
 
 - (CGSize)headerSize {
@@ -59,56 +59,57 @@
     return _tableView.tableFooterView.frame.size;
 }
 
+- (void)setIsReceiverTypingText:(BOOL)isReceiverTypingText {
+    // TODO:
+}
+
 #pragma mark - Class methods
 
 - (void)addMessage:(Message *)message {
     [_messages addObject:message];
     NSUInteger index = [_messages indexOfObject:message];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-    [_tableView reloadData];
-    OwnerMessageTableViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
-    [UIView performWithoutAnimation:^{
-        [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    [_tableView updatesCompletion:^{
+        [_tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
     }];
-    [cell show];
+    [self scrollToBottom];
 }
 
-- (void)removeMessage:(Message *)message {
-    [_messages removeObject:message];
-    [_tableView reloadData];
-}
-
-- (void)receiverIsTypingText:(BOOL)isTypingText {
-    [UIView animateWithDuration:.32f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _tableView.tableFooterView.alpha = isTypingText ? 1.f : 0.f;
-    } completion:^(BOOL finished) {
-        if (isTypingText) {
-            [_pointsActivityIndicatoreView playAnimation];
-        } else {
-            [_pointsActivityIndicatoreView stopAnimation];
-        }
+- (void)removeMessageAtIndex:(NSUInteger)index {
+    [_messages removeObjectAtIndex:index];
+    [_tableView updatesCompletion:^{
+        [_tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
     }];
 }
 
 - (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration {
     keyboardHeight = height;
     [UIView animate:^{
+        _editView.transform = CGAffineTransformMakeTranslation(0.f, -keyboardHeight);
         [self configureBottomInset];
     } completion:^{
         isKeyboardShow = show;
     } duration:duration];
 }
 
-- (void)refresh {
+- (void)reloadData {
     [_tableView reloadData];
 }
 
-#pragma mark - Overriding properties
+- (void)scrollToTop {
+    _tableView.contentOffset = CGPointZero;
+}
+
+- (void)scrollToBottom {
+    CGPoint point = CGPointMake(0.f, _tableView.contentSize.height - _tableView.bounds.size.height + _tableView.contentInset.bottom);
+    [_tableView setContentOffset:point animated:YES];
+}
 
 #pragma mark - Overriding methods
 
 - (void)loadViewFromNib {
     [super loadViewFromNib];
+    _messages = [NSMutableArray new];
+    [_roundedView cornerRadius:.5f * _roundedView.frame.size.height];
     _textView.textContainerInset = UIEdgeInsetsZero;
     _textView.textContainer.lineFragmentPadding = 0.f;
     [_textView sizeToFit];
@@ -116,12 +117,9 @@
     _textView.didChangeConstraint = ^{
         [self configureBottomInset];
     };
-    _messages = [NSMutableArray new];
-    [_roundedView cornerRadius:16.f];
     _tableView.refreshControl = nil;
     _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 0.f, 198.f)];
-    _tableView.tableFooterView = _tableFooterView;
-    _tableView.tableFooterView.alpha = 0.f;
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 0.f, 4.f)];
     [_tableView registerCellClass:[OwnerMessageTableViewCell class]];
     [_tableView registerCellClass:[ReceiverMessageTableViewCell class]];
     [_textViewContainerView cornerRadius:.5f * _textViewContainerView.frame.size.height];
@@ -139,7 +137,7 @@
 }
 
 - (UITableViewCell *)tableView:(TableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Message *message = _messages[indexPath.row];
+    Message *message = [self messageWithIndexPath:indexPath];
     OwnerMessageTableViewCell *cell = [tableView dequeueReusableCellWithIndex:message.isOwner ? 0 : 1];
     cell.message = message.text;
     cell.date = message.date;
@@ -160,7 +158,7 @@
     _label.text = message.text;
     [_label sizeToFit];
     CGSize size = [_label sizeThatFits:CGSizeMake(.68f * WIDTH - 32.f, FLT_MAX)];
-    size.height += 36.f;
+    size.height += 36.f; // One pixel is separator;
     return size.height;
 }
 
@@ -195,8 +193,7 @@
 #pragma mark - Other methods
 
 - (void)configureBottomInset {
-    _editView.transform = CGAffineTransformMakeTranslation(0.f, -keyboardHeight);
-    _tableView.contentInset = UIEdgeInsetsMake(0.f, 0.f, _editView.frame.size.height + keyboardHeight, 0.f);
+    _tableView.contentInset = UIEdgeInsetsMake(0.f, 0.f, _editView.frame.size.height + keyboardHeight - 8.f, 0.f);
 }
 
 - (void)applicationWillEnterForeground {

@@ -10,7 +10,9 @@
 #import "ConversationView.h"
 
 
-@interface ConversationView () <ChatViewDelegate>
+@interface ConversationView () <ChatViewDelegate> {
+    BOOL a;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 
@@ -37,7 +39,7 @@
     _closeLabel.text = LOCALIZE(@"cv_label_0");
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeView_TUI)];
     [_closeView addGestureRecognizer:tapGR];
-    [_chatView receiverIsTypingText:YES];
+//    [_chatView receiverIsTypingText:YES];
     Message *message_0 = [Message new];
     message_0.text = @"adas dsfdsf fafgdgfag fdgfdg adfg  dfga gdfcvcvbcxvdf v fvcx vfv vfvdfv";
     message_0.date = @"00:28";
@@ -57,6 +59,13 @@
     message_3.date = @"01:00";
     message_3.isDelivered = NO;
     _chatView.messages = [NSMutableArray arrayWithArray:@[message_0, message_1, message_2, message_3, message_0, message_1, message_2, message_3, message_0, message_1, message_2, message_3]];
+    [self repeater];
+}
+
+- (void)repeater {
+    a = !a;
+    _chatView.isReceiverTypingText = a;
+    [self performSelector:@selector(repeater) withObject:nil afterDelay:2.f];
 }
 
 #pragma mark - ChatViewDelegate

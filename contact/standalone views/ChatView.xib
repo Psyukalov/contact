@@ -37,7 +37,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAJ-s5-ZlT" customClass="TableView">
+                <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAJ-s5-ZlT" customClass="TableView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
@@ -46,7 +46,7 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7s-PY-yFp" customClass="SMView">
-                    <rect key="frame" x="0.0" y="622.5" width="375" height="54.5"/>
+                    <rect key="frame" x="0.0" y="622.5" width="375" height="52.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1G-6k-hsZ">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -56,10 +56,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-x6-QGJ" customClass="SMView">
-                            <rect key="frame" x="20" y="7" width="256" height="31.5"/>
+                            <rect key="frame" x="20" y="7" width="257.5" height="31.5"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMQ-hv-624" customClass="SMTextView">
-                                    <rect key="frame" x="16" y="6" width="224" height="19.5"/>
+                                    <rect key="frame" x="16" y="6" width="225.5" height="19.5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="58" id="aAA-WG-Bes"/>
@@ -98,13 +98,13 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-VB-01m">
-                            <rect key="frame" x="275.5" y="1" width="99.5" height="43.5"/>
+                            <rect key="frame" x="277" y="1" width="98" height="43.5"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="send_message_button" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-p6-Kth">
-                                    <rect key="frame" x="64.5" y="15" width="15" height="13"/>
+                                    <rect key="frame" x="63" y="15" width="15" height="13"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="send" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W0-oE-Q4X" customClass="SMLabel">
-                                    <rect key="frame" x="20" y="10.5" width="36.5" height="22"/>
+                                    <rect key="frame" x="20" y="12" width="35" height="19"/>
                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                     <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -130,14 +130,14 @@
                     </subviews>
                     <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="4J7-VB-01m" secondAttribute="bottom" constant="10" id="Rjs-Wq-dnb"/>
+                        <constraint firstAttribute="bottom" secondItem="4J7-VB-01m" secondAttribute="bottom" constant="8" id="Rjs-Wq-dnb"/>
                         <constraint firstAttribute="trailing" secondItem="4J7-VB-01m" secondAttribute="trailing" id="YCD-go-EHU"/>
                         <constraint firstAttribute="trailing" secondItem="C1G-6k-hsZ" secondAttribute="trailing" id="cdA-VY-2Nk"/>
                         <constraint firstItem="XaS-x6-QGJ" firstAttribute="top" secondItem="C1G-6k-hsZ" secondAttribute="bottom" constant="6" id="h56-Gs-lzm"/>
                         <constraint firstItem="C1G-6k-hsZ" firstAttribute="leading" secondItem="b7s-PY-yFp" secondAttribute="leading" id="iNg-ts-0kb"/>
                         <constraint firstItem="C1G-6k-hsZ" firstAttribute="top" secondItem="b7s-PY-yFp" secondAttribute="top" id="oL7-sw-cNN"/>
                         <constraint firstItem="XaS-x6-QGJ" firstAttribute="leading" secondItem="b7s-PY-yFp" secondAttribute="leading" constant="20" id="pSZ-fU-Ggx"/>
-                        <constraint firstAttribute="bottom" secondItem="XaS-x6-QGJ" secondAttribute="bottom" constant="16" id="r0h-RP-XZB"/>
+                        <constraint firstAttribute="bottom" secondItem="XaS-x6-QGJ" secondAttribute="bottom" constant="14" id="r0h-RP-XZB"/>
                         <constraint firstItem="4J7-VB-01m" firstAttribute="top" secondItem="C1G-6k-hsZ" secondAttribute="bottom" id="tbQ-be-GLe"/>
                         <constraint firstItem="4J7-VB-01m" firstAttribute="leading" secondItem="XaS-x6-QGJ" secondAttribute="trailing" id="ytx-ND-qVi"/>
                     </constraints>
@@ -154,7 +154,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="b7s-PY-yFp" secondAttribute="trailing" id="PZF-bh-Idp"/>
-                <constraint firstAttribute="bottom" secondItem="b7s-PY-yFp" secondAttribute="bottom" constant="-10" id="aKG-Pe-xw9"/>
+                <constraint firstAttribute="bottom" secondItem="b7s-PY-yFp" secondAttribute="bottom" constant="-8" id="aKG-Pe-xw9"/>
                 <constraint firstAttribute="trailing" secondItem="zAJ-s5-ZlT" secondAttribute="trailing" id="eR8-oe-YHP"/>
                 <constraint firstItem="b7s-PY-yFp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fBw-aR-mCV"/>
                 <constraint firstItem="zAJ-s5-ZlT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lvk-gu-QPH"/>
@@ -221,7 +221,7 @@
                 <constraint firstItem="YDx-kt-toc" firstAttribute="leading" secondItem="JOU-Hz-he8" secondAttribute="leading" constant="20" id="te2-U4-2X9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="40" y="330"/>
+            <point key="canvasLocation" x="40" y="325"/>
         </view>
     </objects>
     <resources>

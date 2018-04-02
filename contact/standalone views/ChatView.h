@@ -36,13 +36,18 @@
 @property (assign, nonatomic) CGSize headerSize;
 @property (assign, nonatomic) CGSize footerSize;
 
+@property (assign, nonatomic) BOOL isReceiverTypingText;
+
 - (void)addMessage:(Message *)message;
-- (void)removeMessage:(Message *)message;
+- (void)removeMessageAtIndex:(NSUInteger)index;
 
-- (void)receiverIsTypingText:(BOOL)isTypingText;
+//- (void)receiverIsTypingText:(BOOL)isTypingText;
 
-- (void)refresh;
+- (void)reloadData;
 
 - (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration;
+
+- (void)scrollToTop;
+- (void)scrollToBottom;
 
 @end
