@@ -19,4 +19,6 @@
 @property (assign, nonatomic) BOOL isNightMode;
 @property (assign, nonatomic) BOOL neededNightMode;
 
+- (void)animate;
+
 @end

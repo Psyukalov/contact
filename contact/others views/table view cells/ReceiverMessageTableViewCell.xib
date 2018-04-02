@@ -75,12 +75,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ccP-VA-yEH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pbx-Tc-bWd" secondAttribute="leading" constant="24" id="3bu-X0-6Po"/>
                             <constraint firstAttribute="bottom" secondItem="yBp-Kk-7Bf" secondAttribute="bottom" constant="18" id="AEO-1s-ny9"/>
                             <constraint firstAttribute="trailing" secondItem="yBp-Kk-7Bf" secondAttribute="trailing" constant="16" id="M2g-49-acp"/>
                             <constraint firstItem="yBp-Kk-7Bf" firstAttribute="leading" secondItem="pbx-Tc-bWd" secondAttribute="leading" constant="16" id="RWK-5U-Fmd"/>
+                            <constraint firstItem="ccP-VA-yEH" firstAttribute="trailing" secondItem="yBp-Kk-7Bf" secondAttribute="trailing" id="U7S-T4-EgG"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="a0U-Kp-kbp"/>
                             <constraint firstAttribute="bottom" secondItem="ccP-VA-yEH" secondAttribute="bottom" constant="2" id="fqo-Yl-HGD"/>
-                            <constraint firstAttribute="trailing" secondItem="ccP-VA-yEH" secondAttribute="trailing" constant="16" id="her-id-r9s"/>
                             <constraint firstItem="yBp-Kk-7Bf" firstAttribute="top" secondItem="pbx-Tc-bWd" secondAttribute="top" constant="10" id="rIP-Cj-G2r"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

@@ -9,7 +9,20 @@
 
 #import "ReceiverMessageTableViewCell.h"
 
+#import "UIView+Custom.h"
+
 
 @implementation ReceiverMessageTableViewCell
+
+#pragma mark - Overriding methods
+
+- (void)animate {
+    self.transform = CGAffineTransformMakeTranslation(-32.f, 0.f);
+    self.alpha = 0.f;
+    [UIView animate:^{
+        self.transform = CGAffineTransformIdentity;
+        self.alpha = 1.f;
+    } completion:nil duration:.64f];
+}
 
 @end

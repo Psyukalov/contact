@@ -23,7 +23,6 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="editView" destination="b7s-PY-yFp" id="bZ5-i9-5I6"/>
-                <outlet property="editViewHeightLC" destination="6rM-Ah-mpe" id="f6S-9W-Fbv"/>
                 <outlet property="pointsActivityIndicatoreView" destination="Q50-13-0Ml" id="FDd-8G-NCU"/>
                 <outlet property="roundedView" destination="YDx-kt-toc" id="ZU3-7P-Yl3"/>
                 <outlet property="sendView" destination="4J7-VB-01m" id="zOf-Xx-738"/>
@@ -47,7 +46,7 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7s-PY-yFp" customClass="SMView">
-                    <rect key="frame" x="0.0" y="622" width="375" height="55"/>
+                    <rect key="frame" x="0.0" y="622.5" width="375" height="54.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1G-6k-hsZ">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -57,24 +56,37 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-x6-QGJ" customClass="SMView">
-                            <rect key="frame" x="20" y="7" width="256" height="32"/>
+                            <rect key="frame" x="20" y="7" width="256" height="31.5"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMQ-hv-624">
-                                    <rect key="frame" x="16" y="-2" width="224" height="128"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMQ-hv-624" customClass="SMTextView">
+                                    <rect key="frame" x="16" y="6" width="224" height="19.5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="128" id="Ma6-ZN-p8F"/>
+                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="58" id="aAA-WG-Bes"/>
+                                        <constraint firstAttribute="height" constant="19" id="wMT-cO-4cw"/>
                                     </constraints>
+                                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayTextColor">
+                                            <color key="value" red="0.13333333333333333" green="0.13333333333333333" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="screenModeNighTextColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Xkd-RV-zgm"/>
+                                    </connections>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="32" id="6rM-Ah-mpe"/>
+                                <constraint firstAttribute="bottom" secondItem="UMQ-hv-624" secondAttribute="bottom" constant="6" id="Wey-F4-5R9"/>
                                 <constraint firstItem="UMQ-hv-624" firstAttribute="centerX" secondItem="XaS-x6-QGJ" secondAttribute="centerX" id="dJc-nb-6cO"/>
                                 <constraint firstItem="UMQ-hv-624" firstAttribute="leading" secondItem="XaS-x6-QGJ" secondAttribute="leading" constant="16" id="g3w-sz-F99"/>
-                                <constraint firstItem="UMQ-hv-624" firstAttribute="top" secondItem="XaS-x6-QGJ" secondAttribute="top" constant="-2" id="pUc-ft-3um"/>
+                                <constraint firstItem="UMQ-hv-624" firstAttribute="top" secondItem="XaS-x6-QGJ" secondAttribute="top" constant="6" id="pUc-ft-3um"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="screenModeDayColor">
@@ -86,7 +98,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-VB-01m">
-                            <rect key="frame" x="275.5" y="1" width="99.5" height="44"/>
+                            <rect key="frame" x="275.5" y="1" width="99.5" height="43.5"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="send_message_button" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-p6-Kth">
                                     <rect key="frame" x="64.5" y="15" width="15" height="13"/>
@@ -111,7 +123,6 @@
                                 <constraint firstAttribute="trailing" secondItem="T3s-p6-Kth" secondAttribute="trailing" constant="20" id="6OJ-UA-FZX"/>
                                 <constraint firstItem="0W0-oE-Q4X" firstAttribute="leading" secondItem="4J7-VB-01m" secondAttribute="leading" constant="20" id="Kzx-yv-Qyg"/>
                                 <constraint firstItem="T3s-p6-Kth" firstAttribute="leading" secondItem="0W0-oE-Q4X" secondAttribute="trailing" constant="8" id="QKe-dI-0oq"/>
-                                <constraint firstAttribute="height" constant="44" id="gvj-5F-aq0"/>
                                 <constraint firstItem="0W0-oE-Q4X" firstAttribute="centerY" secondItem="4J7-VB-01m" secondAttribute="centerY" id="qAQ-aU-yL6"/>
                                 <constraint firstItem="T3s-p6-Kth" firstAttribute="centerY" secondItem="0W0-oE-Q4X" secondAttribute="centerY" id="tuK-WA-zAN"/>
                             </constraints>
@@ -127,6 +138,7 @@
                         <constraint firstItem="C1G-6k-hsZ" firstAttribute="top" secondItem="b7s-PY-yFp" secondAttribute="top" id="oL7-sw-cNN"/>
                         <constraint firstItem="XaS-x6-QGJ" firstAttribute="leading" secondItem="b7s-PY-yFp" secondAttribute="leading" constant="20" id="pSZ-fU-Ggx"/>
                         <constraint firstAttribute="bottom" secondItem="XaS-x6-QGJ" secondAttribute="bottom" constant="16" id="r0h-RP-XZB"/>
+                        <constraint firstItem="4J7-VB-01m" firstAttribute="top" secondItem="C1G-6k-hsZ" secondAttribute="bottom" id="tbQ-be-GLe"/>
                         <constraint firstItem="4J7-VB-01m" firstAttribute="leading" secondItem="XaS-x6-QGJ" secondAttribute="trailing" id="ytx-ND-qVi"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>

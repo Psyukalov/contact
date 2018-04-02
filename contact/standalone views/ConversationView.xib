@@ -100,7 +100,7 @@
                             <rect key="frame" x="20" y="134" width="12" height="18"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onx-Lb-ArK">
-                            <rect key="frame" x="311" y="74" width="64" height="64"/>
+                            <rect key="frame" x="311" y="74.5" width="64" height="64"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="64" id="SiN-53-o6J"/>
                                 <constraint firstAttribute="width" secondItem="onx-Lb-ArK" secondAttribute="height" multiplier="1:1" id="nUc-zD-i9f"/>

@@ -63,6 +63,17 @@
     }
 }
 
+#pragma mark - Class methods
+
+- (void)animate {
+    self.transform = CGAffineTransformMakeTranslation(32.f, 0.f);
+    self.alpha = 0.f;
+    [UIView animate:^{
+        self.transform = CGAffineTransformIdentity;
+        self.alpha = 1.f;
+    } completion:nil duration:.64f];
+}
+
 #pragma mark - Overriding methods
 
 - (void)awakeFromNib {

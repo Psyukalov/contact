@@ -14,10 +14,11 @@
 
 @property (assign, nonatomic) NSUInteger identifier;
 
-@property (strong, nonatomic) NSString *message;
+@property (strong, nonatomic) NSString *text;
 @property (strong, nonatomic) NSString *date;
 
 @property (assign, nonatomic) BOOL isOwner;
 @property (assign, nonatomic) BOOL isDelivered;
+@property (assign, nonatomic) BOOL isTypingNow;
 
 @end

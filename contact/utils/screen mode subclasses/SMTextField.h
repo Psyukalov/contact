@@ -9,10 +9,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ScreenModeManager.h"
+
 
 IB_DESIGNABLE
 
-@interface SMTextField : UITextField
+@interface SMTextField : UITextField <ScreenModeProtocol>
 
 @property (strong, nonatomic) IBInspectable UIColor *screenModeDayTextColor;
 @property (strong, nonatomic) IBInspectable UIColor *screenModeNighTextColor;

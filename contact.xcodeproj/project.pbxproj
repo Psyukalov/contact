@@ -16,6 +16,8 @@
 		C7330DDB205C0F4300E8F336 /* SMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DDA205C0F4300E8F336 /* SMButton.m */; };
 		C7330DDD205C234B00E8F336 /* RegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7330DDC205C234B00E8F336 /* RegistrationView.xib */; };
 		C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = C7330DE2205C294E00E8F336 /* UILabel+Custom.m */; };
+		C757F00F206CF01500C1805F /* SMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C757F00E206CF01500C1805F /* SMTextView.m */; };
+		C757F013206D041700C1805F /* MBAutoGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C757F012206D041700C1805F /* MBAutoGrowingTextView.m */; };
 		C75D4F9C2065088D00FBC213 /* ProfileSlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75D4F9B2065088C00FBC213 /* ProfileSlidingView.xib */; };
 		C75D4F9F206508AD00FBC213 /* ProfileSlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D4F9E206508AD00FBC213 /* ProfileSlidingView.m */; };
 		C75D4FA42065215700FBC213 /* EditProfileSlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D4FA32065215700FBC213 /* EditProfileSlidingView.m */; };
@@ -113,6 +115,10 @@
 		C7330DDC205C234B00E8F336 /* RegistrationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationView.xib; sourceTree = "<group>"; };
 		C7330DE1205C294E00E8F336 /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
 		C7330DE2205C294E00E8F336 /* UILabel+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Custom.m"; sourceTree = "<group>"; };
+		C757F00D206CF01500C1805F /* SMTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMTextView.h; sourceTree = "<group>"; };
+		C757F00E206CF01500C1805F /* SMTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTextView.m; sourceTree = "<group>"; };
+		C757F011206D041700C1805F /* MBAutoGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAutoGrowingTextView.h; sourceTree = "<group>"; };
+		C757F012206D041700C1805F /* MBAutoGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAutoGrowingTextView.m; sourceTree = "<group>"; };
 		C75D4F9B2065088C00FBC213 /* ProfileSlidingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSlidingView.xib; sourceTree = "<group>"; };
 		C75D4F9D206508AD00FBC213 /* ProfileSlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileSlidingView.h; sourceTree = "<group>"; };
 		C75D4F9E206508AD00FBC213 /* ProfileSlidingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileSlidingView.m; sourceTree = "<group>"; };
@@ -251,6 +257,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C757F010206D041700C1805F /* MBAutoGrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				C757F011206D041700C1805F /* MBAutoGrowingTextView.h */,
+				C757F012206D041700C1805F /* MBAutoGrowingTextView.m */,
+			);
+			path = MBAutoGrowingTextView;
+			sourceTree = "<group>";
+		};
 		C788432A206A7EE000A15235 /* VPPointsActivityIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +319,8 @@
 				C7E41B76205BDC9200C4B96F /* SMLabel.m */,
 				C7CBFB6E2064E8F600C5CB0F /* SMTextField.h */,
 				C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */,
+				C757F00D206CF01500C1805F /* SMTextView.h */,
+				C757F00E206CF01500C1805F /* SMTextView.m */,
 				C7E41B72205BDB6100C4B96F /* SMView.h */,
 				C7E41B73205BDB6100C4B96F /* SMView.m */,
 			);
@@ -439,6 +456,7 @@
 		C7FBC22920591DD900A49F14 /* third party */ = {
 			isa = PBXGroup;
 			children = (
+				C757F010206D041700C1805F /* MBAutoGrowingTextView */,
 				C7FBC23A20592A4800A49F14 /* iCarousel */,
 				C7FBC24220592CF000A49F14 /* VPActivityIndicatorImageView */,
 				C788432A206A7EE000A15235 /* VPPointsActivityIndicatorView */,
@@ -707,6 +725,7 @@
 				C7FBC28020597A3300A49F14 /* RegistrationView.m in Sources */,
 				C7FBC2742059533700A49F14 /* AuthorizationView.m in Sources */,
 				C7FBC267205939EA00A49F14 /* CViewController.m in Sources */,
+				C757F00F206CF01500C1805F /* SMTextView.m in Sources */,
 				C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */,
 				C780BFD6206A6B240065DCA1 /* TableView.m in Sources */,
 				C7FBC2322059250C00A49F14 /* ViewController.m in Sources */,
@@ -733,6 +752,7 @@
 				C7884336206A9FFB00A15235 /* OwnerMessageTableViewCell.m in Sources */,
 				C763786F206264E600C1DD8B /* WavesView.m in Sources */,
 				C7FBC20D2059087600A49F14 /* AppDelegate.m in Sources */,
+				C757F013206D041700C1805F /* MBAutoGrowingTextView.m in Sources */,
 				C7884321206A79DF00A15235 /* ChatView.m in Sources */,
 				C7330DD8205C099100E8F336 /* SMImageView.m in Sources */,
 				C7330DD3205C075D00E8F336 /* AboutContactView.m in Sources */,
