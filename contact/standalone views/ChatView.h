@@ -41,8 +41,6 @@
 - (void)addMessage:(Message *)message;
 - (void)removeMessageAtIndex:(NSUInteger)index;
 
-//- (void)receiverIsTypingText:(BOOL)isTypingText;
-
 - (void)reloadData;
 
 - (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration;

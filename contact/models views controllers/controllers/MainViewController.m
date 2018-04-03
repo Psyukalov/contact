@@ -22,6 +22,9 @@
 
 #import "QRCodeView.h"
 #import "QRScanView.h"
+#import "RequestMessageView.h"
+#import "WaitingMessageView.h"
+#import "RatingMessageView.h"
 
 
 @interface MainViewController () <ProfileSlidingViewDelegate>
@@ -311,6 +314,33 @@
     [self.view addSubview:scan];
     [scan viewAnimation:ViewAnimationFadeOut animated:NO];
     [scan viewAnimation:ViewAnimationFadeIn animated:YES];
+}
+
+- (IBAction)request_tui:(UIButton *)sender {
+    RequestMessageView *requestMV = [RequestMessageView new];
+    requestMV.name = @"Jon Snow";
+    requestMV.age = 16;
+    requestMV.distance = 1238000.f;
+    [requestMV viewAnimation:ViewAnimationZoomIn animated:YES];
+}
+
+- (IBAction)found_tui:(UIButton *)sender {
+    WaitingMessageView *waitingMV = [WaitingMessageView new];
+    [waitingMV viewAnimation:ViewAnimationZoomIn animated:YES];
+}
+
+- (IBAction)setrating_tui:(UIButton *)sender {
+    RatingMessageView *ratingMV = [RatingMessageView new];
+    ratingMV.tokensCount = 32;
+    __weak RatingMessageView *weakRatingMV = ratingMV;
+    ratingMV.didCloseViewCompletion = ^{
+        NSLog(@"Rating: %ld;", (unsigned long)weakRatingMV.rate);
+    };
+    [ratingMV viewAnimation:ViewAnimationZoomIn animated:YES];
+}
+
+- (IBAction)switch:(UISwitch *)sender {
+    _testFuncView.hidden = !sender.on;
 }
 
 @end

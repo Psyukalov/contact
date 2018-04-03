@@ -12,12 +12,22 @@
 
 @interface ConversationView () <ChatViewDelegate> {
     BOOL a;
+    NSString *localizedMetersString;
+    NSString *localizedKilometersString;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 
 @property (weak, nonatomic) IBOutlet UIView *closeView;
+
 @property (weak, nonatomic) IBOutlet UILabel *closeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameAndAgeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *awayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *roleActionButton;
 
 @end
 
@@ -25,6 +35,24 @@
 @implementation ConversationView
 
 #pragma mark - Class properties
+
+- (void)setName:(NSString *)name {
+    _name = name;
+    [self fillRequestMesage];
+}
+
+- (void)setAge:(NSUInteger)age {
+    _age = age;
+    [self fillRequestMesage];
+}
+
+- (void)setDistance:(CGFloat)distance {
+    _distance = distance;
+    BOOL isKilometers = _distance > 1000.f;
+    CGFloat resultDistance = isKilometers ? _distance / 1000.f : _distance;
+    NSString *resultUnit = isKilometers ? localizedKilometersString : localizedMetersString;
+    _distanceLabel.text = [NSString stringWithFormat:@"%1.f %@", resultDistance, resultUnit];
+}
 
 #pragma mark - Class methods
 
@@ -37,9 +65,15 @@
     _chatView.delegate = self;
     [_closeView cornerRadius:.5f * _closeView.frame.size.height];
     _closeLabel.text = LOCALIZE(@"cv_label_0");
-    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeView_TUI)];
+    localizedMetersString = LOCALIZE(@"cv_label_1");
+    localizedKilometersString = LOCALIZE(@"cv_label_2");
+    _awayLabel.text = LOCALIZE(@"cv_label_3");
+    _timeLeftLabel.text = LOCALIZE(@"cv_label_4");UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeView_TUI)];
     [_closeView addGestureRecognizer:tapGR];
-//    [_chatView receiverIsTypingText:YES];
+    // TODO:
+    [self setDistance:100.f];
+    [self setName:@"Lara Croft"];
+    [self setAge:20];
     Message *message_0 = [Message new];
     message_0.text = @"adas dsfdsf fafgdgfag fdgfdg adfg  dfga gdfcvcvbcxvdf v fvcx vfv vfvdfv";
     message_0.date = @"00:28";
@@ -82,6 +116,11 @@
 }
 
 #pragma mark - Other methods
+
+- (void)fillRequestMesage {
+    NSString *age = _age > 0 ? [NSString stringWithFormat:@", %ld", (unsigned long)_age] : [NSString new];
+    _nameAndAgeLabel.text = [NSString stringWithFormat:@"%@%@", _name, age];
+}
 
 #pragma mark - Actions
 

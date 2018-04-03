@@ -16,4 +16,10 @@
 
 @property (weak, nonatomic) IBOutlet ChatView *chatView;
 
+@property (strong, nonatomic) NSString *name;
+
+@property (assign, nonatomic) NSUInteger age;
+
+@property (assign, nonatomic) CGFloat distance;
+
 @end

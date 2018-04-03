@@ -21,6 +21,17 @@
 
 @implementation MessageView
 
+#pragma mark - Class methods
+
+- (void)close {
+    [self viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
+        [self removeFromSuperview];
+        if (self.didCloseViewCompletion) {
+            self.didCloseViewCompletion();
+        }
+    }];
+}
+
 #pragma mark - Overriding methods
 
 - (void)loadViewFromNib {
@@ -34,12 +45,12 @@
 }
 
 - (void)viewAnimation:(ViewAnimation)viewAnimation animated:(BOOL)animated completion:(void (^)(void))completion {
-    BOOL inAnimation = viewAnimation == ViewAnimationFadeIn || viewAnimation == ViewAnimationZoomIn;
-    CGAffineTransform transform = inAnimation ? CGAffineTransformIdentity : CGAffineTransformMakeScale(.64f, .64f);
-    CGFloat alpha = inAnimation ? 1.f : 0.f;
+    BOOL isInAnimation = viewAnimation == ViewAnimationFadeIn || viewAnimation == ViewAnimationZoomIn;
+    CGAffineTransform transform = isInAnimation ? CGAffineTransformIdentity : CGAffineTransformMakeScale(.64f, .64f);
+    CGFloat alpha = isInAnimation ? 1.f : 0.f;
     if (animated) {
         [UIView animateWithDuration:.32f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            if (inAnimation) {
+            if (isInAnimation) {
                 self.alpha = alpha;
             } else {
                 _messageView.alpha = alpha;
@@ -47,7 +58,7 @@
             }
         } completion:nil];
         [UIView animateWithDuration:.32f delay:.32f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            if (!inAnimation) {
+            if (!isInAnimation) {
                 self.alpha = alpha;
             } else {
                 _messageView.alpha = alpha;
@@ -71,12 +82,7 @@
 #pragma mark - Actions
 
 - (IBAction)closeButton_TUI:(UIButton *)sender {
-    [self viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
-        [self removeFromSuperview];
-        if (self.didCloseViewCompletion) {
-            self.didCloseViewCompletion();
-        }
-    }];
+    [self close];
 }
 
 @end

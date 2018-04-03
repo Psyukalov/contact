@@ -10,8 +10,13 @@
 #import "CView.h"
 
 
+#define kDefaultAutoDiclineTime (10)
+
+
 @interface MessageView : CView
 
 @property (weak, nonatomic) IBOutlet UIView *messageView;
+
+- (void)close;
 
 @end

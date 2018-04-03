@@ -105,3 +105,32 @@
 // Error message view
 
 "emv_label_0" = "Ошибка";
+
+// Reuest message view
+
+"rmv_label_0" = "Новый контакт!";
+"rmv_label_1" = "м";
+"rmv_label_2" = "км";
+"rmv_label_3" = "от Вас";
+"rmv_label_4" = "Ждёт Вашего ответа";
+
+"rmv_button_0" = "Контакт!";
+
+// Waiting message view
+
+"wmv_label_0" = "Контакт найден!";
+"wmv_label_1" = "Ожидаем ответа...";
+
+// Rating message view
+
+"rating_mv_label_0" = "Успех!";
+"rating_mv_label_1" = "Вы получили Токены";
+"rating_mv_label_2" = "Оцените контакт:";
+
+// Convercation view
+
+"cv_label_0" = "Покинуть чат";
+"cv_label_1" = "м";
+"cv_label_2" = "км";
+"cv_label_3" = "от Вас";
+"cv_label_4" = "осталось";

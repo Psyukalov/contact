@@ -105,3 +105,32 @@
 // Error message view
 
 "emv_label_0" = "Error";
+
+// Reuest message view
+
+"rmv_label_0" = "New contact request!";
+"rmv_label_1" = "m";
+"rmv_label_2" = "km";
+"rmv_label_3" = "away";
+"rmv_label_4" = "Waiting for you reply";
+
+"rmv_button_0" = "Connect!";
+
+// Waiting message view
+
+"wmv_label_0" = "Contact found!";
+"wmv_label_1" = "Waiting for chat...";
+
+// Rating message view
+
+"rating_mv_label_0" = "Success!";
+"rating_mv_label_1" = "You earn Tokens";
+"rating_mv_label_2" = "Rate this contact:";
+
+// Convercation view
+
+"cv_label_0" = "Leave chat";
+"cv_label_1" = "m";
+"cv_label_2" = "km";
+"cv_label_3" = "away";
+"cv_label_4" = "time left";

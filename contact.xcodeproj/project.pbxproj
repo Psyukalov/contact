@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70A815520736B2F00289B0E /* RequestMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70A815420736B2E00289B0E /* RequestMessageView.xib */; };
+		C70A815820736B5300289B0E /* RequestMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70A815720736B5300289B0E /* RequestMessageView.m */; };
+		C70A815C207379B800289B0E /* VPTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C70A815B207379B700289B0E /* VPTimer.m */; };
+		C70A815E20737FFD00289B0E /* WaitingMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70A815D20737FFC00289B0E /* WaitingMessageView.xib */; };
+		C70A81612073800E00289B0E /* WaitingMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70A81602073800E00289B0E /* WaitingMessageView.m */; };
+		C70A816520738B7400289B0E /* VPRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70A816420738B7400289B0E /* VPRatingView.m */; };
+		C70A816A20738C1B00289B0E /* rating_default_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A816620738C1A00289B0E /* rating_default_button@2x.png */; };
+		C70A816B20738C1B00289B0E /* rating_default_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A816720738C1B00289B0E /* rating_default_button@3x.png */; };
+		C70A816C20738C1B00289B0E /* rating_selected_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A816820738C1B00289B0E /* rating_selected_button@2x.png */; };
+		C70A816D20738C1B00289B0E /* rating_selected_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A816920738C1B00289B0E /* rating_selected_button@3x.png */; };
+		C70A816F207394AB00289B0E /* RatingMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70A816E207394AA00289B0E /* RatingMessageView.xib */; };
+		C70A8172207394C200289B0E /* RatingMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70A8171207394C200289B0E /* RatingMessageView.m */; };
 		C71CB47920614ED700DC7ADD /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CB47820614ED700DC7ADD /* Switch.m */; };
 		C7208D06206BC8B200E1292A /* ReceiverMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7208D05206BC8B200E1292A /* ReceiverMessageTableViewCell.m */; };
 		C7208D08206BC92C00E1292A /* ReceiverMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7208D07206BC92C00E1292A /* ReceiverMessageTableViewCell.xib */; };
@@ -100,6 +112,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70A815420736B2E00289B0E /* RequestMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestMessageView.xib; sourceTree = "<group>"; };
+		C70A815620736B5300289B0E /* RequestMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMessageView.h; sourceTree = "<group>"; };
+		C70A815720736B5300289B0E /* RequestMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestMessageView.m; sourceTree = "<group>"; };
+		C70A815A207379B700289B0E /* VPTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPTimer.h; sourceTree = "<group>"; };
+		C70A815B207379B700289B0E /* VPTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPTimer.m; sourceTree = "<group>"; };
+		C70A815D20737FFC00289B0E /* WaitingMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaitingMessageView.xib; sourceTree = "<group>"; };
+		C70A815F2073800E00289B0E /* WaitingMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingMessageView.h; sourceTree = "<group>"; };
+		C70A81602073800E00289B0E /* WaitingMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitingMessageView.m; sourceTree = "<group>"; };
+		C70A816320738B7400289B0E /* VPRatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPRatingView.h; sourceTree = "<group>"; };
+		C70A816420738B7400289B0E /* VPRatingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPRatingView.m; sourceTree = "<group>"; };
+		C70A816620738C1A00289B0E /* rating_default_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rating_default_button@2x.png"; sourceTree = "<group>"; };
+		C70A816720738C1B00289B0E /* rating_default_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rating_default_button@3x.png"; sourceTree = "<group>"; };
+		C70A816820738C1B00289B0E /* rating_selected_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rating_selected_button@2x.png"; sourceTree = "<group>"; };
+		C70A816920738C1B00289B0E /* rating_selected_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rating_selected_button@3x.png"; sourceTree = "<group>"; };
+		C70A816E207394AA00289B0E /* RatingMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingMessageView.xib; sourceTree = "<group>"; };
+		C70A8170207394C200289B0E /* RatingMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingMessageView.h; sourceTree = "<group>"; };
+		C70A8171207394C200289B0E /* RatingMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatingMessageView.m; sourceTree = "<group>"; };
 		C71CB47720614ED700DC7ADD /* Switch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Switch.h; sourceTree = "<group>"; };
 		C71CB47820614ED700DC7ADD /* Switch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Switch.m; sourceTree = "<group>"; };
 		C7208D04206BC8B200E1292A /* ReceiverMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiverMessageTableViewCell.h; sourceTree = "<group>"; };
@@ -257,6 +286,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C70A8159207379B700289B0E /* VPTimer */ = {
+			isa = PBXGroup;
+			children = (
+				C70A815A207379B700289B0E /* VPTimer.h */,
+				C70A815B207379B700289B0E /* VPTimer.m */,
+			);
+			path = VPTimer;
+			sourceTree = "<group>";
+		};
+		C70A816220738B4B00289B0E /* VPRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				C70A816620738C1A00289B0E /* rating_default_button@2x.png */,
+				C70A816720738C1B00289B0E /* rating_default_button@3x.png */,
+				C70A816820738C1B00289B0E /* rating_selected_button@2x.png */,
+				C70A816920738C1B00289B0E /* rating_selected_button@3x.png */,
+				C70A816320738B7400289B0E /* VPRatingView.h */,
+				C70A816420738B7400289B0E /* VPRatingView.m */,
+			);
+			path = VPRatingView;
+			sourceTree = "<group>";
+		};
 		C757F010206D041700C1805F /* MBAutoGrowingTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,11 +507,13 @@
 		C7FBC22920591DD900A49F14 /* third party */ = {
 			isa = PBXGroup;
 			children = (
-				C757F010206D041700C1805F /* MBAutoGrowingTextView */,
 				C7FBC23A20592A4800A49F14 /* iCarousel */,
+				C757F010206D041700C1805F /* MBAutoGrowingTextView */,
 				C7FBC24220592CF000A49F14 /* VPActivityIndicatorImageView */,
 				C788432A206A7EE000A15235 /* VPPointsActivityIndicatorView */,
 				C7B78EBC2068FE8D00730BF8 /* VPQRCodeGenerator */,
+				C70A816220738B4B00289B0E /* VPRatingView */,
+				C70A8159207379B700289B0E /* VPTimer */,
 			);
 			path = "third party";
 			sourceTree = "<group>";
@@ -576,9 +629,15 @@
 				C7B78EC7206914CF00730BF8 /* QRScanView.h */,
 				C7B78EC8206914CF00730BF8 /* QRScanView.m */,
 				C7B78EC5206914B300730BF8 /* QRScanView.xib */,
+				C70A8170207394C200289B0E /* RatingMessageView.h */,
+				C70A8171207394C200289B0E /* RatingMessageView.m */,
+				C70A816E207394AA00289B0E /* RatingMessageView.xib */,
 				C7FBC27E20597A3300A49F14 /* RegistrationView.h */,
 				C7FBC27F20597A3300A49F14 /* RegistrationView.m */,
 				C7330DDC205C234B00E8F336 /* RegistrationView.xib */,
+				C70A815620736B5300289B0E /* RequestMessageView.h */,
+				C70A815720736B5300289B0E /* RequestMessageView.m */,
+				C70A815420736B2E00289B0E /* RequestMessageView.xib */,
 				C785C233205FEE2900FC3927 /* SearchAnimationView.h */,
 				C785C234205FEE2900FC3927 /* SearchAnimationView.m */,
 				C785C236205FEE3F00FC3927 /* SearchAnimationView.xib */,
@@ -591,6 +650,9 @@
 				C763787C2062BAC300C1DD8B /* ThirdManualItemView.h */,
 				C763787A2062BAC200C1DD8B /* ThirdManualItemView.m */,
 				C763787B2062BAC300C1DD8B /* ThirdManualItemView.xib */,
+				C70A815F2073800E00289B0E /* WaitingMessageView.h */,
+				C70A81602073800E00289B0E /* WaitingMessageView.m */,
+				C70A815D20737FFC00289B0E /* WaitingMessageView.xib */,
 				C763786D206264E600C1DD8B /* WavesView.h */,
 				C763786E206264E600C1DD8B /* WavesView.m */,
 				C7637870206264F200C1DD8B /* WavesView.xib */,
@@ -659,6 +721,7 @@
 			files = (
 				C7B78E6D2068E40600730BF8 /* MessageView.xib in Resources */,
 				C7FBC26D205945A500A49F14 /* AuthorizationViewController.xib in Resources */,
+				C70A816C20738C1B00289B0E /* rating_selected_button@2x.png in Resources */,
 				C7FBC268205939EA00A49F14 /* CViewController.xib in Resources */,
 				C7FBC25E2059383000A49F14 /* OpenSans-Italic.ttf in Resources */,
 				C7B78E722068F1FC00730BF8 /* QRCodeView.xib in Resources */,
@@ -670,9 +733,13 @@
 				C7FBC25C2059383000A49F14 /* OpenSans-ExtraBold.ttf in Resources */,
 				C75D4FA6206532FE00FBC213 /* EditProfileSlidingView.xib in Resources */,
 				C7637871206264F200C1DD8B /* WavesView.xib in Resources */,
+				C70A816B20738C1B00289B0E /* rating_default_button@3x.png in Resources */,
 				C7884337206A9FFB00A15235 /* OwnerMessageTableViewCell.xib in Resources */,
 				C763786C2062635300C1DD8B /* FirstManualItemView.xib in Resources */,
 				C75D4F9C2065088D00FBC213 /* ProfileSlidingView.xib in Resources */,
+				C70A815520736B2F00289B0E /* RequestMessageView.xib in Resources */,
+				C70A815E20737FFD00289B0E /* WaitingMessageView.xib in Resources */,
+				C70A816D20738C1B00289B0E /* rating_selected_button@3x.png in Resources */,
 				C7A2DC032063D99B00BE4B88 /* HistoryView.xib in Resources */,
 				C7208D08206BC92C00E1292A /* ReceiverMessageTableViewCell.xib in Resources */,
 				C785C232205FDCA600FC3927 /* MainViewController.xib in Resources */,
@@ -681,11 +748,13 @@
 				C7FBC2152059087600A49F14 /* Assets.xcassets in Resources */,
 				C7FBC2602059383000A49F14 /* OpenSans-LightItalic.ttf in Resources */,
 				C7330DD5205C077300E8F336 /* AboutContactView.xib in Resources */,
+				C70A816F207394AB00289B0E /* RatingMessageView.xib in Resources */,
 				C785C237205FEE3F00FC3927 /* SearchAnimationView.xib in Resources */,
 				C7330DDD205C234B00E8F336 /* RegistrationView.xib in Resources */,
 				C7FBC2622059383000A49F14 /* OpenSans-SemiBold.ttf in Resources */,
 				C7FBC22C20591E2D00A49F14 /* Localizable.strings in Resources */,
 				C7B78EC6206914B300730BF8 /* QRScanView.xib in Resources */,
+				C70A816A20738C1B00289B0E /* rating_default_button@2x.png in Resources */,
 				C7FBC25A2059383000A49F14 /* OpenSans-Bold.ttf in Resources */,
 				C7FBC24B2059339500A49F14 /* activity_indicator_image@2x.png in Resources */,
 				C76378792062A0D400C1DD8B /* SecondManualItemView.xib in Resources */,
@@ -719,6 +788,7 @@
 				C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */,
 				C7FBC2362059286F00A49F14 /* View.m in Sources */,
 				C7A2DC012063D98900BE4B88 /* HistoryView.m in Sources */,
+				C70A816520738B7400289B0E /* VPRatingView.m in Sources */,
 				C7B78EBF2068FEC000730BF8 /* VPQRCodeGenerator.m in Sources */,
 				C763786220624BE400C1DD8B /* ManualView.m in Sources */,
 				C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */,
@@ -738,6 +808,9 @@
 				C7E41B74205BDB6100C4B96F /* SMView.m in Sources */,
 				C7F41398205BBC8A00AA316D /* CObject.m in Sources */,
 				C7FBC271205952E300A49F14 /* CView.m in Sources */,
+				C70A815820736B5300289B0E /* RequestMessageView.m in Sources */,
+				C70A815C207379B800289B0E /* VPTimer.m in Sources */,
+				C70A8172207394C200289B0E /* RatingMessageView.m in Sources */,
 				C763787D2062BAC300C1DD8B /* ThirdManualItemView.m in Sources */,
 				C7B78EC2206909EC00730BF8 /* ErrorMessageView.m in Sources */,
 				C763786A2062631C00C1DD8B /* FirstManualItemView.m in Sources */,
@@ -756,6 +829,7 @@
 				C7884321206A79DF00A15235 /* ChatView.m in Sources */,
 				C7330DD8205C099100E8F336 /* SMImageView.m in Sources */,
 				C7330DD3205C075D00E8F336 /* AboutContactView.m in Sources */,
+				C70A81612073800E00289B0E /* WaitingMessageView.m in Sources */,
 				C785C235205FEE2900FC3927 /* SearchAnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
