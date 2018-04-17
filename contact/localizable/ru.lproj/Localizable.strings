@@ -48,7 +48,7 @@
 
 // Search animation view
 
-"sav_label_0" = "Поиск контактов";
+"sav_label_0" = "Поиск контактов\nИли коснитесь экрана для просмотра карты";
 
 // Profile sliding view
 
@@ -134,3 +134,7 @@
 "cv_label_2" = "км";
 "cv_label_3" = "от Вас";
 "cv_label_4" = "осталось";
+
+// Main view controller
+
+"mvc_button_0" = "Поиск контакта";

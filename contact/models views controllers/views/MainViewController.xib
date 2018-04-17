@@ -8,12 +8,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="neededUpdateDeviceOrientation" value="NO"/>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isAnimated" value="NO"/>
-                <userDefinedRuntimeAttribute type="boolean" keyPath="neededGradientImageViews" value="NO"/>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="neededGradientImageViews" value="YES"/>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="neededAccelerometerUpdates" value="YES"/>
             </userDefinedRuntimeAttributes>
             <connections>
@@ -22,9 +27,11 @@
                 <outlet property="basePatternImageView" destination="U2s-cw-Lgc" id="Vti-Uc-TQq"/>
                 <outlet property="contentView" destination="eoS-W0-Bar" id="NI5-kU-w4i"/>
                 <outlet property="generatingQRView" destination="qOZ-9O-3oK" id="j1a-vI-12U"/>
+                <outlet property="mapView" destination="Zqr-3t-fpH" id="sJU-oC-FGK"/>
                 <outlet property="profileSlidingView" destination="bcJ-SF-wKr" id="ybG-WS-K3m"/>
                 <outlet property="scrollView" destination="5Xy-oI-UWQ" id="Lt6-Pf-f1Q"/>
                 <outlet property="searchAnimationView" destination="Z73-xA-c2S" id="jnE-h2-ebt"/>
+                <outlet property="searchButton" destination="Uc9-fo-lld" id="97W-eO-qTl"/>
                 <outlet property="testFuncView" destination="IZe-fp-Gww" id="R2F-ZH-Gtl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -43,6 +50,29 @@
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_pattern_image" translatesAutoresizingMaskIntoConstraints="NO" id="U2s-cw-Lgc">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </imageView>
+                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqr-3t-fpH" customClass="MapView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="rwT-24-t40"/>
+                                    </connections>
+                                </mapView>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc9-fo-lld">
+                                    <rect key="frame" x="28" y="32" width="358" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="9ZR-bI-6uK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                    <state key="normal" title="search">
+                                        <color key="titleColor" red="0.10980392160000001" green="0.51764705879999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="searchButton_TUI:" destination="-1" eventType="touchUpInside" id="rrT-FN-bkj"/>
+                                    </connections>
+                                </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_gradient_layer_0_image" translatesAutoresizingMaskIntoConstraints="NO" id="hFT-UP-RM1">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </imageView>
@@ -73,22 +103,29 @@
                                 <constraint firstItem="hFT-UP-RM1" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="5JY-rC-Dux"/>
                                 <constraint firstAttribute="trailing" secondItem="Z73-xA-c2S" secondAttribute="trailing" id="8S7-s8-pFU"/>
                                 <constraint firstAttribute="bottom" secondItem="bcJ-SF-wKr" secondAttribute="bottom" id="Bn2-WK-aQm"/>
+                                <constraint firstItem="Uc9-fo-lld" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" constant="28" id="GcF-Ir-f8q"/>
                                 <constraint firstItem="Z73-xA-c2S" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="NMN-SD-svS"/>
+                                <constraint firstItem="Zqr-3t-fpH" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="NPy-m7-rw6"/>
+                                <constraint firstItem="Zqr-3t-fpH" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="Ozn-WQ-AuS"/>
                                 <constraint firstItem="U2s-cw-Lgc" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="Pba-RM-oJP"/>
                                 <constraint firstItem="RzM-aA-sPn" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="Pbq-jx-YVy"/>
                                 <constraint firstAttribute="bottom" secondItem="RzM-aA-sPn" secondAttribute="bottom" id="Q2m-x5-mgU"/>
                                 <constraint firstAttribute="trailing" secondItem="U2s-cw-Lgc" secondAttribute="trailing" id="RE8-Qh-K0b"/>
+                                <constraint firstItem="Uc9-fo-lld" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" constant="32" id="SME-Ch-Bc6"/>
                                 <constraint firstItem="bcJ-SF-wKr" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="ULE-r0-3D6"/>
                                 <constraint firstAttribute="bottom" secondItem="U2s-cw-Lgc" secondAttribute="bottom" id="UqC-Qj-aCL"/>
                                 <constraint firstAttribute="bottom" secondItem="hFT-UP-RM1" secondAttribute="bottom" id="VmU-wE-ekm"/>
                                 <constraint firstAttribute="trailing" secondItem="bcJ-SF-wKr" secondAttribute="trailing" id="XrS-k1-EAn"/>
+                                <constraint firstAttribute="trailing" secondItem="Zqr-3t-fpH" secondAttribute="trailing" id="Y75-ZR-zCn"/>
                                 <constraint firstAttribute="trailing" secondItem="hFT-UP-RM1" secondAttribute="trailing" id="ZFr-Qy-bGm"/>
+                                <constraint firstAttribute="bottom" secondItem="Zqr-3t-fpH" secondAttribute="bottom" id="fqQ-Hb-XHt"/>
                                 <constraint firstItem="bcJ-SF-wKr" firstAttribute="leading" secondItem="eoS-W0-Bar" secondAttribute="leading" id="gPm-OQ-fQ5"/>
                                 <constraint firstItem="hFT-UP-RM1" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="iam-Or-84e"/>
                                 <constraint firstItem="RzM-aA-sPn" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="jQ4-WQ-JTJ"/>
                                 <constraint firstItem="Z73-xA-c2S" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="lMT-TM-TLB"/>
                                 <constraint firstItem="U2s-cw-Lgc" firstAttribute="top" secondItem="eoS-W0-Bar" secondAttribute="top" id="nww-JY-I71"/>
                                 <constraint firstAttribute="bottom" secondItem="Z73-xA-c2S" secondAttribute="bottom" id="qIF-Ee-jzS"/>
+                                <constraint firstItem="Uc9-fo-lld" firstAttribute="centerX" secondItem="eoS-W0-Bar" secondAttribute="centerX" id="rPs-Y2-d4e"/>
                                 <constraint firstAttribute="trailing" secondItem="RzM-aA-sPn" secondAttribute="trailing" id="xVT-ja-Rq0"/>
                             </constraints>
                         </view>
@@ -254,7 +291,7 @@
         </view>
     </objects>
     <resources>
-        <image name="base_gradient_layer_0_image" width="32" height="812"/>
+        <image name="base_gradient_layer_0_image" width="10" height="270"/>
         <image name="base_gradient_layer_1_image" width="32" height="460"/>
         <image name="base_pattern_image" width="553" height="1091"/>
     </resources>

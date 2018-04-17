@@ -66,18 +66,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNeededUpdateDeviceOrientation:_neededUpdateDeviceOrientation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [center addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    if (_neededUpdateDeviceOrientation) {
-        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-        [center addObserver:self selector:@selector(deviceOrientationDidChangeSelector:) name:UIDeviceOrientationDidChangeNotification object:nil];
-    }
+    [center addObserver:self selector:@selector(deviceOrientationDidChangeSelector:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

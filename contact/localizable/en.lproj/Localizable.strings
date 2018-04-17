@@ -48,7 +48,7 @@
 
 // Search animation view
 
-"sav_label_0" = "Searching for contact";
+"sav_label_0" = "Searching for contact\nTap to Screen for Map Observe";
 
 // Profile sliding view
 
@@ -134,3 +134,7 @@
 "cv_label_2" = "km";
 "cv_label_3" = "away";
 "cv_label_4" = "time left";
+
+// Main view controller
+
+"mvc_button_0" = "Searching contact";

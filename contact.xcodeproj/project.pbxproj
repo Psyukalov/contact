@@ -71,6 +71,9 @@
 		C7B78EC420690A2600730BF8 /* ErrorMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78EC320690A2500730BF8 /* ErrorMessageView.xib */; };
 		C7B78EC6206914B300730BF8 /* QRScanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B78EC5206914B300730BF8 /* QRScanView.xib */; };
 		C7B78EC9206914CF00730BF8 /* QRScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B78EC8206914CF00730BF8 /* QRScanView.m */; };
+		C7C1F9C8207BA8A000D40B59 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C1F9C6207BA89F00D40B59 /* LocationManager.m */; };
+		C7C1F9CB207BAC0800D40B59 /* CDayTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C1F9CA207BAC0800D40B59 /* CDayTileOverlay.m */; };
+		C7C1F9CE207BAC1800D40B59 /* CNightTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C1F9CD207BAC1800D40B59 /* CNightTileOverlay.m */; };
 		C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */; };
 		C7CBFB7F2064FD6F00C5CB0F /* SlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBFB7E2064FD6F00C5CB0F /* SlidingView.m */; };
 		C7CBFB812064FD7C00C5CB0F /* SlidingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CBFB802064FD7C00C5CB0F /* SlidingView.xib */; };
@@ -78,6 +81,8 @@
 		C7E41B77205BDC9200C4B96F /* SMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E41B76205BDC9200C4B96F /* SMLabel.m */; };
 		C7F41395205BBC1000AA316D /* ScreenModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F41394205BBC1000AA316D /* ScreenModeManager.m */; };
 		C7F41398205BBC8A00AA316D /* CObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F41396205BBC8A00AA316D /* CObject.m */; };
+		C7F9B8A52073D6C100C8CF9A /* TileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F9B8A32073D6C000C8CF9A /* TileOverlay.m */; };
+		C7F9B8A82073D76200C8CF9A /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F9B8A72073D76200C8CF9A /* MapView.m */; };
 		C7FBC20D2059087600A49F14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FBC20C2059087600A49F14 /* AppDelegate.m */; };
 		C7FBC2152059087600A49F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FBC2142059087600A49F14 /* Assets.xcassets */; };
 		C7FBC21B2059087600A49F14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FBC21A2059087600A49F14 /* main.m */; };
@@ -213,6 +218,12 @@
 		C7B78EC5206914B300730BF8 /* QRScanView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRScanView.xib; sourceTree = "<group>"; };
 		C7B78EC7206914CF00730BF8 /* QRScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRScanView.h; sourceTree = "<group>"; };
 		C7B78EC8206914CF00730BF8 /* QRScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRScanView.m; sourceTree = "<group>"; };
+		C7C1F9C6207BA89F00D40B59 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		C7C1F9C7207BA8A000D40B59 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		C7C1F9C9207BAC0800D40B59 /* CDayTileOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDayTileOverlay.h; sourceTree = "<group>"; };
+		C7C1F9CA207BAC0800D40B59 /* CDayTileOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDayTileOverlay.m; sourceTree = "<group>"; };
+		C7C1F9CC207BAC1800D40B59 /* CNightTileOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNightTileOverlay.h; sourceTree = "<group>"; };
+		C7C1F9CD207BAC1800D40B59 /* CNightTileOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNightTileOverlay.m; sourceTree = "<group>"; };
 		C7CBFB6E2064E8F600C5CB0F /* SMTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMTextField.h; sourceTree = "<group>"; };
 		C7CBFB6F2064E8F600C5CB0F /* SMTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTextField.m; sourceTree = "<group>"; };
 		C7CBFB7D2064FD6F00C5CB0F /* SlidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlidingView.h; sourceTree = "<group>"; };
@@ -226,6 +237,10 @@
 		C7F41394205BBC1000AA316D /* ScreenModeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenModeManager.m; sourceTree = "<group>"; };
 		C7F41396205BBC8A00AA316D /* CObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CObject.m; sourceTree = "<group>"; };
 		C7F41397205BBC8A00AA316D /* CObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CObject.h; sourceTree = "<group>"; };
+		C7F9B8A32073D6C000C8CF9A /* TileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileOverlay.m; sourceTree = "<group>"; };
+		C7F9B8A42073D6C000C8CF9A /* TileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileOverlay.h; sourceTree = "<group>"; };
+		C7F9B8A62073D76200C8CF9A /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		C7F9B8A72073D76200C8CF9A /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
 		C7FBC2082059087600A49F14 /* contact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FBC20B2059087600A49F14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7FBC20C2059087600A49F14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -436,6 +451,8 @@
 		C7FBC22320591DD900A49F14 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C7C1F9C7207BA8A000D40B59 /* LocationManager.h */,
+				C7C1F9C6207BA89F00D40B59 /* LocationManager.m */,
 				C7884325206A7BB400A15235 /* Message.h */,
 				C7884324206A7BB300A15235 /* Message.m */,
 				C7F41393205BBC1000AA316D /* ScreenModeManager.h */,
@@ -490,12 +507,16 @@
 		C7FBC22820591DD900A49F14 /* subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				C7F9B8A62073D76200C8CF9A /* MapView.h */,
+				C7F9B8A72073D76200C8CF9A /* MapView.m */,
 				C7FBC2372059290A00A49F14 /* NavigationController.h */,
 				C7FBC2382059290A00A49F14 /* NavigationController.m */,
 				C71CB47720614ED700DC7ADD /* Switch.h */,
 				C71CB47820614ED700DC7ADD /* Switch.m */,
 				C780BFD5206A6B240065DCA1 /* TableView.h */,
 				C780BFD4206A6B240065DCA1 /* TableView.m */,
+				C7F9B8A42073D6C000C8CF9A /* TileOverlay.h */,
+				C7F9B8A32073D6C000C8CF9A /* TileOverlay.m */,
 				C7FBC2352059286F00A49F14 /* View.h */,
 				C7FBC2342059286F00A49F14 /* View.m */,
 				C7FBC2312059250C00A49F14 /* ViewController.h */,
@@ -521,8 +542,12 @@
 		C7FBC233205927F300A49F14 /* project subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				C7C1F9C9207BAC0800D40B59 /* CDayTileOverlay.h */,
+				C7C1F9CA207BAC0800D40B59 /* CDayTileOverlay.m */,
 				C76378652062623D00C1DD8B /* CItemView.h */,
 				C76378662062623D00C1DD8B /* CItemView.m */,
+				C7C1F9CC207BAC1800D40B59 /* CNightTileOverlay.h */,
+				C7C1F9CD207BAC1800D40B59 /* CNightTileOverlay.m */,
 				C7F41397205BBC8A00AA316D /* CObject.h */,
 				C7F41396205BBC8A00AA316D /* CObject.m */,
 				C7FBC26F205952E300A49F14 /* CView.h */,
@@ -783,6 +808,8 @@
 				C7B78EC9206914CF00730BF8 /* QRScanView.m in Sources */,
 				C7330DE3205C294E00E8F336 /* UILabel+Custom.m in Sources */,
 				C7884330206A8FEE00A15235 /* ConversationView.m in Sources */,
+				C7F9B8A52073D6C100C8CF9A /* TileOverlay.m in Sources */,
+				C7C1F9CB207BAC0800D40B59 /* CDayTileOverlay.m in Sources */,
 				C76378672062623D00C1DD8B /* CItemView.m in Sources */,
 				C7884326206A7BB400A15235 /* Message.m in Sources */,
 				C7A2DC092063DD2800BE4B88 /* HistoryTableViewCell.m in Sources */,
@@ -799,12 +826,14 @@
 				C7CBFB702064E8F600C5CB0F /* SMTextField.m in Sources */,
 				C780BFD6206A6B240065DCA1 /* TableView.m in Sources */,
 				C7FBC2322059250C00A49F14 /* ViewController.m in Sources */,
+				C7F9B8A82073D76200C8CF9A /* MapView.m in Sources */,
 				C788432D206A7EE100A15235 /* VPPointsActivityIndicatorView.m in Sources */,
 				C7FBC26B2059456E00A49F14 /* AuthorizationViewController.m in Sources */,
 				C7FBC2392059290A00A49F14 /* NavigationController.m in Sources */,
 				C7FBC27D2059781F00A49F14 /* UITextField+Custom.m in Sources */,
 				C7FBC23D20592A4800A49F14 /* iCarousel.m in Sources */,
 				C7F41395205BBC1000AA316D /* ScreenModeManager.m in Sources */,
+				C7C1F9CE207BAC1800D40B59 /* CNightTileOverlay.m in Sources */,
 				C7E41B74205BDB6100C4B96F /* SMView.m in Sources */,
 				C7F41398205BBC8A00AA316D /* CObject.m in Sources */,
 				C7FBC271205952E300A49F14 /* CView.m in Sources */,
@@ -827,6 +856,7 @@
 				C7FBC20D2059087600A49F14 /* AppDelegate.m in Sources */,
 				C757F013206D041700C1805F /* MBAutoGrowingTextView.m in Sources */,
 				C7884321206A79DF00A15235 /* ChatView.m in Sources */,
+				C7C1F9C8207BA8A000D40B59 /* LocationManager.m in Sources */,
 				C7330DD8205C099100E8F336 /* SMImageView.m in Sources */,
 				C7330DD3205C075D00E8F336 /* AboutContactView.m in Sources */,
 				C70A81612073800E00289B0E /* WaitingMessageView.m in Sources */,

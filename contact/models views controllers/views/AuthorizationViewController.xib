@@ -53,6 +53,9 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_gradient_layer_1_image" translatesAutoresizingMaskIntoConstraints="NO" id="vF9-hM-ZwU">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </imageView>
+                                <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIF-Ly-PC6" customClass="MapView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                </mapView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjQ-nd-euy" customClass="AuthorizationView">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </view>
@@ -84,12 +87,15 @@
                             <constraints>
                                 <constraint firstItem="hW5-Xd-rpe" firstAttribute="centerY" secondItem="WHI-7W-VHh" secondAttribute="centerY" id="1ic-SP-RWQ"/>
                                 <constraint firstItem="fhU-vh-rXe" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="6aL-I0-kOQ"/>
+                                <constraint firstAttribute="trailing" secondItem="VIF-Ly-PC6" secondAttribute="trailing" id="8My-h3-U4K"/>
                                 <constraint firstItem="WHI-7W-VHh" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" constant="60" id="93o-bP-UIi"/>
                                 <constraint firstItem="UnT-05-LAl" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="9zs-bA-ZdF"/>
+                                <constraint firstAttribute="bottom" secondItem="VIF-Ly-PC6" secondAttribute="bottom" id="BvS-G6-zy6"/>
                                 <constraint firstItem="Kcp-Dm-MUc" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="FGX-8O-jiS"/>
                                 <constraint firstAttribute="bottom" secondItem="UnT-05-LAl" secondAttribute="bottom" id="Kpu-rW-71e"/>
                                 <constraint firstItem="Kcp-Dm-MUc" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="Nli-zO-ggU"/>
                                 <constraint firstAttribute="trailing" secondItem="hjQ-nd-euy" secondAttribute="trailing" id="O4J-st-5cM"/>
+                                <constraint firstItem="VIF-Ly-PC6" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="ThQ-5H-7Om"/>
                                 <constraint firstAttribute="trailing" secondItem="vF9-hM-ZwU" secondAttribute="trailing" id="UTX-eH-Dcv"/>
                                 <constraint firstAttribute="trailing" secondItem="hW5-Xd-rpe" secondAttribute="trailing" constant="26" id="XtC-7E-dV8"/>
                                 <constraint firstItem="vF9-hM-ZwU" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="ZEB-HN-Ew0"/>
@@ -102,6 +108,7 @@
                                 <constraint firstItem="fhU-vh-rXe" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="imj-kR-lWi"/>
                                 <constraint firstAttribute="trailing" secondItem="Kcp-Dm-MUc" secondAttribute="trailing" id="k2g-M4-YB2"/>
                                 <constraint firstAttribute="trailing" secondItem="fhU-vh-rXe" secondAttribute="trailing" id="q3x-4S-P2N"/>
+                                <constraint firstItem="VIF-Ly-PC6" firstAttribute="top" secondItem="B9p-Vi-14F" secondAttribute="top" id="qOc-8C-mz7"/>
                                 <constraint firstItem="UnT-05-LAl" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="twV-KB-gkJ"/>
                                 <constraint firstAttribute="trailing" secondItem="UnT-05-LAl" secondAttribute="trailing" id="u0Q-Uv-sOz"/>
                                 <constraint firstItem="hjQ-nd-euy" firstAttribute="leading" secondItem="B9p-Vi-14F" secondAttribute="leading" id="uSf-Cm-nJp"/>
@@ -130,7 +137,7 @@
         </view>
     </objects>
     <resources>
-        <image name="base_gradient_layer_0_image" width="32" height="812"/>
+        <image name="base_gradient_layer_0_image" width="10" height="270"/>
         <image name="base_gradient_layer_1_image" width="32" height="460"/>
         <image name="base_pattern_image" width="553" height="1091"/>
         <image name="contact_logotype_39_pt_mode_night_image" width="39" height="45"/>

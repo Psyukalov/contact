@@ -21,12 +21,8 @@
 @end
 
 
-IB_DESIGNABLE
-
 @interface ViewController : UIViewController <ViewControllerProtocol>
 
 @property (strong, nonatomic) NSString *imageNamed;
-
-@property (assign, nonatomic) IBInspectable BOOL neededUpdateDeviceOrientation;
 
 @end

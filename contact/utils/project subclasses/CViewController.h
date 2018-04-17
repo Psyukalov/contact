@@ -16,6 +16,8 @@
 
 #import "UIView+Custom.h"
 
+#import "MapView.h"
+
 #import "ErrorMessageView.h"
 
 
@@ -34,11 +36,13 @@ typedef void(^CViewControllerCompletion)(void);
 
 IB_DESIGNABLE
 
-@interface CViewController : ViewController
+@interface CViewController : ViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+
+@property (weak, nonatomic) IBOutlet MapView *mapView;
 
 @property (assign, nonatomic) IBInspectable BOOL neededGradientImageViews;
 @property (assign, nonatomic) IBInspectable BOOL isAnimated;
@@ -50,6 +54,9 @@ IB_DESIGNABLE
 
 - (void)gradientLayersHidden:(BOOL)hidden animated:(BOOL)animated;
 - (void)gradientLayersHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion;
+
+- (void)mapViewHidden:(BOOL)hidden animated:(BOOL)animated;
+- (void)mapViewHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion;
 
 - (void)startAccelerometerUpdates;
 - (void)stopAccelerometerUpdates;

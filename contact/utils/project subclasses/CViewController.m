@@ -9,10 +9,15 @@
 
 #import "CViewController.h"
 
+#import "CDayTileOverlay.h"
+#import "CNightTileOverlay.h"
+
 #import "ScreenModeManager.h"
 
 
-@interface CViewController ()
+@interface CViewController () {
+    BOOL canFocus;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *basePatternImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *baseGradientLayer_0_ImageView;
@@ -51,6 +56,28 @@
     } else {
         _baseGradientLayer_0_ImageView.alpha = alpha;
         _baseGradientLayer_1_ImageView.alpha = alpha;
+        if (completion) {
+            completion();
+        }
+    }
+}
+
+- (void)mapViewHidden:(BOOL)hidden animated:(BOOL)animated {
+    [self mapViewHidden:hidden animated:animated completion:nil];
+}
+
+- (void)mapViewHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion {
+    CGFloat alpha = hidden ? 0.f : 1.f;
+    if (animated) {
+        [UIView animateWithDuration:.64f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            _mapView.alpha = alpha;
+        } completion:^(BOOL finished) {
+            if (completion) {
+                completion();
+            }
+        }];
+    } else {
+        _mapView.alpha = alpha;
         if (completion) {
             completion();
         }
@@ -164,12 +191,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    canFocus = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(screenModeChangeNotificationName) name:kScreenModeChangeNotificationName object:nil];
     if (_neededAccelerometerUpdates) {
         _motionManager = [CMMotionManager new];
         _motionManager.accelerometerUpdateInterval = .08f;
     }
     [[ScreenModeManager shared] applyScreenMode];
     [self gradientLayersHidden:YES animated:NO];
+    [self mapViewHidden:YES animated:NO];
     _basePatternImageView.layer.zPosition = -1024.f;
 }
 
@@ -187,6 +217,57 @@
             completion();
         }
     }];
+}
+
+- (void)screenModeChangeNotificationName {
+    ScreenModeManager *manager = [ScreenModeManager shared];
+    for (id<MKOverlay> tileOverlay in _mapView.overlays) {
+        if ([tileOverlay isKindOfClass:[TileOverlay class]]) {
+            [_mapView removeOverlay:tileOverlay];
+        }
+    }
+    [_mapView addOverlay:manager.isScreenModeDay ? [CDayTileOverlay tileOverlay] : [CNightTileOverlay tileOverlay]];
+}
+
+#pragma mark - MKMapViewDelegate
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
+    BOOL condition = [overlay isKindOfClass:[TileOverlay class]];
+    return condition ? [[MKTileOverlayRenderer alloc] initWithTileOverlay:overlay] : [[MKOverlayRenderer alloc] initWithOverlay:overlay];
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    if (canFocus) {
+        CGFloat delta = .16f;
+        MKCoordinateSpan span = MKCoordinateSpanMake(delta, delta);
+        MKCoordinateRegion region = MKCoordinateRegionMake(userLocation.coordinate, span);
+        [_mapView setRegion:region animated:YES];
+    }
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        static NSString *userLocationReuseIdentifier = @"user_location_reuse_identifier";
+        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:userLocationReuseIdentifier];
+        annotationView.canShowCallout = YES;
+        annotationView.image = [UIImage imageNamed:@"pin_user_location_image"];
+        return annotationView;
+    } else {
+        return nil;
+    }
+    return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    // TODO:
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
+    // TODO:
+}
+
+- (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated {
+    canFocus = NO;
 }
 
 @end

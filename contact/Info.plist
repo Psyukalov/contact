@@ -19,11 +19,19 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>10</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Scan QR</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>nil</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>nil</string>
+	<key>NSLocationUsageDescription</key>
+	<string>nil</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>nil</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OpenSans-Bold.ttf</string>

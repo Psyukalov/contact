@@ -18,6 +18,8 @@
 
 #import "AuthorizationViewController.h"
 
+#import "LocationManager.h"
+
 // TODO:
 
 #import "QRCodeView.h"
@@ -32,6 +34,8 @@
 @property (weak, nonatomic) IBOutlet SearchAnimationView *searchAnimationView;
 
 @property (weak, nonatomic) IBOutlet ProfileSlidingView *profileSlidingView;
+
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 
 @property (strong, nonatomic) CView *customView;
 
@@ -85,9 +89,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    LocationOptions options = LocationOptionsMake(LocationUpdateTypeLocation, kCLDistanceFilterNone, kCLLocationAccuracyBest, 0.f);
+    LocationManager *locationManager = [LocationManager sharedWithOptions:options];
+    [locationManager requestAuthorization];
+    [locationManager startUpdate];
     _profileSlidingView.delegate = self;
     [_searchAnimationView viewAnimation:ViewAnimationZoomOut animated:NO];
     [self interfaceHidden:YES animated:NO];
+    [self searchButtonHidden:YES animated:NO completion:nil];
+    [_searchButton setTitle:LOCALIZE(@"mvc_button_0") forState:UIControlStateNormal];
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(profileSlidingView_TUI)];
+    [_profileSlidingView addGestureRecognizer:tapGR];
     // TODO:
     [_generatingQRView viewAnimation:ViewAnimationFadeOut animated:NO];
     //
@@ -95,6 +107,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self performSelector:@selector(showMap) withObject:nil afterDelay:3.2f];
     BOOL authorized;
     // TODO:
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -188,11 +201,13 @@
             break;
         case ProfileActionLogOut: {
             __weak MainViewController *weakSelf = self;
-            [profileView setIsOpen:NO animated:YES completion:^{
-                [weakSelf interfaceHidden:YES animated:YES completion:^{
-                    [weakSelf.searchAnimationView viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
-                        [weakSelf.searchAnimationView stop];
-                        [weakSelf actionLogOut];
+            [self mapViewHidden:YES animated:NO completion:^{
+                [profileView setIsOpen:NO animated:YES completion:^{
+                    [weakSelf interfaceHidden:YES animated:YES completion:^{
+                        [weakSelf.searchAnimationView viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
+                            [weakSelf.searchAnimationView stop];
+                            [weakSelf actionLogOut];
+                        }];
                     }];
                 }];
             }];
@@ -236,7 +251,9 @@
         [userDefaults synchronize];
         //
         [weakAuthorizationVC.view removeFromSuperview];
-        [self startAnimations];
+        [self mapViewHidden:NO animated:YES completion:^{
+            [self startAnimations];
+        }];
     };
     [self.view addSubview:authorizationVC.view];
 }
@@ -251,6 +268,52 @@
 
 - (void)applicationWillEnterForeground {
     [_searchAnimationView play];
+}
+
+- (void)showMap {
+    [self mapViewHidden:NO animated:YES];
+}
+
+- (void)searchButtonHidden:(BOOL)hidden animated:(BOOL)animated completion:(void (^)(void))completion{
+    CGFloat alpha = hidden ? 0.f : 1.f;
+    if (animated) {
+        [UIView animate:^{
+            _searchButton.alpha = alpha;
+        } completion:^{
+            if (completion) {
+                completion();
+            }
+        } duration:.64f];
+    } else {
+        _searchButton.alpha = alpha;
+        if (completion) {
+            completion();
+        }
+    }
+}
+
+#pragma mark - Actios
+
+- (void)profileSlidingView_TUI {
+    if (!_profileSlidingView.isOpen) {
+        [self interfaceHidden:YES animated:YES completion:^{
+            [self gradientLayersHidden:YES animated:YES completion:^{
+                [_searchAnimationView viewAnimation:ViewAnimationZoomOut animated:YES completion:^{
+                    [self searchButtonHidden:NO animated:YES completion:nil];
+                }];
+            }];
+        }];
+    }
+}
+
+- (IBAction)searchButton_TUI:(UIButton *)sender {
+    [self searchButtonHidden:YES animated:YES completion:^{
+        [_searchAnimationView viewAnimation:ViewAnimationZoomIn animated:YES completion:^{
+            [self gradientLayersHidden:NO animated:YES completion:^{
+                [self interfaceHidden:NO animated:YES];
+            }];
+        }];
+    }];
 }
 
 #pragma mark - Test
